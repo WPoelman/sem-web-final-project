@@ -19,3 +19,4 @@ Final project for the course Semantic Webtechnology
   - Output naar file met een soort van report van de toegepaste mappings en wat we gemist hebben of niet weten
 - (Later) handmatige menselijke annotatie van output
 - (Later) evaluatie van infoboxes die ongeveer 1 op 1 overeenkomen, als gold set behandelen, kan eventueel ook op key niveau voor bepaalde mappings die al overeen komen (gaat de vertaling van deze key goed etc.)
+- (Later) ook kijken of er Nederlandse artikelen zijn waar wel een infobox voor is en voor het Engels niet (alleen nuttig voor het verslag, volledige statistieken voor het probleem)
