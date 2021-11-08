@@ -7,17 +7,20 @@ pip install wptools
 """
 
 import argparse
-import concurrent
-import wptools
-import requests
-import pickle
 import concurrent.futures
-from tqdm import tqdm
+import contextlib
+import io
+import pickle
+
+import requests
+import wptools
+
+MAX_WORKERS = 32
 
 
 def create_arg_parser():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-t", "--titles_file", default='data/titlesAE.txt',
+    parser.add_argument("-t", "--titles_file", default='data/titles.txt',
                         help="Input txt file containing book titles on each line")
 
     args = parser.parse_args()
@@ -30,7 +33,7 @@ def get_dutch_title(en_title):
         URL = "https://en.wikipedia.org/w/api.php"
         PARAMS = {
             "action": "query",
-            "titles": title,
+            "titles": en_title,
             "prop": "langlinks",
             "lllang": "nl",
             "format": "json"
@@ -48,12 +51,14 @@ def get_dutch_title(en_title):
 
 def get_infobox(title, language='en'):
     """Use the title of a Wikipedia page to get the infobox"""
-    try:
-        page = wptools.page(title, lang=language,
-                            silent=True, verbose=False).get_parse(show=False)
-        infobox = page.data['infobox']
-    except:
-        infobox = False
+    with contextlib.redirect_stderr(io.StringIO()), \
+            contextlib.redirect_stdout(io.StringIO()):
+        try:
+            page = wptools.page(title, lang=language,
+                                silent=True, verbose=False).get_parse(show=False)
+            infobox = page.data['infobox']
+        except:
+            infobox = False
 
     return infobox
 
@@ -78,7 +83,6 @@ if __name__ == "__main__":
     with open(args.titles_file, 'r') as f:
         for line in f:
             titles.append(line.strip())
-    print(len(titles))
 
     # Create {title: infobox} dictionary
     en_infoboxes = dict()
@@ -87,11 +91,14 @@ if __name__ == "__main__":
     both_infoboxes_titles = []
     only_en = 0
 
-    all_data = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=32) as executor:
+    print(f'Fetching {len(titles)} with {MAX_WORKERS} workers')
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
         futures = [executor.submit(get_data, title) for title in titles]
-        for result in tqdm(concurrent.futures.as_completed(futures), total=len(futures)):
-            all_data.append(result.result())
+        all_data = [
+            r.result()
+            for r in concurrent.futures.as_completed(futures)
+        ]
 
     for en_title, en_infobox, nl_title, nl_infobox in all_data:
         # First: try to get dutch title
@@ -109,11 +116,12 @@ if __name__ == "__main__":
                 nl_infoboxes[en_title] = nl_infobox
                 both_infoboxes_titles.append(en_title)
             else:
-                nl_infoboxes[en_title] = "NA"
+                nl_infoboxes[en_title] = None
                 only_en += 1
+
     # Write full dictionary to pickle file:
-    create_dict_pickle(en_infoboxes, 'all_en_infoboxesAE.pickle')
-    create_dict_pickle(nl_infoboxes, 'all_nl_infoboxesAE.pickle')
+    create_dict_pickle(en_infoboxes, 'all_en_infoboxes.pickle')
+    create_dict_pickle(nl_infoboxes, 'all_nl_infoboxes.pickle')
 
     print("number of titles: ", len(titles))
     print("number of titles containing only EN infoboxes: ", only_en)
