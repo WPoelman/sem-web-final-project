@@ -13,9 +13,9 @@ def create_arg_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument("-t", "--titles_file", default='data/titles.txt',
                         help="Input txt file containing book titles on each line")
-    parser.add_argument("-ep", "--en_pickle", default='data/all_en_infoboxes.pickle',
+    parser.add_argument("-ep", "--en_pickle", default='data/en_infoboxes.pickle',
                         help="Input pickle dictionary containing English infoboxes")
-    parser.add_argument("-np", "--nl_pickle", default='data/all_nl_infoboxes.pickle',
+    parser.add_argument("-np", "--nl_pickle", default='data/nl_infoboxes.pickle',
                         help="Input pickle dictionary containing Dutch infoboxes")
 
     args = parser.parse_args()
