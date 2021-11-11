@@ -88,21 +88,48 @@ if __name__ == "__main__":
         # todo: get the mappings
         mapping = "PUT METHOD TO GET MAPPINGS HERE"
 
-        # Either expand the existing NL infobox or generate a new one
+        # todo: various steps of filling the new infobox
+        # We try to generate the NL infobox
+        new_infobox = dict()
+        for en_label in cleaned_en:
+            # todo: Retrieve dutch label from mapping
+            nl_label = "GET LABEL FROM MAPPING"
+            # todo: with the retrieved label, either use same value as English / translate the value / do something else
+
+            # todo: Here we put specific cases
+            # If NL title differs from the EN title, we say it is a translated book
+            if en_label == 'name':
+                if nl_title != en_title:
+                    new_infobox['orig titel'] = en_title
+                new_infobox['naam'] = nl_title
+
+            # If it is translated, add the original language
+            if 'orig titel' in new_infobox and 'language' in cleaned_en:
+                new_infobox['originele taal'] = translate(cleaned_en['language'])
+
+            # If a book is part of a series, we try to find the EN and NL wikipedia pages for it
+            if 'series' in cleaned_en:
+                dutch_series = get_dutch_title(cleaned_en['series'])
+                new_infobox['reeks'] = dutch_series
+
+            # If the label is not in our mapping, simply translate the English label to a Dutch label
+            if en_label not in mapping:
+                nl_label = translate(en_label)
+                if nl_label not in new_infobox:
+                    new_infobox[nl_label] = cleaned_en[en_label] #todo: decide whether we want to just use the same value in this case
+
+        # Finally, if there is an existing NL infobox, we first use those key-value pairs and add only
+        # the missing ones from our generated infobox to it.
         if nl_infobox:
             cleaned_nl = clean.clean_ib_dict(nl_infobox)
-            # todo: expand the NL infobox with keys that are not in there
-            # todo: Maybe we should just check for each label that we generate whether it is already in the infobox
+            for key in new_infobox:
+                if key not in cleaned_nl:
+                    cleaned_nl[key] = new_infobox[key]
         else:
-            # todo: generate new infobox
-            for en_label in cleaned_en:
-                # todo: Retrieve dutch label from mapping
-                nl_label = "GET LABEL FROM MAPPING"
+            cleaned_nl = new_infobox
 
-                if en_label not in mapping:
-                    # Simply translate the English label to a Dutch label
-                    nl_label = translate(en_label)
-
+        #print(cleaned_nl)  # The combination of the existing infobox with our own infobox
+        #print(new_infobox)  # Our self created infobox so far
 
 
 
