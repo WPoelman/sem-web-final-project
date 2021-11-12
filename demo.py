@@ -101,15 +101,19 @@ if __name__ == "__main__":
         # We try to generate the NL infobox
         new_infobox = dict()
         for en_key in cleaned_en:
-            nl_key_options = mapper.translate(en_key) # TODO: test if we want fuzzy here or not
+            # TODO: test if we want fuzzy here or not
+            nl_key_options = mapper.translate(en_key)
 
             # TODO: figure out if we want to overwrite the keys or use elifs
             if nl_key_options:
+                # TODO: find a way to rank these and pick the best one
+                # (key co-occurrence maybe? On both the Dutch and English
+                # training sets?)
                 new_infobox[nl_key_options[0]] = cleaned_en[en_key]
 
             # todo: Here we put specific cases
             # If NL title differs from the EN title, we say it is a translated book
-            if en_key == 'name':
+            elif en_key == 'name':
                 if nl_title != en_title:
                     new_infobox['orig titel'] = en_title
                 new_infobox['naam'] = nl_title
@@ -141,5 +145,6 @@ if __name__ == "__main__":
         else:
             cleaned_nl = new_infobox
 
-        print(cleaned_nl)  # The combination of the existing infobox with our own infobox
+        # The combination of the existing infobox with our own infobox
+        print(cleaned_nl)
         print(new_infobox)  # Our self created infobox so far
