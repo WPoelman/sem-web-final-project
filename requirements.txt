@@ -1,3 +1,4 @@
 wptools
 requests
 Unidecode
+deep_translator

@@ -90,6 +90,9 @@ class Mapper:
 
         return list(self.map[en_key])
 
+    def has_key(self, en_key: str) -> bool:
+        return en_key in self.map.keys()
+
 
 def normalize_str(string: str) -> str:
     # Do the basic cleaning of possibly noisy Wikipedia specific stuff
