@@ -9,7 +9,7 @@ import argparse
 import wptools
 import requests
 import sys
-import clean
+from utils import *
 from deep_translator import GoogleTranslator
 
 
@@ -83,7 +83,7 @@ if __name__ == "__main__":
         nl_infobox = get_infobox(nl_title, 'nl')
 
         # Clean the English infobox
-        cleaned_en = clean.clean_ib_dict(en_infobox)
+        cleaned_en = clean_ib_dict(en_infobox)
 
         # todo: get the mappings
         mapping = "PUT METHOD TO GET MAPPINGS HERE"
@@ -121,7 +121,7 @@ if __name__ == "__main__":
         # Finally, if there is an existing NL infobox, we first use those key-value pairs and add only
         # the missing ones from our generated infobox to it.
         if nl_infobox:
-            cleaned_nl = clean.clean_ib_dict(nl_infobox)
+            cleaned_nl = clean_ib_dict(nl_infobox)
             for key in new_infobox:
                 if key not in cleaned_nl:
                     cleaned_nl[key] = new_infobox[key]

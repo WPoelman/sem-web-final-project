@@ -1,13 +1,10 @@
 #!/usr/bin/env python
 
 """
-...
-remember to:
-pip install wptools
 """
 
 import argparse
-import pickle
+from utils import *
 
 def create_arg_parser():
     parser = argparse.ArgumentParser()
@@ -21,11 +18,6 @@ def create_arg_parser():
     args = parser.parse_args()
     return args
 
-
-def load_dict_pickle(filename):
-    with open(filename, 'rb') as handle:
-        dict = pickle.load(handle)
-    return dict
 
 
 def get_key(val, dict):
