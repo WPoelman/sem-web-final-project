@@ -11,7 +11,7 @@ WHITESPACE_PATTERN = re.compile(r'\W+')
 TAG_PATTERN = re.compile(r'<[^>]+>')
 TRANSLATION = str.maketrans({'[': ' ', ']': ' ', '{': ' ', '}': ' ', '|': ' '})
 
-def load_dict_pickle(filename):
+def load_pickle(filename):
     with open(filename, 'rb') as handle:
         dict = pickle.load(handle)
     return dict

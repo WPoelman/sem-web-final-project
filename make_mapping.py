@@ -31,8 +31,8 @@ if __name__ == "__main__":
     args = create_arg_parser()
 
     # Open english and dutch infobox dictionaries:
-    nl_infoboxes = load_dict_pickle(args.nl_pickle)  # 556 out of 2908 are actually infoboxes, other say "NA"
-    en_infoboxes = load_dict_pickle(args.en_pickle)  # 2908 infoboxes
+    nl_infoboxes = load_pickle(args.nl_pickle)  # 556 out of 2908 are actually infoboxes, other say "NA"
+    en_infoboxes = load_pickle(args.en_pickle)  # 2908 infoboxes
 
     # Print example of how key value pair looks:
     first_title = list(en_infoboxes.keys())[0]
