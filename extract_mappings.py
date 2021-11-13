@@ -14,13 +14,14 @@ from unidecode import unidecode
 
 from utils import *
 
-from collections import defaultdict
+from collections import defaultdict, Counter
 
 
 @dataclass
 class Mapping:
     en_key: str
     nl_key: str
+    train_count: int = 0  # How many times this mapping is seen in training
     reason: str = None  # Explanation of how this mapping came to be
 
     def translate(self, en_key: str, allow_fuzzy=True) -> str:
@@ -31,6 +32,10 @@ class Mapping:
             return self.nl_key
 
         return None
+
+    def set_counter(self, count: int) -> Mapping:
+        self.train_count = count
+        return self
 
     def __hash__(self):
         return hash((self.en_key, self.nl_key))
@@ -130,7 +135,7 @@ def main():
     both_available = en_infoboxes.keys() & nl_infoboxes.keys()
 
     # Expect normalized en_keys as the original keys here
-    mappings = set()
+    mappings = Counter()
 
     for key in both_available:
         for nl_k, nl_v in nl_infoboxes[key].items():
@@ -155,9 +160,9 @@ def main():
                     reason = None
 
                 if reason:
-                    mappings.add(Mapping(en_k, nl_k, reason=reason))
+                    mappings.update([Mapping(en_k, nl_k, reason=reason)])
 
-    mappings = list(mappings)
+    mappings = [m.set_counter(count) for m, count in mappings.items()]
     mapper = Mapper(mappings)
 
     with open('data/mappings.pickle', 'wb') as f:
