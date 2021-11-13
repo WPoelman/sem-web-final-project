@@ -7,14 +7,14 @@ both Dutch and English available.
 from __future__ import annotations
 
 import argparse
+from collections import Counter, defaultdict
 from dataclasses import dataclass
-from typing import List, Optional, Set, Union
+from typing import List, Optional
 
+import Levenshtein
 from unidecode import unidecode
 
 from utils import *
-
-from collections import defaultdict, Counter
 
 
 @dataclass
@@ -143,7 +143,12 @@ def create_arg_parser():
                         default='data/train/nl_infoboxes_clean.pickle',
                         type=str,
                         help="Path to cleaned Dutch infoboxes train set")
-
+    parser.add_argument("-t", "--threshold",
+                        default=0.8,
+                        type=float,
+                        help=("Levenshtein similarity ratio threshold for "
+                              "infobox values, bigger or equal to the "
+                              "threshold counts as a match)"))
     args = parser.parse_args()
     return args
 
@@ -163,14 +168,22 @@ def main():
     for key in both_available:
         for nl_k, nl_v in nl_infoboxes[key].items():
             nl_k_norm = normalize_str(nl_k)
+            nl_v_norm = normalize_str(nl_v)
 
             for en_k, en_v in en_infoboxes[key].items():
                 en_k_norm = normalize_str(en_k)
+                en_v_norm = normalize_str(en_v)
 
-                if nl_k_norm == en_k_norm:
+                if nl_k == en_k:
                     reason = 'Exact key match'
+                elif nl_k_norm == en_k_norm:
+                    reason = 'Normalized key match'
                 elif nl_v == en_v:
                     reason = 'Exact value match'
+                elif nl_v_norm == en_v_norm:
+                    reason = 'Normalized value match'
+                elif Levenshtein.ratio(nl_v_norm, en_v_norm) >= args.threshold:
+                    reason = 'Normalized value Levenshtein match'
                 # De resultaten van deze zijn matig tot zeer poep, staat daarom
                 # voor nu even uit
                 # elif (nl_v in en_v) or (en_v in nl_v):
