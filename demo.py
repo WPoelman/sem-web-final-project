@@ -89,59 +89,60 @@ if __name__ == "__main__":
     if not en_infobox:
         print("There is no infobox available for this Wikipedia page, "
               "please try another title.", file=sys.stderr)
-    else:
-        # Get NL title and retrieve Dutch wikipedia infobox
-        nl_title = get_dutch_title(en_title)
-        nl_infobox = get_infobox(nl_title, 'nl')
+        exit(1)
 
-        # Clean the English infobox
-        cleaned_en = clean_ib_dict(en_infobox)
+    # Get NL title and retrieve Dutch wikipedia infobox
+    nl_title = get_dutch_title(en_title)
+    nl_infobox = get_infobox(nl_title, 'nl')
 
-        # todo: various steps of filling the new infobox
-        # We try to generate the NL infobox
-        new_infobox = dict()
-        for en_key in cleaned_en:
-            # TODO: test if we want fuzzy here or not
-            nl_key_options = mapper.translate(en_key)
+    # Clean the English infobox
+    cleaned_en = clean_ib_dict(en_infobox)
 
-            if nl_key_options:
-                # TODO: find a way to rank these and pick the best one
-                # (key co-occurrence maybe? On both the Dutch and English
-                # training sets?)
-                new_infobox[nl_key_options[0]] = cleaned_en[en_key]
-            # If the label is not in our mapping, simply translate the English label to a Dutch label
-            else:
-                nl_key = translate(en_key)
-                if nl_key not in new_infobox:
-                    # todo: decide whether we want to just use the same value in this case
-                    new_infobox[nl_key] = cleaned_en[en_key]
+    # todo: various steps of filling the new infobox
+    # We try to generate the NL infobox
+    new_infobox = dict()
+    for en_key in cleaned_en:
+        # TODO: test if we want fuzzy here or not
+        nl_key_options = mapper.translate(en_key)
 
-        # todo: Here we put specific cases to overwrite keys
-        # If NL title differs from the EN title, we say it is a translated book
-        if 'name' in cleaned_en:
-            if nl_title != en_title:
-                new_infobox['orig titel'] = en_title
-            new_infobox['naam'] = nl_title
-
-        # If it is translated, add the original language
-        if 'orig titel' in new_infobox and 'language' in cleaned_en:
-            new_infobox['originele taal'] = translate(cleaned_en['language'])
-
-        # If a book is part of a series, we try to find the EN and NL wikipedia pages for it
-        if 'series' in cleaned_en:
-            dutch_series = get_dutch_title(cleaned_en['series'])
-            new_infobox['reeks'] = dutch_series
-
-        # Finally, if there is an existing NL infobox, we first use those key-value pairs and add only
-        # the missing ones from our generated infobox to it.
-        if nl_infobox:
-            cleaned_nl = clean_ib_dict(nl_infobox)
-            for key in new_infobox:
-                if key not in cleaned_nl:
-                    cleaned_nl[key] = new_infobox[key]
+        if nl_key_options:
+            # TODO: find a way to rank these and pick the best one
+            # (key co-occurrence maybe? On both the Dutch and English
+            # training sets?)
+            new_infobox[nl_key_options[0]] = cleaned_en[en_key]
+        # If the label is not in our mapping, simply translate the English label to a Dutch label
         else:
-            cleaned_nl = new_infobox
+            nl_key = translate(en_key)
+            if nl_key not in new_infobox:
+                # todo: decide whether we want to just use the same value in this case
+                new_infobox[nl_key] = cleaned_en[en_key]
 
-        # The combination of the existing infobox with our own infobox
-        print(cleaned_nl)
-        print(new_infobox)  # Our self created infobox so far
+    # todo: Here we put specific cases to overwrite keys
+    # If NL title differs from the EN title, we say it is a translated book
+    if 'name' in cleaned_en:
+        if nl_title != en_title:
+            new_infobox['orig titel'] = en_title
+        new_infobox['naam'] = nl_title
+
+    # If it is translated, add the original language
+    if 'orig titel' in new_infobox and 'language' in cleaned_en:
+        new_infobox['originele taal'] = translate(cleaned_en['language'])
+
+    # If a book is part of a series, we try to find the EN and NL wikipedia pages for it
+    if 'series' in cleaned_en:
+        dutch_series = get_dutch_title(cleaned_en['series'])
+        new_infobox['reeks'] = dutch_series
+
+    # Finally, if there is an existing NL infobox, we first use those key-value pairs and add only
+    # the missing ones from our generated infobox to it.
+    if nl_infobox:
+        cleaned_nl = clean_ib_dict(nl_infobox)
+        for key in new_infobox:
+            if key not in cleaned_nl:
+                cleaned_nl[key] = new_infobox[key]
+    else:
+        cleaned_nl = new_infobox
+
+    # The combination of the existing infobox with our own infobox
+    print(cleaned_nl)
+    print(new_infobox)  # Our self created infobox so far
