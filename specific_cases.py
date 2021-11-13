@@ -6,9 +6,11 @@ File to handle several specific cases in generating the Dutch infoboxes.
 
 from demo import get_dutch_title, translate
 
+
 def handle_specific_cases(en_ib, nl_ib, key_pairs, en_title, nl_title):
 	"""Takes the English and currently generated Dutch infobox, to replace
 	or add values for certain very specific cases"""
+
 	# If NL title differs from the EN title, we say it is a translated book
 	if 'name' in en_ib:
 		if nl_title != en_title:
@@ -26,7 +28,7 @@ def handle_specific_cases(en_ib, nl_ib, key_pairs, en_title, nl_title):
 		nl_ib.pop(key_pairs['series'], None)
 		nl_ib['reeks'] = dutch_series
 
-	# The genre label has some dubious translations to Dutch
+	# The genre label has some dubious exceptions when translating to Dutch
 	if 'genre' in en_ib:
 		genre = en_ib['genre']
 		if genre == 'Science fiction':
