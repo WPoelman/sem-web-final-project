@@ -123,7 +123,7 @@ if __name__ == "__main__":
                 chosen_keypairs[en_key] = nl_key
 
     # We update the dictionary by handling specific cases for generating labels
-    updated_dictionary = handle_specific_cases(cleaned_en, new_infobox, chosen_keypairs, en_title, nl_title)
+    new_infobox = handle_specific_cases(cleaned_en, new_infobox, chosen_keypairs, en_title, nl_title)
 
     # Finally, if there is an existing NL infobox, we first use those key-value pairs and add only
     # the missing ones from our generated infobox to it.
