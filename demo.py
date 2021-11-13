@@ -82,15 +82,19 @@ def translate(value, source='en', target='nl'):
 
 def evaluate(true_infobox, gen_infobox):
     item_count_true = len(true_infobox.keys())
-    item_count_generated = len(gen_infobox.keys())
+    item_count_gen = len(gen_infobox.keys())
 
-    correct_keys = true_infobox.keys() & gen_infobox.keys()
-    correct_values = set(true_infobox.values()) & set(gen_infobox.values())
+    correct_k = len(true_infobox.keys() & gen_infobox.keys())
+    correct_v = len(set(true_infobox.values()) & set(gen_infobox.values()))
 
     pairs_true = {(k, v) for k, v in true_infobox.items()}
-    pairs_generated = {(k, v) for k, v in gen_infobox.items()}
+    pairs_gen = {(k, v) for k, v in gen_infobox.items()}
 
-    correct_pairs = pairs_generated & pairs_true
+    correct_pairs = len(pairs_gen & pairs_true)
+
+    frac_correct_k = round(correct_k / item_count_gen, 3)
+    frac_correct_v = round(correct_v / item_count_gen, 3)
+    frac_correct_pairs = round(correct_pairs / len(pairs_gen), 3)
 
     print(f'''
     --- true infobox ---
@@ -99,13 +103,14 @@ def evaluate(true_infobox, gen_infobox):
     --- generated infobox ---
     {json.dumps(gen_infobox, indent=4)}
 
-
+    --- stats ---
     items in true infobox:      {item_count_true}
-    items in genreated infobox: {item_count_generated}
+    items in genreated infobox: {item_count_gen}
 
-    correct keys:           {len(correct_keys)} / {item_count_generated}
-    correct values keys:    {len(correct_values)} / {item_count_generated}
-    correct key AND value:  {len(correct_pairs)} / {item_count_generated}
+    --- exact matches ---
+    correct keys:          {frac_correct_k} ({correct_k} / {item_count_gen})
+    correct values:        {frac_correct_v} ({correct_v} / {item_count_gen})
+    correct key AND value: {frac_correct_pairs} ({correct_pairs} / {item_count_gen})
     ''')
 
 
@@ -140,7 +145,7 @@ if __name__ == "__main__":
     chosen_keypairs = dict()  # Here we store which EN and NL keys we picked
     for en_key in en_infobox_clean:
         # TODO: test if we want fuzzy here or not
-        nl_key_options = mapper.translate(en_key)
+        nl_key_options = mapper.translate(en_key, allow_fuzzy=False)
 
         if nl_key_options:
             # TODO: find a way to rank these and pick the best one
