@@ -73,8 +73,8 @@ def get_infobox(title, language='en'):
 def translate(value, source='en', target='nl'):
     """Translate from the source to the target language"""
     try:
-        translated_val = GoogleTranslator(
-            source=source, target=target).translate(value)
+        translated_val = GoogleTranslator(source=source,
+                                          target=target).translate(value)
     except:
         return value
     return translated_val
@@ -148,9 +148,6 @@ if __name__ == "__main__":
         nl_key_options = mapper.translate(en_key, allow_fuzzy=False)
 
         if nl_key_options:
-            # TODO: find a way to rank these and pick the best one
-            # (key co-occurrence maybe? On both the Dutch and English
-            # training sets?)
             nl_key = nl_key_options[0]
             nl_new_infobox[nl_key] = en_infobox_clean[en_key]
             chosen_keypairs[en_key] = nl_key

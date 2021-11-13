@@ -43,8 +43,6 @@ class Mapping:
     def __eq__(self, other):
         if not isinstance(other, type(self)):
             return NotImplemented
-        # TODO: maybe also add reason to this, but that could also introduce
-        # unwanted duplicates -> test
         return self.en_key == other.en_key and self.nl_key == other.nl_key
 
 
@@ -87,10 +85,7 @@ class Mapper:
         if en_key not in self.map:
             return None
 
-        # NOTE: we moeten goed opletten of we met een genormaliseerde of de
-        # 'originele' key werken. Ik zit er aan te denk om de norm variant aan
-        # de mapping toe te voegen, maar dat wordt misschien wat
-        # onoverzichtelijk
+        # NOTE: be careful if you are using a normalized key or not 
         mapping_options = self.map[en_key]
 
         if rank_strategy == 'most_frequent':
@@ -184,14 +179,6 @@ def main():
                     reason = 'Normalized value match'
                 elif Levenshtein.ratio(nl_v_norm, en_v_norm) >= args.threshold:
                     reason = 'Normalized value Levenshtein match'
-                # De resultaten van deze zijn matig tot zeer poep, staat daarom
-                # voor nu even uit
-                # elif (nl_v in en_v) or (en_v in nl_v):
-                #     reason = 'Partial value match'
-                # We can add more strategies to extract mappings here, for instance:
-                #   - string distance metrics (Levenstein, gap distance etc.)
-                #   - translated value is (roughly) the same
-                #   - ...
                 else:
                     reason = None
 
