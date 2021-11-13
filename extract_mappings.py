@@ -74,7 +74,12 @@ class Mapper:
 
         return map
 
-    def translate(self, en_key: str, allow_fuzzy=False) -> Optional[List[str]]:
+    def translate(
+        self,
+        en_key: str,
+        allow_fuzzy=False,
+        rank_strategy='most_frequent'
+    ) -> Optional[List[str]]:
         if en_key not in self.map:
             return None
 
@@ -82,8 +87,17 @@ class Mapper:
         # 'originele' key werken. Ik zit er aan te denk om de norm variant aan
         # de mapping toe te voegen, maar dat wordt misschien wat
         # onoverzichtelijk
+        mapping_options = self.map[en_key]
+
+        if rank_strategy == 'most_frequent':
+            mapping_options = sorted(
+                mapping_options,
+                key=lambda x: x.train_count,
+                reverse=True
+            )
+
         results = []
-        for mapping in self.map[en_key]:
+        for mapping in mapping_options:
             option = mapping.translate(en_key, allow_fuzzy)
             if option:
                 results.append(option)
