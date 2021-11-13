@@ -74,6 +74,10 @@ class Mapper:
 
         return map
 
+    @staticmethod
+    def __most_frequent(mappings: List[Mapping]) -> List[Mapping]:
+        return sorted(mappings, key=lambda x: x.train_count, reverse=True)
+
     def translate(
         self,
         en_key: str,
@@ -90,11 +94,7 @@ class Mapper:
         mapping_options = self.map[en_key]
 
         if rank_strategy == 'most_frequent':
-            mapping_options = sorted(
-                mapping_options,
-                key=lambda x: x.train_count,
-                reverse=True
-            )
+            mapping_options = self.__most_frequent(mapping_options)
 
         results = []
         for mapping in mapping_options:
@@ -103,11 +103,20 @@ class Mapper:
                 results.append(option)
         return results
 
-    def get_mappings(self, en_key: str) -> Optional[List[Mapping]]:
+    def get_mappings(
+        self,
+        en_key: str,
+        rank_strategy='most_frequent'
+    ) -> Optional[List[Mapping]]:
         if en_key not in self.map:
             return None
 
-        return list(self.map[en_key])
+        mappings = list(self.map[en_key])
+
+        if rank_strategy == 'most_frequent':
+            mappings = self.__most_frequent(mappings)
+
+        return mappings
 
     def has_key(self, en_key: str) -> bool:
         return en_key in self.map.keys()
