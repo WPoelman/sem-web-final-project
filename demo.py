@@ -118,7 +118,7 @@ if __name__ == "__main__":
 
         # todo: Here we put specific cases to overwrite keys
         # If NL title differs from the EN title, we say it is a translated book
-        if en_key == 'name':
+        if 'name' in cleaned_en:
             if nl_title != en_title:
                 new_infobox['orig titel'] = en_title
             new_infobox['naam'] = nl_title
