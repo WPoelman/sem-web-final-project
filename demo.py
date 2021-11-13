@@ -10,6 +10,7 @@ import wptools
 import requests
 import sys
 from utils import *
+from specific_cases import *
 from deep_translator import GoogleTranslator
 from extract_mappings import Mapping, Mapper
 
@@ -101,6 +102,7 @@ if __name__ == "__main__":
     # todo: various steps of filling the new infobox
     # We try to generate the NL infobox
     new_infobox = dict()
+    chosen_keypairs = dict()  # Here we store which EN and NL keys we picked
     for en_key in cleaned_en:
         # TODO: test if we want fuzzy here or not
         nl_key_options = mapper.translate(en_key)
@@ -109,29 +111,19 @@ if __name__ == "__main__":
             # TODO: find a way to rank these and pick the best one
             # (key co-occurrence maybe? On both the Dutch and English
             # training sets?)
-            new_infobox[nl_key_options[0]] = cleaned_en[en_key]
+            nl_key = nl_key_options[0]
+            new_infobox[nl_key] = cleaned_en[en_key]
+            chosen_keypairs[en_key] = nl_key
         # If the label is not in our mapping, simply translate the English label to a Dutch label
         else:
             nl_key = translate(en_key)
             if nl_key not in new_infobox:
                 # todo: decide whether we want to just use the same value in this case
                 new_infobox[nl_key] = cleaned_en[en_key]
+                chosen_keypairs[en_key] = nl_key
 
-    # todo: Here we put specific cases to overwrite keys
-    # If NL title differs from the EN title, we say it is a translated book
-    if 'name' in cleaned_en:
-        if nl_title != en_title:
-            new_infobox['orig titel'] = en_title
-        new_infobox['naam'] = nl_title
-
-    # If it is translated, add the original language
-    if 'orig titel' in new_infobox and 'language' in cleaned_en:
-        new_infobox['originele taal'] = translate(cleaned_en['language'])
-
-    # If a book is part of a series, we try to find the EN and NL wikipedia pages for it
-    if 'series' in cleaned_en:
-        dutch_series = get_dutch_title(cleaned_en['series'])
-        new_infobox['reeks'] = dutch_series
+    # We update the dictionary by handling specific cases for generating labels
+    new_infobox = handle_specific_cases(cleaned_en, new_infobox, chosen_keypairs, en_title, nl_title)
 
     # Finally, if there is an existing NL infobox, we first use those key-value pairs and add only
     # the missing ones from our generated infobox to it.

@@ -1,0 +1,41 @@
+#!/usr/bin/env python
+
+"""
+File to handle several specific cases in generating the Dutch infoboxes.
+"""
+
+from demo import get_dutch_title, translate
+
+
+def handle_specific_cases(en_ib, nl_ib, key_pairs, en_title, nl_title):
+	"""Takes the English and currently generated Dutch infobox, to replace
+	or add values for certain very specific cases"""
+
+	# If NL title differs from the EN title, we say it is a translated book
+	if 'name' in en_ib:
+		if nl_title != en_title:
+			nl_ib['orig titel'] = en_title
+		used_nl_key = key_pairs['name']
+		nl_ib[used_nl_key] = nl_title
+
+	# If it is translated, add the original language
+	if 'orig titel' in nl_ib and 'language' in en_ib:
+		nl_ib['originele taal'] = translate(en_ib['language'])
+
+	# If a book is part of a series, we try to find the EN and NL wikipedia pages for it
+	if 'series' in en_ib:
+		dutch_series = get_dutch_title(en_ib['series'])
+		nl_ib.pop(key_pairs['series'], None)
+		nl_ib['reeks'] = dutch_series
+
+	# The genre label has some dubious exceptions when translating to Dutch
+	if 'genre' in en_ib:
+		genre = en_ib['genre']
+		if genre == 'Science fiction':
+			nl_ib['genre'] = 'Sciencefiction'
+		elif genre == 'Fantasy':
+			nl_ib['genre'] = 'Fantasy genre Fantasy'
+		else:
+			nl_ib['genre'] = translate(genre)
+
+	return nl_ib
