@@ -80,7 +80,11 @@ def translate(value, source='en', target='nl'):
     return translated_val
 
 
-def evaluate(true_infobox, gen_infobox):
+def rnd(n, ndigits=3):
+    return round(n, ndigits)
+
+
+def evaluate(true_infobox, gen_infobox, chosen_top3):
     item_count_true = len(true_infobox.keys())
     item_count_gen = len(gen_infobox.keys())
 
@@ -92,9 +96,20 @@ def evaluate(true_infobox, gen_infobox):
 
     correct_pairs = len(pairs_gen & pairs_true)
 
-    frac_correct_k = round(correct_k / item_count_gen, 3)
-    frac_correct_v = round(correct_v / item_count_gen, 3)
-    frac_correct_pairs = round(correct_pairs / len(pairs_gen), 3)
+    frac_correct_k = rnd(correct_k / item_count_gen)
+    frac_correct_v = rnd(correct_v / item_count_gen)
+    frac_correct_pairs = rnd(correct_pairs / len(pairs_gen))
+
+    close_keys = []
+    for k, v in true_infobox.items():
+        for k1, v1 in chosen_top3.items():
+            if k != k1 and k in v1:
+                # We don't have the correct key, but it is in the top 3
+                close_keys.append(
+                    f'Actual: {(k, v)} predicted: {k1} options: {v1}'
+                )
+
+    close_keys_results = '\n'.join(close_keys)
 
     print(f'''
     --- true infobox ---
@@ -111,6 +126,9 @@ def evaluate(true_infobox, gen_infobox):
     correct keys:          {frac_correct_k} ({correct_k} / {item_count_gen})
     correct values:        {frac_correct_v} ({correct_v} / {item_count_gen})
     correct key AND value: {frac_correct_pairs} ({correct_pairs} / {item_count_gen})
+
+    --- wrong key but in top 3 ---
+    {close_keys_results}
     ''')
 
 
@@ -143,6 +161,7 @@ if __name__ == "__main__":
     # We try to generate the NL infobox
     nl_new_infobox = dict()
     chosen_keypairs = dict()  # Here we store which EN and NL keys we picked
+    chosen_top3 = dict()
     for en_key in en_infobox_clean:
         # TODO: test if we want fuzzy here or not
         nl_key_options = mapper.translate(en_key, allow_fuzzy=False)
@@ -151,6 +170,7 @@ if __name__ == "__main__":
             nl_key = nl_key_options[0]
             nl_new_infobox[nl_key] = en_infobox_clean[en_key]
             chosen_keypairs[en_key] = nl_key
+            chosen_top3[nl_key] = nl_key_options[:3]
         # If the label is not in our mapping, simply translate the English
         # label to a Dutch label
         else:
@@ -182,7 +202,7 @@ if __name__ == "__main__":
     #     cleaned_nl = nl_new_infobox
 
     if nl_infobox_clean:
-        evaluate(nl_infobox_clean, nl_new_infobox)
+        evaluate(nl_infobox_clean, nl_new_infobox, chosen_top3)
     else:
         print(f'Cannot evaluate {en_title} since there is no Dutch infobox')
 
