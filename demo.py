@@ -13,6 +13,7 @@ Description:
 import argparse
 import concurrent.futures
 import sys
+from typing import Dict, List
 
 from extract_mappings import Mapper, Mapping
 from specific_cases import *
@@ -37,30 +38,42 @@ def create_arg_parser():
                         type=str,
                         help="Path to a trained mapper object.")
     parser.add_argument("-w", "--max_workers", default=32,
-                        help="Max concurrent workers used to create the infoboxes.")
+                        help=("Max concurrent workers used to create the"
+                              " infoboxes."))
     parser.add_argument("-v", "--verbose", action='store_true',
-                        help="Show the output of the boxes as they are created")
+                        help=("Show the output of the boxes as they are "
+                              "created"))
     parser.add_argument("-e", "--expand", action='store_true',
-                        help="Next to newly generated infboxes, also try to expand existing infoboxes")
+                        help=("Next to newly generated infboxes, also try to "
+                              "expand existing infoboxes"))
     args = parser.parse_args()
     return args
 
 
-def evaluate_infobox(true_infobox, gen_infobox, chosen_top3):
+def evaluate_infobox(
+    true_infobox: InfoBox,
+    gen_infobox: InfoBox,
+    chosen_top3: Dict[str, List[str]]
+) -> str:
+    ''' Compares two infoboxes along with the top 3 options per chosen key for
+        the generated infobox. It returns an evaluation report with the 
+        infoboxes themselves and various metrics.
+    '''
     item_count_true = len(true_infobox.keys())
     item_count_gen = len(gen_infobox.keys())
 
-    correct_k = len(true_infobox.keys() & gen_infobox.keys())
-    correct_v = len(set(true_infobox.values()) & set(gen_infobox.values()))
+    # 'Correct is abbreviated to 'c' to keep things somewhat short and readable
+    c_k = len(true_infobox.keys() & gen_infobox.keys())
+    c_v = len(set(true_infobox.values()) & set(gen_infobox.values()))
 
     pairs_true = {(k, v) for k, v in true_infobox.items()}
     pairs_gen = {(k, v) for k, v in gen_infobox.items()}
 
-    correct_pairs = len(pairs_gen & pairs_true)
+    c_pairs = len(pairs_gen & pairs_true)
 
-    frac_correct_k = rnd(correct_k / item_count_gen)
-    frac_correct_v = rnd(correct_v / item_count_gen)
-    frac_correct_pairs = rnd(correct_pairs / len(pairs_gen))
+    frac_c_k = rnd(c_k / item_count_gen)
+    frac_c_v = rnd(c_v / item_count_gen)
+    frac_c_pairs = rnd(c_pairs / len(pairs_gen))
 
     close_keys = []
     for k, v in true_infobox.items():
@@ -87,9 +100,9 @@ def evaluate_infobox(true_infobox, gen_infobox, chosen_top3):
     items in generated infobox: {item_count_gen}
 
     --- exact matches ---
-    correct keys:          {frac_correct_k} ({correct_k} / {item_count_gen})
-    correct values:        {frac_correct_v} ({correct_v} / {item_count_gen})
-    correct key AND value: {frac_correct_pairs} ({correct_pairs} / {item_count_gen})
+    correct keys:          {frac_c_k} ({c_k} / {item_count_gen})
+    correct values:        {frac_c_v} ({c_v} / {item_count_gen})
+    correct key AND value: {frac_c_pairs} ({c_pairs} / {item_count_gen})
 
     --- wrong key but in top 3 ---
     {close_keys_results}
@@ -102,9 +115,9 @@ class InfoBoxGenerator:
     def __init__(
         self,
         mapper: Mapper,
-        output_folder='data/reports/',
-        verbose=False,
-        expand_existing=False
+        output_folder: str = 'data/reports/',
+        verbose: bool = False,
+        expand_existing: bool = False
     ) -> None:
         '''
         Class to generate infoboxes.
@@ -123,8 +136,8 @@ class InfoBoxGenerator:
 
     def generate_infobox(
         self,
-        en_title,
-        evaluate=True,
+        en_title: str,
+        evaluate: bool = True,
     ):
         ''' 
         Creates a Dutch infobox for a given English Wikipedia article title.
@@ -140,7 +153,7 @@ class InfoBoxGenerator:
         # the NL infobox as well
         if not en_infobox:
             print(
-                f"There is no English infobox available for {en_title}, skipping.",
+                f"There is no English infobox for {en_title}, skipping.",
                 file=sys.stderr
             )
             return None
@@ -158,7 +171,7 @@ class InfoBoxGenerator:
 
         # We try to generate the NL infobox
         nl_new_infobox = dict()
-        chosen_keypairs = dict()  # Here we store which EN and NL keys we picked
+        chosen_keypairs = dict()  # Here we store which EN & NL keys we picked
         chosen_top3 = dict()
 
         for en_key in en_infobox_clean:
@@ -177,7 +190,8 @@ class InfoBoxGenerator:
                     nl_new_infobox[nl_key] = en_infobox_clean[en_key]
                     chosen_keypairs[en_key] = nl_key
 
-        # We update the dictionary by handling specific cases for generating labels
+        # We update the dictionary by handling specific cases for 
+        # generating labels
         nl_new_infobox = handle_specific_cases(en_infobox_clean,
                                                nl_new_infobox,
                                                chosen_keypairs,
@@ -191,7 +205,7 @@ class InfoBoxGenerator:
                 chosen_top3
             )
         else:
-            report = f'Cannot evaluate {en_title} since there is no Dutch infobox'
+            report = f'Cannot evaluate {en_title}, there is no Dutch infobox'
 
         # Finally, if there is an existing NL infobox, we first use those
         # key-value pairs and add only the missing ones from our generated

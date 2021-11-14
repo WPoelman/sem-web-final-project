@@ -13,6 +13,7 @@ import io
 import json
 import pickle
 import re
+from typing import Any, Dict, Optional
 
 import requests
 import wptools
@@ -22,14 +23,16 @@ WHITESPACE_PATTERN = re.compile(r'\W+')
 TAG_PATTERN = re.compile(r'<[^>]+>')
 TRANSLATION = str.maketrans({'[': ' ', ']': ' ', '{': ' ', '}': ' ', '|': ' '})
 
+InfoBox = Dict[str, Any]
 
-def load_pickle(filename):
+
+def load_pickle(filename: str) -> Any:
     with open(filename, 'rb') as handle:
         dict = pickle.load(handle)
     return dict
 
 
-def clean_str(string):
+def clean_str(string: str) -> str:
     # remove brackets
     string = string.translate(TRANSLATION)
     # remove html tags
@@ -44,13 +47,14 @@ def unpack_iterables(item):
         return item
     elif type(item) == str:
         return clean_str(item)
-    elif len(item) > 0 and all(type(a) not in (list, tuple, set) for a in item):
+    elif (len(item) > 0 and
+            all(type(a) not in (list, tuple, set) for a in item)):
         return item
 
     return unpack_iterables(item[0])
 
 
-def clean_ib_dict(ib_dict):
+def clean_ib_dict(ib_dict: InfoBox) -> InfoBox:
     """Takes an infobox dicionary as input, cleans all the
      values and returns the cleaned infobox dictionary"""
     cleaned_dict = dict()
@@ -59,7 +63,7 @@ def clean_ib_dict(ib_dict):
     return cleaned_dict
 
 
-def get_dutch_title(en_title):
+def get_dutch_title(en_title: str) -> str:
     """Use the English title of a Wikipedia page to get the Dutch title"""
     try:
         URL = "https://en.wikipedia.org/w/api.php"
@@ -82,7 +86,7 @@ def get_dutch_title(en_title):
     return dutch_title
 
 
-def get_infobox(title, language='en'):
+def get_infobox(title: str, language: str = 'en') -> Optional[InfoBox]:
     """Use the title of a Wikipedia page to get the infobox"""
     # For some reason this library prints a lot of garbage even though we tell
     # it three (!) times to be quiet. This is a known problem:
@@ -93,8 +97,10 @@ def get_infobox(title, language='en'):
     with contextlib.redirect_stderr(io.StringIO()), \
             contextlib.redirect_stdout(io.StringIO()):
         try:
-            page = wptools.page(title, lang=language,
-                                silent=True, verbose=False).get_parse(show=False)
+            page = wptools.page(title,
+                                lang=language,
+                                silent=True,
+                                verbose=False).get_parse(show=False)
             infobox = page.data['infobox']
         except:
             infobox = None
@@ -102,12 +108,12 @@ def get_infobox(title, language='en'):
     return infobox
 
 
-def rnd(n, ndigits=3):
+def rnd(n: float, ndigits: int = 3) -> float:
     ''' Helper for consistent rounding'''
     return round(n, ndigits)
 
 
-def translate(value, source='en', target='nl'):
+def translate(value: str, source: str = 'en', target: str = 'nl') -> str:
     """Translate from the source to the target language"""
     try:
         translated_val = GoogleTranslator(source=source,

@@ -12,6 +12,7 @@ Description:
 import argparse
 import concurrent.futures
 import pickle
+from typing import Any, Dict
 
 from utils import *
 
@@ -27,14 +28,14 @@ def create_arg_parser():
     return args
 
 
-def get_data(en_title):
+def get_data(en_title: str):
     en_infobox = get_infobox(en_title)
     nl_title = get_dutch_title(en_title)
     nl_infobox = get_infobox(nl_title, 'nl')
     return en_title, en_infobox, nl_title, nl_infobox
 
 
-def create_dict_pickle(dict, filename):
+def create_dict_pickle(dict: Dict[Any, Any], filename: str):
     with open(filename, 'wb') as handle:
         pickle.dump(dict, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
@@ -54,7 +55,7 @@ def main():
     both_infoboxes_titles = []
     only_en = 0
 
-    print(f'Fetching {len(titles)} with {args.max_workers} workers')
+    print(f'Fetching {len(titles)} titles with {args.max_workers} workers...')
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.max_workers) as executor:
         futures = [executor.submit(get_data, title) for title in titles]

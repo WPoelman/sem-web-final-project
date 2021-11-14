@@ -15,7 +15,7 @@ from __future__ import annotations
 import argparse
 from collections import Counter, defaultdict
 from dataclasses import dataclass
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 
 import Levenshtein
 from unidecode import unidecode
@@ -30,7 +30,7 @@ class Mapping:
     train_count: int = 0  # How many times this mapping is seen in training
     reason: str = None  # Explanation of how this mapping came to be
 
-    def translate(self, en_key: str, allow_fuzzy=True) -> str:
+    def translate(self, en_key: str, allow_fuzzy: bool = True) -> str:
         if en_key == self.en_key:
             return self.nl_key
 
@@ -46,7 +46,7 @@ class Mapping:
     def __hash__(self):
         return hash((self.en_key, self.nl_key))
 
-    def __eq__(self, other):
+    def __eq__(self, other: Any):
         if not isinstance(other, type(self)):
             return NotImplemented
         return self.en_key == other.en_key and self.nl_key == other.nl_key
@@ -57,7 +57,7 @@ class Mapper:
         self.map = self.__create_map(mappings)
 
     @staticmethod
-    def __create_map(mappings):
+    def __create_map(mappings: List[Mapping]) -> Dict[str, set]:
         map = defaultdict(set)
         # First add all mappings we know
         for map1 in mappings:
@@ -85,8 +85,8 @@ class Mapper:
     def translate(
         self,
         en_key: str,
-        allow_fuzzy=False,
-        rank_strategy='most_frequent'
+        allow_fuzzy: bool = False,
+        rank_strategy: str = 'most_frequent'
     ) -> Optional[List[str]]:
         if en_key not in self.map:
             return None
@@ -124,6 +124,7 @@ class Mapper:
 
 
 def normalize_str(string: str) -> str:
+    '''Normalizes a string'''
     # Do the basic cleaning of possibly noisy Wikipedia specific stuff
     string = clean_str(string)
     # Next try ascii folding to account for localization differences
@@ -132,13 +133,15 @@ def normalize_str(string: str) -> str:
     return string
 
 
-def print_top_10_mappings(mappings):
+def print_top_10_mappings(mappings: List[Mapping]):
     """Prints top 10 mappings, according to occurrence frequency"""
 
     # Get and sort mappings according to counts
     counts = [(m.train_count, m.en_key, m.nl_key) for m in mappings]
     counts.sort(key=lambda tup: tup[0], reverse=True)
-    print(f'### TOP 10 MAPPINGS:\n\nEnglish key: {"":<12} Dutch key: {"":<14} Count: {"":<5}')  # Print header
+    # Print header
+    print(f'### TOP 10 MAPPINGS:\n\nEnglish key: {"":<12} Dutch key: '
+          f'{"":<14} Count: {"":<5}')
 
     # Print information
     for t in counts[:10]:

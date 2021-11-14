@@ -1,8 +1,5 @@
 #!/usr/bin/env python
 
-
-#!/usr/bin/env python
-
 """
 Filename:   specific_cases.py
 Date:       14-11-2021
@@ -11,10 +8,17 @@ Description:
 	Program to handle several specific cases in generating the Dutch infoboxes.
 """
 
-from utils import get_dutch_title, translate
+from typing import Dict
+from utils import InfoBox, get_dutch_title, translate
 
 
-def handle_specific_cases(en_ib, nl_ib, key_pairs, en_title, nl_title):
+def handle_specific_cases(
+    en_ib: InfoBox,
+    nl_ib: InfoBox,
+    key_pairs: Dict[str, str],
+    en_title: str,
+    nl_title: str
+) -> InfoBox:
     """Takes the English and currently generated Dutch infobox, to replace
     or add values for certain very specific cases"""
 
@@ -35,7 +39,7 @@ def handle_specific_cases(en_ib, nl_ib, key_pairs, en_title, nl_title):
         nl_ib['originele taal'] = translate(en_ib['language'])
 
     # If a book is part of a series, we try to find the EN and NL wikipedia
-	# pages for it
+        # pages for it
     if 'series' in en_ib:
         dutch_series = get_dutch_title(en_ib['series'])
         nl_ib.pop(key_pairs['series'], None)
