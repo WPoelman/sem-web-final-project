@@ -84,7 +84,7 @@ def evaluate_infobox(true_infobox, gen_infobox, chosen_top3):
 
     --- stats ---
     items in true infobox:      {item_count_true}
-    items in genreated infobox: {item_count_gen}
+    items in generated infobox: {item_count_gen}
 
     --- exact matches ---
     correct keys:          {frac_correct_k} ({correct_k} / {item_count_gen})
@@ -110,7 +110,7 @@ class InfoBoxGenerator:
         Class to generate infoboxes.
 
         expand_existing: When an existing Dutch infobox is found, controls
-                         wether or not to expand that one, or to leave it
+                         whether or not to expand that one, or to leave it
                          as is.
 
         verbose:        Print evaluation output as it is created.
@@ -129,7 +129,7 @@ class InfoBoxGenerator:
         ''' 
         Creates a Dutch infobox for a given English Wikipedia article title.
 
-        evaluate:       Controls wether to create an evaluation report or
+        evaluate:       Controls whether to create an evaluation report or
                         not. These reports are stored in data/reports
                         and have the English article name as filename.
         '''
@@ -174,8 +174,6 @@ class InfoBoxGenerator:
             else:
                 nl_key = translate(en_key)
                 if nl_key not in nl_new_infobox:
-                    # TODO: decide whether we want to just use the same value
-                    # in this case
                     nl_new_infobox[nl_key] = en_infobox_clean[en_key]
                     chosen_keypairs[en_key] = nl_key
 
