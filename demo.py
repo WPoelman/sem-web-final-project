@@ -104,7 +104,9 @@ def evaluate(true_infobox, gen_infobox, chosen_top3):
     for k, v in true_infobox.items():
         for k1, v1 in chosen_top3.items():
             if k != k1 and k in v1:
-                # We don't have the correct key, but it is in the top 3
+                # We don't have the correct key, but it is in the top 3.
+                # This does include some overlap, but that gives us more
+                # insight into the generally wrong/close keys we have.
                 close_keys.append(
                     f'Actual: {(k, v)} predicted: {k1} options: {v1}'
                 )
