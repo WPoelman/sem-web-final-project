@@ -132,6 +132,19 @@ def normalize_str(string: str) -> str:
     return string
 
 
+def print_top_10_mappings(mappings):
+    """Prints top 10 mappings, according to occurrence frequency"""
+
+    # Get and sort mappings according to counts
+    counts = [(m.train_count, m.en_key, m.nl_key) for m in mappings]
+    counts.sort(key=lambda tup: tup[0], reverse=True)
+    print(f'### TOP 10 MAPPINGS:\n\nEnglish key: {"":<12} Dutch key: {"":<14} Count: {"":<5}')  # Print header
+
+    # Print information
+    for t in counts[:10]:
+        print(f'{t[1]:<25} {t[2]:<25} {t[0]:<25}')
+
+
 def create_arg_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument("-e", "--en_path",
@@ -148,6 +161,9 @@ def create_arg_parser():
                         help=("Levenshtein similarity ratio threshold for "
                               "infobox values, bigger or equal to the "
                               "threshold counts as a match)"))
+    parser.add_argument("-top_10", "--top_10",
+                        action="store_true",
+                        help="Print top 10 mappings")
     args = parser.parse_args()
     return args
 
@@ -191,6 +207,9 @@ def main():
 
     mappings = [m.set_counter(count) for m, count in mappings.items()]
     mapper = Mapper(mappings)
+
+    if args.top_10:
+        print_top_10_mappings(mappings)
 
     with open('data/mappings.pickle', 'wb') as f:
         pickle.dump(mappings, f)
