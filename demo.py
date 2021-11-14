@@ -202,7 +202,7 @@ class InfoBoxGenerator:
         if expanded:
             with open(f'{self.output_folder}{en_title}_expanded.txt', 'w') as f:
                 f.write(
-                    f'Original: \n{format_dict_str(nl_infobox)}\n'
+                    f'Original: \n{format_dict_str(nl_infobox_clean)}\n'
                     f'------------------------------------------\n'
                     f'Expanded: \n{format_dict_str(expanded) }'
                 )
