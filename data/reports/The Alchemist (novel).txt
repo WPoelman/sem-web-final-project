@@ -1,0 +1,60 @@
+
+    --- true infobox ---
+    {
+    "naam": "De Alchemist",
+    "orig titel": "O Alquimista",
+    "auteur": "Paulo Coelho",
+    "land": "Brazili\u00eb",
+    "taal": "oorspronkelijk in Portugees",
+    "genre": "esoterie",
+    "uitgiftedatum": "1988",
+    "paginas": "140 NL editie",
+    "grootte_gewicht": "126 15 201 mm 175 g",
+    "isbn": "9029508981"
+}
+
+    --- generated infobox ---
+    {
+    "orig titel": "De Alchemist (roman)",
+    "cover-op-enwp": "File TheAlchemist jpg",
+    "onderschrift": "Original Brazilian publication",
+    "auteur": "Paulo Coelho",
+    "kaftontwerp": "Caravaggio Narcissus Caravaggio Narcissus 1597 9",
+    "land": "Brazili\u00eb",
+    "originele taal": "Portugees",
+    "genre": "Zoektocht Avontuur roman avontuur Fantasie roman fantasie",
+    "uitgever": "HarperCollins HarperTorch English translation",
+    "uitgiftedatum origineel": "1988",
+    "uitgiftedatum": "1993",
+    "medium": "Print hardback paperback and iTunes Audiobook Audible",
+    "paginas": "163 pp first English edition hardcover 208 pages 25th Anniversary Edition",
+    "dewey": "869 3",
+    "isbn": "0 06 250217 4",
+    "isbn_note": "first English edition hardcover",
+    "oclc": "26857452",
+    "voorafgegaan": "The Pilgrimage 1987",
+    "vervolg": "Brida 1990"
+}
+
+    --- stats ---
+    items in true infobox:      10
+    items in generated infobox: 19
+
+    --- exact matches ---
+    correct keys:          0.368 (7 / 19)
+    correct values:        0.158 (3 / 19)
+    correct key AND value: 0.105 (2 / 19)
+
+    --- wrong key but in top 3 ---
+    Actual: ('naam', 'De Alchemist') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
+Actual: ('orig titel', 'O Alquimista') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'O Alquimista') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
+Actual: ('orig titel', 'O Alquimista') predicted: voorafgegaan options: ['voorafgegaan', 'vorigeboek', 'orig titel']
+Actual: ('orig titel', 'O Alquimista') predicted: vervolg options: ['vervolg', 'volgendeboek', 'orig titel']
+Actual: ('auteur', 'Paulo Coelho') predicted: kaftontwerp options: ['kaftontwerp', 'illustraties', 'auteur']
+Actual: ('taal', 'oorspronkelijk in Portugees') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('taal', 'oorspronkelijk in Portugees') predicted: originele taal options: ['originele taal', 'taal']
+Actual: ('uitgiftedatum', '1988') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
+Actual: ('uitgiftedatum', '1988') predicted: paginas options: ['paginas', 'uitgiftedatum']
+Actual: ('paginas', '140 NL editie') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
+    

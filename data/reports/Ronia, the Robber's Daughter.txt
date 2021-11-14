@@ -1,0 +1,54 @@
+
+    --- true infobox ---
+    {
+    "naam": "Ronja de roversdochter",
+    "orig titel": "Ronja R\u00f6vardotter",
+    "cover-op-enwp": "Ronia Robbers Daughter png",
+    "auteur": "Astrid Lindgren",
+    "illustraties": "Ilon Wikland",
+    "land": "Zweden",
+    "taal": "Zweeds",
+    "uitgever": "Rab\u00e9n Sj\u00f6gren",
+    "uitgiftedatum": "1981",
+    "paginas": "235",
+    "isbn": "91 29 54877 2",
+    "film": "Ronja de roversdochter film"
+}
+
+    --- generated infobox ---
+    {
+    "orig titel": "Ronja de roversdochter",
+    "cover-op-enwp": "Ronia Robbers Daughter png",
+    "onderschrift": "First edition",
+    "auteur": "Astrid Lindgren",
+    "illustraties": "Ilon Wikland",
+    "land": "Zweden",
+    "originele taal": "Zweedse taal Zweeds",
+    "uitgever": "Rab\u00e9n Sj\u00f6gren",
+    "uitgiftedatum origineel": "1981 in literature 1981",
+    "paginas": "235 pp",
+    "isbn": "91 29 54877 2",
+    "congres": "MLCS 82 9917",
+    "oclc": "9462379"
+}
+
+    --- stats ---
+    items in true infobox:      12
+    items in generated infobox: 13
+
+    --- exact matches ---
+    correct keys:          0.615 (8 / 13)
+    correct values:        0.538 (7 / 13)
+    correct key AND value: 0.462 (6 / 13)
+
+    --- wrong key but in top 3 ---
+    Actual: ('naam', 'Ronja de roversdochter') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
+Actual: ('orig titel', 'Ronja Rövardotter') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'Ronja Rövardotter') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
+Actual: ('auteur', 'Astrid Lindgren') predicted: illustraties options: ['illustraties', 'kaftontwerp', 'auteur']
+Actual: ('illustraties', 'Ilon Wikland') predicted: auteur options: ['auteur', 'schrijver', 'illustraties']
+Actual: ('taal', 'Zweeds') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('taal', 'Zweeds') predicted: originele taal options: ['originele taal', 'taal']
+Actual: ('uitgiftedatum', '1981') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'jaren-actief']
+Actual: ('uitgiftedatum', '1981') predicted: paginas options: ['paginas', 'uitgiftedatum']
+    

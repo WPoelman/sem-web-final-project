@@ -1,0 +1,51 @@
+
+    --- true infobox ---
+    {
+    "naam": "Pinokkio",
+    "afbeelding": "Le avventure di Pinocchio pag007 jpg",
+    "onderschrift": "Italiaans uitgave uit 1902",
+    "orig titel": "Le avventure di Pinocchio Pinocchio",
+    "auteur": "Carlo Collodi",
+    "vertaler": "Andrea Rauch Leontine Bijman A Bottner Joseph Witlox Hans Andreus Annelies Kin",
+    "illustraties": "Enrico Mazzanti Carlo Chiostri Roberto Innocenti Quentin Gr\u00e9ban Elice Kernkamp Justine Brax",
+    "land": "Itali\u00eb",
+    "originele taal": "Italiaans",
+    "genre": "Kinderboek sprookje",
+    "originele uitgever": "Felice Paggi",
+    "uitgiftedatum origineel": "1883",
+    "paginas": "224",
+    "film": "o a Pinokkio 1940 Pinokkio"
+}
+
+    --- generated infobox ---
+    {
+    "orig titel": "Pinokkio (boek)",
+    "cover-op-enwp": "Pinocchio jpg",
+    "afbeeldingbreedte": "190px",
+    "onderschrift": "illustration from 1883 edition by Enrico Mazzanti",
+    "auteur": "Carlo Collodi",
+    "illustraties": "Enrico Mazzanti",
+    "land": "Itali\u00eb",
+    "originele taal": "Italiaanse taal Italiaans",
+    "genre": "Fictie literatuur fantasie kinderboek Avontuur fictie avontuur",
+    "uitgiftedatum origineel": "1883"
+}
+
+    --- stats ---
+    items in true infobox:      14
+    items in generated infobox: 10
+
+    --- exact matches ---
+    correct keys:          0.8 (8 / 10)
+    correct values:        0.3 (3 / 10)
+    correct key AND value: 0.3 (3 / 10)
+
+    --- wrong key but in top 3 ---
+    Actual: ('naam', 'Pinokkio') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('afbeelding', 'Le avventure di Pinocchio pag007 jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'Le avventure di Pinocchio Pinocchio') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'Le avventure di Pinocchio Pinocchio') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
+Actual: ('auteur', 'Carlo Collodi') predicted: illustraties options: ['illustraties', 'kaftontwerp', 'auteur']
+Actual: ('illustraties', 'Enrico Mazzanti Carlo Chiostri Roberto Innocenti Quentin Gréban Elice Kernkamp Justine Brax') predicted: auteur options: ['auteur', 'schrijver', 'illustraties']
+Actual: ('paginas', '224') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
+    

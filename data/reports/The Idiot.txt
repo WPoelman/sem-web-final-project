@@ -1,0 +1,42 @@
+
+    --- true infobox ---
+    {
+    "naam": "De idioot",
+    "onderschrift": "Fjodor Dostojevski",
+    "orig titel": "\u0418\u0434\u0438\u043e\u0442",
+    "auteur": "Fjodor Dostojevski",
+    "vertaler": "Charles B Timmer",
+    "land": "Rusland hoofdbetekenis Rusland",
+    "taal": "Nederlands",
+    "originele taal": "Russisch hoofdbetekenis Russisch",
+    "genre": "Roman",
+    "uitgever": "Uitg Maarten Muntinga",
+    "uitgiftedatum": "2010",
+    "uitgiftedatum origineel": "1869",
+    "paginas": "761",
+    "isbn": "9789041704719"
+}
+
+    --- generated infobox ---
+    {
+    "orig titel": "De idioot",
+    "cover-op-enwp": "Fyodor Dostoyevsky manuscript and drawing 06 jpg",
+    "onderschrift": "Drawing and handwritten text by Fyodor Dostoevsky",
+    "auteur": "Fyodor Dostoevsky",
+    "orig_lang_code": "ru"
+}
+
+    --- stats ---
+    items in true infobox:      14
+    items in generated infobox: 5
+
+    --- exact matches ---
+    correct keys:          0.6 (3 / 5)
+    correct values:        0.2 (1 / 5)
+    correct key AND value: 0.0 (0 / 5)
+
+    --- wrong key but in top 3 ---
+    Actual: ('naam', 'De idioot') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
+Actual: ('orig titel', 'Идиот') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'Идиот') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
+    

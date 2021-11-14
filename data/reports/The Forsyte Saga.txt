@@ -1,0 +1,31 @@
+
+    --- true infobox ---
+    {
+    "naam": "The Forsyte Saga",
+    "auteur": "John Galsworthy",
+    "land": "Engeland",
+    "originele taal": "Engels",
+    "uitgiftedatum origineel": "1922"
+}
+
+    --- generated infobox ---
+    {
+    "orig titel": "The Forsyte Saga",
+    "auteur": "John Galsworthy",
+    "genre": "Roman",
+    "uitgever": "William Heinemann Ltd",
+    "uitgiftedatum origineel": "1906 1921 serialised"
+}
+
+    --- stats ---
+    items in true infobox:      5
+    items in generated infobox: 5
+
+    --- exact matches ---
+    correct keys:          0.4 (2 / 5)
+    correct values:        0.4 (2 / 5)
+    correct key AND value: 0.2 (1 / 5)
+
+    --- wrong key but in top 3 ---
+    Actual: ('naam', 'The Forsyte Saga') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+    

@@ -1,0 +1,44 @@
+
+    --- true infobox ---
+    {
+    "naam": "Die Leiden des jungen Werthers",
+    "afbeelding": "Goethe 1774 JPG",
+    "auteur": "Johann Wolfgang von Goethe",
+    "land": "Duitsland",
+    "taal": "Duits",
+    "genre": "Briefroman",
+    "uitgever": "Weygand sche Buchhandlung Leipzig",
+    "uitgiftedatum": "1774"
+}
+
+    --- generated infobox ---
+    {
+    "orig titel": "Die Leiden des jungen Werthers",
+    "cover-op-enwp": "Goethe 1774 JPG",
+    "onderschrift": "First print 1774",
+    "auteur": "Johann Wolfgang von Goethe",
+    "land": "Duitsland",
+    "originele taal": "Duitse taal Duits",
+    "genre": "briefroman",
+    "uitgever": "Weygand sche Buchhandlung Leipzig",
+    "uitgiftedatum origineel": "29 September 1774 in literature 1774 revised ed 1787 in literature 1787",
+    "uitgiftedatum": "1779"
+}
+
+    --- stats ---
+    items in true infobox:      8
+    items in generated infobox: 10
+
+    --- exact matches ---
+    correct keys:          0.5 (5 / 10)
+    correct values:        0.5 (5 / 10)
+    correct key AND value: 0.3 (3 / 10)
+
+    --- wrong key but in top 3 ---
+    Actual: ('naam', 'Die Leiden des jungen Werthers') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
+Actual: ('afbeelding', 'Goethe 1774 JPG') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
+Actual: ('afbeelding', 'Goethe 1774 JPG') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('taal', 'Duits') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('taal', 'Duits') predicted: originele taal options: ['originele taal', 'taal']
+Actual: ('uitgiftedatum', '1774') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
+    

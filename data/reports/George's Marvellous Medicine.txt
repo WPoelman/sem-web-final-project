@@ -1,0 +1,48 @@
+
+    --- true infobox ---
+    {
+    "naam": "Joris en de geheimzinnige toverdrank",
+    "orig titel": "George s Marvellous Medicine",
+    "cover-op-enwp": "George s Marvellous Medicine first edition jpg",
+    "auteur": "Roald Dahl",
+    "kaftontwerp": "Quentin Blake",
+    "genre": "Jeugdliteratuur",
+    "uitgever": "Jonathan Cape VK Alfred A Knopf Inc VS paperbackuitgave van Puffin Books Nederlandse vertaling uitgegeven door Uitgeverij De Fontein Fontein",
+    "uitgiftedatum": "1981",
+    "medium": "Boek"
+}
+
+    --- generated infobox ---
+    {
+    "orig titel": "Joris en de geheimzinnige toverdrank",
+    "cover-op-enwp": "George s Marvellous Medicine first edition jpg",
+    "onderschrift": "British first edition hardback",
+    "auteur": "Roald Dahl",
+    "illustraties": "Quentin Blake",
+    "land": "Verenigd Koninkrijk",
+    "originele taal": "Engels",
+    "genre": "roman voor kinderen",
+    "uitgever": "Jonathan Cape UK hardback Alfred Knopf US hardback Puffin Books paperback",
+    "uitgiftedatum origineel": "10 January 1981",
+    "medium": "Print Hardcover Hardback Paperback",
+    "paginas": "96"
+}
+
+    --- stats ---
+    items in true infobox:      9
+    items in generated infobox: 12
+
+    --- exact matches ---
+    correct keys:          0.5 (6 / 12)
+    correct values:        0.333 (4 / 12)
+    correct key AND value: 0.167 (2 / 12)
+
+    --- wrong key but in top 3 ---
+    Actual: ('naam', 'Joris en de geheimzinnige toverdrank') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('orig titel', 'George s Marvellous Medicine') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'George s Marvellous Medicine') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
+Actual: ('auteur', 'Roald Dahl') predicted: illustraties options: ['illustraties', 'kaftontwerp', 'auteur']
+Actual: ('kaftontwerp', 'Quentin Blake') predicted: illustraties options: ['illustraties', 'kaftontwerp', 'auteur']
+Actual: ('uitgiftedatum', '1981') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'jaren-actief']
+Actual: ('uitgiftedatum', '1981') predicted: paginas options: ['paginas', 'uitgiftedatum']
+    

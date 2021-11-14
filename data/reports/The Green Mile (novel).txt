@@ -1,0 +1,49 @@
+
+    --- true infobox ---
+    {
+    "naam": "De groene mijl",
+    "orig titel": "The Green Mile",
+    "cover-op-enwp": "Greenmilepart1 jpg",
+    "auteur": "Stephen King schrijver Stephen King",
+    "land": "Verenigde Staten",
+    "taal": "Engels",
+    "genre": "Fantasy misdaad",
+    "uitgever": "New American Library Signet Books",
+    "uitgiftedatum": "28 maart 1996",
+    "medium": "Print Paperback",
+    "paginas": "592",
+    "film": "The Green Mile film The Green Mile"
+}
+
+    --- generated infobox ---
+    {
+    "orig titel": "De groene mijl (roman)",
+    "cover-op-enwp": "Greenmilepart1 jpg",
+    "afbeeldingbreedte": "200px",
+    "onderschrift": "Cover of the first volume in the series released March 28 1996",
+    "auteur": "Stephen King",
+    "land": "Verenigde Staten",
+    "originele taal": "Engels",
+    "genre": "Donkere Fantasie Zuidelijk Gotisch Magisch Realisme",
+    "uitgever": "New American Library Signet Books",
+    "uitgiftedatum origineel": "March August 1996",
+    "medium": "Print Paperback"
+}
+
+    --- stats ---
+    items in true infobox:      12
+    items in generated infobox: 11
+
+    --- exact matches ---
+    correct keys:          0.636 (7 / 11)
+    correct values:        0.455 (5 / 11)
+    correct key AND value: 0.364 (4 / 11)
+
+    --- wrong key but in top 3 ---
+    Actual: ('naam', 'De groene mijl') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('orig titel', 'The Green Mile') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'The Green Mile') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
+Actual: ('taal', 'Engels') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('taal', 'Engels') predicted: originele taal options: ['originele taal', 'taal']
+Actual: ('uitgiftedatum', '28 maart 1996') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'jaren-actief']
+    

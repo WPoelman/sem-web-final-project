@@ -1,0 +1,50 @@
+
+    --- true infobox ---
+    {
+    "naam": "Maaierstijd",
+    "reeks": "Schijfwereld",
+    "auteur": "Terry Pratchett",
+    "vertaler": "Venugopalan Ittekot",
+    "uitgever": "Het Spectrum",
+    "orig titel": "Reaper Man",
+    "uitgiftedatum": "1991 1995",
+    "genre": "Fantasy genre Fantasy",
+    "paginas": "239 blz",
+    "isbn": "9027443327",
+    "voorafgegaan": "Rollende Prenten",
+    "vervolg": "Heksen in de lucht"
+}
+
+    --- generated infobox ---
+    {
+    "orig titel": "Maaierstijd",
+    "cover-op-enwp": "reaper man cover jpg",
+    "onderschrift": "First edition",
+    "auteur": "Terry Pratchett",
+    "kaftontwerp": "Josh Kirby",
+    "originele taal": "Engels",
+    "onderwerp": "Alien invasion science fiction SF Man with No Name Western fiction Westerns Modernization Shopping mall s Civil rights Minority rights movements Characters Death Discworld Death Unseen University Unseen University staff Locations Ankh Morpork Discworld geography Octarine Grass Country Octarine Grass Country",
+    "genre": "Fantasy genre Fantasy",
+    "uitgever": "Victor Gollancz",
+    "uitgiftedatum origineel": "1991",
+    "isbn": "0 575 04979 0",
+    "reeks": "Discworld 11th novel 2nd Death story"
+}
+
+    --- stats ---
+    items in true infobox:      12
+    items in generated infobox: 12
+
+    --- exact matches ---
+    correct keys:          0.5 (6 / 12)
+    correct values:        0.25 (3 / 12)
+    correct key AND value: 0.167 (2 / 12)
+
+    --- wrong key but in top 3 ---
+    Actual: ('naam', 'Maaierstijd') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('auteur', 'Terry Pratchett') predicted: kaftontwerp options: ['kaftontwerp', 'illustraties', 'auteur']
+Actual: ('orig titel', 'Reaper Man') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'Reaper Man') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
+Actual: ('orig titel', 'Reaper Man') predicted: reeks options: ['reeks', 'extra portaal', 'orig titel']
+Actual: ('uitgiftedatum', '1991 1995') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'jaren-actief']
+    

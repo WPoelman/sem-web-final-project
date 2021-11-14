@@ -1,0 +1,52 @@
+
+    --- true infobox ---
+    {
+    "naam": "Emma",
+    "afbeelding": "EmmaTitlePage jpg",
+    "onderschrift": "Titelblad van de eerste druk",
+    "orig titel": "Emma",
+    "auteur": "Jane Austen",
+    "land": "Engeland",
+    "originele taal": "Engels",
+    "genre": "Roman literatuur Roman",
+    "uitgiftedatum origineel": "1816"
+}
+
+    --- generated infobox ---
+    {
+    "orig titel": "Emma (roman)",
+    "cover-op-enwp": "EmmaTitlePage jpg",
+    "onderschrift": "Title page of first edition volume 1 of 3",
+    "auteur": "Jane Austen",
+    "land": "Verenigd Koninkrijk",
+    "originele taal": "Engels",
+    "set_in": "southern England and Yorkshire early 19th century",
+    "genre": "roman van manieren",
+    "uitgever": "John Murray publishing house John Murray",
+    "uitgiftedatum origineel": "23 December 1815 title page gives 1816",
+    "medium": "Print hardback",
+    "paginas": "1 036 in three volumes",
+    "dewey": "823 7",
+    "congres": "PR4034 E5",
+    "voorafgegaan": "Mansfield Park",
+    "vervolg": "Northanger Abbey"
+}
+
+    --- stats ---
+    items in true infobox:      9
+    items in generated infobox: 16
+
+    --- exact matches ---
+    correct keys:          0.438 (7 / 16)
+    correct values:        0.188 (3 / 16)
+    correct key AND value: 0.125 (2 / 16)
+
+    --- wrong key but in top 3 ---
+    Actual: ('naam', 'Emma') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
+Actual: ('afbeelding', 'EmmaTitlePage jpg') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
+Actual: ('afbeelding', 'EmmaTitlePage jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'Emma') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'Emma') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
+Actual: ('orig titel', 'Emma') predicted: voorafgegaan options: ['voorafgegaan', 'vorigeboek', 'orig titel']
+Actual: ('orig titel', 'Emma') predicted: vervolg options: ['vervolg', 'volgendeboek', 'orig titel']
+    

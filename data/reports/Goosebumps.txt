@@ -1,0 +1,56 @@
+
+    --- true infobox ---
+    {
+    "titel": "Kippenvel",
+    "orig titel": "Goosebumps",
+    "afbeelding": "Goosebumps png",
+    "onderschrift": "Logo van de boekenserie",
+    "land": "US",
+    "taal": "Engels Nederlands vertaald",
+    "genre": "Horror genre Horror Thriller genre thriller",
+    "oplage": "62",
+    "schrijver": "R L Stine",
+    "uitgever": "VS VLAG Scholastic Publishing NL VLAG Kluitman",
+    "medium": "Paperback",
+    "status": "Be\u00ebindigd",
+    "jaren-actief": "1992 1997",
+    "eerste": "juli 1992",
+    "laatste": "december 1997",
+    "website": "http www scholastic com goosebumps"
+}
+
+    --- generated infobox ---
+    {
+    "orig titel": "Kippenvel (jeugdboekenserie)",
+    "cover-op-enwp": "Goosebumps logo svg",
+    "onderschrift": "Logo",
+    "auteur": "R L Stine",
+    "kaftontwerp": "Tim Jacobus Mark Nagata Craig White Brandon Dorman",
+    "land": "Verenigde Staten",
+    "originele taal": "Engels",
+    "genre": "Horror fictie Horror bovennatuurlijke fictie thriller genre thriller kinderliteratuur",
+    "uitgever": "Scholastic Corporation",
+    "uitgiftedatum origineel": "Goosebumps original series Original series July 1992 December 1997 Spin off series October 1994 February 2000 April 2008 present",
+    "medium": "Print",
+    "volgnummer": "235",
+    "list_books": "List of Goosebumps books"
+}
+
+    --- stats ---
+    items in true infobox:      16
+    items in generated infobox: 13
+
+    --- exact matches ---
+    correct keys:          0.462 (6 / 13)
+    correct values:        0.077 (1 / 13)
+    correct key AND value: 0.0 (0 / 13)
+
+    --- wrong key but in top 3 ---
+    Actual: ('titel', 'Kippenvel') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('orig titel', 'Goosebumps') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('afbeelding', 'Goosebumps png') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('taal', 'Engels Nederlands vertaald') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('taal', 'Engels Nederlands vertaald') predicted: originele taal options: ['originele taal', 'taal']
+Actual: ('schrijver', 'R L Stine') predicted: auteur options: ['auteur', 'schrijver', 'illustraties']
+Actual: ('jaren-actief', '1992 1997') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'jaren-actief']
+    

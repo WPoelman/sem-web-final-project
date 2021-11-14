@@ -1,0 +1,64 @@
+
+    --- true infobox ---
+    {
+    "naam": "De Hongerspelen De Hongerspelen franchise De Hongerspelen Trilogie Deel 1",
+    "orig titel": "The Hunger Games",
+    "vertaler": "Maria Postema",
+    "auteur": "Suzanne Collins",
+    "kaftontwerp": "Erwin van Wanrooy",
+    "land": "Belgi\u00eb en Nederland oorspr Verenigde Staten",
+    "taal": "Nederlands oorspr Engels",
+    "genre": "jeugdboek",
+    "uitgever": "Uitgeverij Unieboek Van Goor oorspr Scholastic",
+    "uitgiftedatum": "2008",
+    "medium": "boek",
+    "isbn": "9789047508083",
+    "vervolg": "Vlammen"
+}
+
+    --- generated infobox ---
+    {
+    "orig titel": "De Hongerspelen",
+    "cover-op-enwp": "The Hunger Games jpg",
+    "naam": "Cover of the novel showing the title in white text on a black and grey background above a depiction of a gold pin featuring a bird in flight its wings spread and an arrow clasped in its beak",
+    "onderschrift": "North American first edition cover",
+    "auteur": "Suzanne Collins",
+    "kaftontwerp": "Tim O Brien illustrator Tim O Brien",
+    "land": "Verenigde Staten",
+    "originele taal": "Engels",
+    "genre": "Avontuurlijke roman Avontuur Sciencefiction",
+    "uitgiftedatum origineel": "September 14 2008 Scholastic Corporation Scholastic Press",
+    "medium": "Print hardcover paperback",
+    "paginas": "374",
+    "isbn": "978 0 439 02352 8",
+    "congres": "PZ7 C6837 Hun 2008",
+    "oclc": "181516677",
+    "voorafgegaan": "The Ballad of Songbirds and Snakes",
+    "vervolg": "Catching Fire",
+    "reeks": "nowrap The Hunger Games trilogy The Hunger Games trilogy"
+}
+
+    --- stats ---
+    items in true infobox:      13
+    items in generated infobox: 18
+
+    --- exact matches ---
+    correct keys:          0.5 (9 / 18)
+    correct values:        0.056 (1 / 18)
+    correct key AND value: 0.056 (1 / 18)
+
+    --- wrong key but in top 3 ---
+    Actual: ('naam', 'De Hongerspelen De Hongerspelen franchise De Hongerspelen Trilogie Deel 1') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('orig titel', 'The Hunger Games') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'The Hunger Games') predicted: naam options: ['naam', 'orig titel', 'afbeelding']
+Actual: ('orig titel', 'The Hunger Games') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
+Actual: ('orig titel', 'The Hunger Games') predicted: reeks options: ['reeks', 'extra portaal', 'orig titel']
+Actual: ('orig titel', 'The Hunger Games') predicted: voorafgegaan options: ['voorafgegaan', 'vorigeboek', 'orig titel']
+Actual: ('orig titel', 'The Hunger Games') predicted: vervolg options: ['vervolg', 'volgendeboek', 'orig titel']
+Actual: ('auteur', 'Suzanne Collins') predicted: kaftontwerp options: ['kaftontwerp', 'illustraties', 'auteur']
+Actual: ('taal', 'Nederlands oorspr Engels') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('taal', 'Nederlands oorspr Engels') predicted: originele taal options: ['originele taal', 'taal']
+Actual: ('uitgever', 'Uitgeverij Unieboek Van Goor oorspr Scholastic') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgever', 'uitgiftedatum']
+Actual: ('uitgiftedatum', '2008') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgever', 'uitgiftedatum']
+Actual: ('uitgiftedatum', '2008') predicted: paginas options: ['paginas', 'uitgiftedatum']
+    

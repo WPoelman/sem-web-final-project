@@ -1,0 +1,45 @@
+
+    --- true infobox ---
+    {
+    "naam": "Strange Case of Dr Jekyll and Mr Hyde",
+    "afbeelding": "Jekyll and Hyde Title jpg",
+    "auteur": "Robert Louis Stevenson",
+    "land": "Schotland",
+    "taal": "Engels",
+    "genre": "Gothic novel",
+    "uitgever": "Longman Longmans Green co",
+    "uitgiftedatum": "1886"
+}
+
+    --- generated infobox ---
+    {
+    "orig titel": "The Strange Case of Dr Jekyll and Mr Hyde",
+    "cover-op-enwp": "Jekyll and Hyde Title jpg",
+    "onderschrift": "Title page of the first London edition 1886",
+    "auteur": "Robert Louis Stevenson",
+    "land": "Engeland",
+    "originele taal": "Engels",
+    "uitgever": "Longmans Green Co",
+    "uitgiftedatum origineel": "5 January 1886",
+    "paginas": "141 first edition",
+    "isbn": "978 0 553 21277 8"
+}
+
+    --- stats ---
+    items in true infobox:      8
+    items in generated infobox: 10
+
+    --- exact matches ---
+    correct keys:          0.3 (3 / 10)
+    correct values:        0.3 (3 / 10)
+    correct key AND value: 0.1 (1 / 10)
+
+    --- wrong key but in top 3 ---
+    Actual: ('naam', 'Strange Case of Dr Jekyll and Mr Hyde') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
+Actual: ('afbeelding', 'Jekyll and Hyde Title jpg') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
+Actual: ('afbeelding', 'Jekyll and Hyde Title jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('taal', 'Engels') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('taal', 'Engels') predicted: originele taal options: ['originele taal', 'taal']
+Actual: ('uitgiftedatum', '1886') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
+Actual: ('uitgiftedatum', '1886') predicted: paginas options: ['paginas', 'uitgiftedatum']
+    

@@ -1,0 +1,45 @@
+
+    --- true infobox ---
+    {
+    "naam": "Silas Marner",
+    "afbeelding": "Silas Marner 1 jpg",
+    "onderschrift": "Titelblad van de eerste editie",
+    "auteur": "George Eliot",
+    "land": "Engeland",
+    "taal": "Engels",
+    "genre": "Roman literatuur roman",
+    "uitgever": "William Blackwood Sons",
+    "uitgiftedatum": "1861",
+    "isbn": "n v t",
+    "voorafgegaan": "The Mill on the Floss 1860",
+    "vervolg": "Romola 1863"
+}
+
+    --- generated infobox ---
+    {
+    "orig titel": "Silas Marner",
+    "cover-op-enwp": "Silas Marner 1 jpg",
+    "onderschrift": "First edition title page",
+    "auteur": "George Eliot",
+    "land": "Verenigd Koninkrijk",
+    "originele taal": "Engels",
+    "uitgever": "William Blackwood and Sons",
+    "uitgiftedatum origineel": "1861"
+}
+
+    --- stats ---
+    items in true infobox:      12
+    items in generated infobox: 8
+
+    --- exact matches ---
+    correct keys:          0.5 (4 / 8)
+    correct values:        0.625 (5 / 8)
+    correct key AND value: 0.125 (1 / 8)
+
+    --- wrong key but in top 3 ---
+    Actual: ('naam', 'Silas Marner') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('afbeelding', 'Silas Marner 1 jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('taal', 'Engels') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('taal', 'Engels') predicted: originele taal options: ['originele taal', 'taal']
+Actual: ('uitgiftedatum', '1861') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
+    

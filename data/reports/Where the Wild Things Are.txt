@@ -1,0 +1,64 @@
+
+    --- true infobox ---
+    {
+    "naam": "Max en de Maximonsters",
+    "orig titel": "Where The Wild Things Are",
+    "auteur": "Maurice Sendak",
+    "kaftontwerp": "Maurice Sendak",
+    "illustraties": "Maurice Sendak",
+    "land": "Verenigde Staten",
+    "taal": "Nederlands",
+    "onderwerp": "Fantasiewereld",
+    "genre": "Prentenboek",
+    "uitgever": "Uitgeverij Lemniscaat Amsterdam",
+    "uitgiftedatum": "1963",
+    "medium": "Boek",
+    "isbn": "978 90 6069 069 7",
+    "Bijzonderheden": "1e dr Nederlandse uitg 1968"
+}
+
+    --- generated infobox ---
+    {
+    "orig titel": "Max en de Maximonsters",
+    "cover-op-enwp": "Where The Wild Things Are book cover jpg",
+    "grens": "yes",
+    "afbeeldingbreedte": "250px",
+    "naam": "The book cover is an illustration of a sail boat coming into a forested shore On the shore sleeping against a tree is a giant furry monster with bare human feet and the head of a bull Above the illustration written in uneven block capital letters against a white background is the title of the book Where the Wild Things Are and below the illustration Story and pictures by Maurice Sendak",
+    "onderschrift": "First edition cover",
+    "auteur": "Maurice Sendak",
+    "illustraties": "Maurice Sendak",
+    "land": "Verenigde Staten",
+    "genre": "Kinderliteratuur Kinderprentenboek",
+    "originele taal": "Engels",
+    "uitgever": "Harper Row",
+    "uitgiftedatum origineel": "November 13 1963",
+    "medium": "Print wide format hardcover",
+    "paginas": "40",
+    "isbn": "0 06 025492 0",
+    "isbn_note": "25th anniversary ed 1988",
+    "congres": "PZ7 S47 Wh",
+    "oclc": "225496"
+}
+
+    --- stats ---
+    items in true infobox:      14
+    items in generated infobox: 19
+
+    --- exact matches ---
+    correct keys:          0.474 (9 / 19)
+    correct values:        0.158 (3 / 19)
+    correct key AND value: 0.158 (3 / 19)
+
+    --- wrong key but in top 3 ---
+    Actual: ('naam', 'Max en de Maximonsters') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('orig titel', 'Where The Wild Things Are') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'Where The Wild Things Are') predicted: naam options: ['naam', 'orig titel', 'afbeelding']
+Actual: ('orig titel', 'Where The Wild Things Are') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
+Actual: ('auteur', 'Maurice Sendak') predicted: illustraties options: ['illustraties', 'kaftontwerp', 'auteur']
+Actual: ('kaftontwerp', 'Maurice Sendak') predicted: illustraties options: ['illustraties', 'kaftontwerp', 'auteur']
+Actual: ('illustraties', 'Maurice Sendak') predicted: auteur options: ['auteur', 'schrijver', 'illustraties']
+Actual: ('taal', 'Nederlands') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('taal', 'Nederlands') predicted: originele taal options: ['originele taal', 'taal']
+Actual: ('uitgiftedatum', '1963') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'jaren-actief']
+Actual: ('uitgiftedatum', '1963') predicted: paginas options: ['paginas', 'uitgiftedatum']
+    

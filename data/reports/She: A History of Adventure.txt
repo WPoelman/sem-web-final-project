@@ -1,0 +1,75 @@
+
+    --- true infobox ---
+    {
+    "naam": "Zij",
+    "afbeelding": "She title page jpg",
+    "onderschrift": "Titelpagina editie 1887",
+    "orig titel": "She A History of Adventure",
+    "auteur": "Henry Rider Haggard",
+    "vertaler": "J Peels",
+    "land": "UK",
+    "taal": "Nederlands",
+    "originele taal": "Engels",
+    "reeks": "Scala SF",
+    "genre": "Sciencefiction",
+    "uitgever": "Scala",
+    "uitgiftedatum": "1977",
+    "uitgiftedatum origineel": "1886",
+    "medium": "pocketboek",
+    "paginas": "192",
+    "grootte": "180 x 115",
+    "isbn": "90 6221 691 9",
+    "vervolg": "De terugkeer van Zij",
+    "extra portaal": "Fantasy"
+}
+
+    --- generated infobox ---
+    {
+    "orig titel": "Zij (boek)",
+    "cover-op-enwp": "File SHE A History of Adventure 1st Edition Cover by H Rider Haggard jpg",
+    "onderschrift": "Cover of the first edition 1887",
+    "auteur": "H Rider Haggard",
+    "illustraties": "E K Johnson Graphic Maurice Greiffenhagen C H M Kerr 1888 ed",
+    "set_in": "Cambridge and East Africa 1860s 80s",
+    "land": "Verenigd Koninkrijk",
+    "originele taal": "Engels",
+    "genre": "Fantasie avontuur romantiek Gothic",
+    "uitgever": "Longmans",
+    "uitgiftedatum origineel": "1887",
+    "medium": "Print serial hardback paperback",
+    "paginas": "317 1887 hardback",
+    "dewey": "823 8",
+    "congres": "PR4731 S6",
+    "voorafgegaan": "King Solomon s Mines",
+    "vervolg": "The Ancient Allan",
+    "reeks": "Henry Rider Haggard Ayesha series Ayesha series"
+}
+
+    --- stats ---
+    items in true infobox:      20
+    items in generated infobox: 18
+
+    --- exact matches ---
+    correct keys:          0.667 (12 / 18)
+    correct values:        0.056 (1 / 18)
+    correct key AND value: 0.056 (1 / 18)
+
+    --- wrong key but in top 3 ---
+    Actual: ('naam', 'Zij') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
+Actual: ('afbeelding', 'She title page jpg') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
+Actual: ('afbeelding', 'She title page jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'She A History of Adventure') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'She A History of Adventure') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
+Actual: ('orig titel', 'She A History of Adventure') predicted: reeks options: ['reeks', 'extra portaal', 'orig titel']
+Actual: ('orig titel', 'She A History of Adventure') predicted: voorafgegaan options: ['voorafgegaan', 'vorigeboek', 'orig titel']
+Actual: ('orig titel', 'She A History of Adventure') predicted: vervolg options: ['vervolg', 'volgendeboek', 'orig titel']
+Actual: ('auteur', 'Henry Rider Haggard') predicted: illustraties options: ['illustraties', 'kaftontwerp', 'auteur']
+Actual: ('taal', 'Nederlands') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('taal', 'Nederlands') predicted: originele taal options: ['originele taal', 'taal']
+Actual: ('uitgiftedatum', '1977') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
+Actual: ('uitgiftedatum', '1977') predicted: paginas options: ['paginas', 'uitgiftedatum']
+Actual: ('paginas', '192') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
+Actual: ('extra portaal', 'Fantasy') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('extra portaal', 'Fantasy') predicted: reeks options: ['reeks', 'extra portaal', 'orig titel']
+Actual: ('extra portaal', 'Fantasy') predicted: genre options: ['genre', 'extra portaal']
+    

@@ -1,0 +1,56 @@
+
+    --- true infobox ---
+    {
+    "naam": "Het dagboek van Bridget Jones",
+    "orig titel": "Bridget Jones s Diary",
+    "auteur": "Helen Fielding",
+    "land": "GB",
+    "originele taal": "Engels",
+    "genre": "Roman literatuur Roman",
+    "originele uitgever": "Picador",
+    "uitgiftedatum origineel": "1996",
+    "paginas": "268 pagina s",
+    "isbn": "978 0 3303 3227 4",
+    "film": "Bridget Jones s Diary film Bridget Jones s Diary 2001",
+    "volgendeboek": "Bridget Jones het nieuwe dagboek"
+}
+
+    --- generated infobox ---
+    {
+    "orig titel": "Het dagboek van Bridget Jones",
+    "cover-op-enwp": "BridgetJonesDiary jpg",
+    "onderschrift": "First edition",
+    "auteur": "Helen Fielding",
+    "kaftontwerp": "Nick Turpin",
+    "land": "Verenigd Koninkrijk",
+    "originele taal": "Engels",
+    "genre": "Komedie roman Chick lit",
+    "uitgever": "Picador imprint Picador",
+    "uitgiftedatum origineel": "1996",
+    "medium": "Print hardback and paperback",
+    "isbn": "0 670 88072 8",
+    "dewey": "823 914 21",
+    "congres": "PR6056 I4588 B75 1998",
+    "oclc": "38884462",
+    "vervolg": "Bridget Jones The Edge of Reason novel The Edge of Reason"
+}
+
+    --- stats ---
+    items in true infobox:      12
+    items in generated infobox: 16
+
+    --- exact matches ---
+    correct keys:          0.438 (7 / 16)
+    correct values:        0.25 (4 / 16)
+    correct key AND value: 0.188 (3 / 16)
+
+    --- wrong key but in top 3 ---
+    Actual: ('naam', 'Het dagboek van Bridget Jones') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('orig titel', 'Bridget Jones s Diary') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'Bridget Jones s Diary') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
+Actual: ('orig titel', 'Bridget Jones s Diary') predicted: vervolg options: ['vervolg', 'volgendeboek', 'orig titel']
+Actual: ('auteur', 'Helen Fielding') predicted: kaftontwerp options: ['kaftontwerp', 'illustraties', 'auteur']
+Actual: ('originele uitgever', 'Picador') predicted: uitgever options: ['uitgever', 'originele uitgever', 'uitgeverij']
+Actual: ('paginas', '268 pagina s') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
+Actual: ('volgendeboek', 'Bridget Jones het nieuwe dagboek') predicted: vervolg options: ['vervolg', 'volgendeboek', 'orig titel']
+    

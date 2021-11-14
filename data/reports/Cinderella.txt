@@ -1,0 +1,35 @@
+
+    --- true infobox ---
+    {
+    "naam": "Assepoester",
+    "afbeelding": "Hermann Vogel Cinderella 1 jpg",
+    "onderschrift": "Duitse titelpagina van Hermann Vogel",
+    "auteur": "Strabo historicus Strabo",
+    "orig gebundeld": "Sprookjes van Moeder de Gans 1697 Kinder und Hausm\u00e4rchen 1812",
+    "datum": "1e eeuw v Chr",
+    "land": "Oude Egypte Itali\u00eb",
+    "genre": "Sprookje"
+}
+
+    --- generated infobox ---
+    {
+    "Folk_Tale_Name": "Cinderella",
+    "Afbeeldingsnaam": "Aschenputtel jpg",
+    "Afbeelding_Bijschrift": "Alexander Zick illustrated Cinderella with the Doves inspired by the Brothers Grimm s version",
+    "Aarne-Thompson-groepering": "ATU 510 A Persecuted Heroine",
+    "Land": "plainlist Ancient Egypt Egypt small oral ref name Carruthers cite book url https books google com books id xlObCgAAQBAJ q cinderella basile oldest pg PT18 title Cinderella And Other Girls Who Lost Their Slippers Origins of Fairy Tales author Amelia Carruthers isbn 9781473370111 date 24 September 2015 Italy small literary ref name Carruthers small oral Italy small literary",
+    "Regio": "Eurasia"
+}
+
+    --- stats ---
+    items in true infobox:      8
+    items in generated infobox: 6
+
+    --- exact matches ---
+    correct keys:          0.0 (0 / 6)
+    correct values:        0.0 (0 / 6)
+    correct key AND value: 0.0 (0 / 6)
+
+    --- wrong key but in top 3 ---
+    
+    

@@ -1,0 +1,51 @@
+
+    --- true infobox ---
+    {
+    "naam": "Berevaar",
+    "reeks": "Schijfwereld",
+    "auteur": "Terry Pratchett",
+    "vertaler": "Venugopalan Ittekot",
+    "uitgever": "Het Spectrum",
+    "orig titel": "Hogfather",
+    "uitgiftedatum": "1996 2000",
+    "genre": "Fantasy genre Fantasy",
+    "paginas": "302 blz",
+    "isbn": "9027472343",
+    "voorafgegaan": "Lemen voeten",
+    "vervolg": "Houzee Pratchett Houzee"
+}
+
+    --- generated infobox ---
+    {
+    "orig titel": "Berevaar",
+    "cover-op-enwp": "Hogfather 2 jpg",
+    "onderschrift": "First edition",
+    "auteur": "Terry Pratchett",
+    "kaftontwerp": "Josh Kirby",
+    "originele taal": "Engels",
+    "onderwerp": "Christmas children s stories the power of belief Characters Death Discworld Death Susan Sto Helit Locations Death s Domain Ankh Morpork Tooth Fairy s domain",
+    "genre": "Fantasy genre Fantasy",
+    "uitgever": "Victor Gollancz",
+    "uitgiftedatum origineel": "1996",
+    "awards": "Came 137th in the Big Read",
+    "isbn": "0 575 06403 X",
+    "reeks": "Discworld 20th novel ndash 4th Death story"
+}
+
+    --- stats ---
+    items in true infobox:      12
+    items in generated infobox: 13
+
+    --- exact matches ---
+    correct keys:          0.462 (6 / 13)
+    correct values:        0.231 (3 / 13)
+    correct key AND value: 0.154 (2 / 13)
+
+    --- wrong key but in top 3 ---
+    Actual: ('naam', 'Berevaar') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('auteur', 'Terry Pratchett') predicted: kaftontwerp options: ['kaftontwerp', 'illustraties', 'auteur']
+Actual: ('orig titel', 'Hogfather') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'Hogfather') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
+Actual: ('orig titel', 'Hogfather') predicted: reeks options: ['reeks', 'extra portaal', 'orig titel']
+Actual: ('uitgiftedatum', '1996 2000') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'jaren-actief']
+    

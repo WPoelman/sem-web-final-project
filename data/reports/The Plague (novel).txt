@@ -1,0 +1,58 @@
+
+    --- true infobox ---
+    {
+    "naam": "De Pest",
+    "afbeelding": "La Peste book cover jpg",
+    "orig titel": "La Peste",
+    "auteur": "Albert Camus",
+    "vertaler": "Jan Pieter van der Sterre",
+    "land": "Frankrijk",
+    "taal": "Nederlands",
+    "originele taal": "Frans",
+    "onderwerp": "Pest ziekte Pestuitbraak quarantaine",
+    "genre": "Sociale roman",
+    "uitgever": "De Bezige Bij",
+    "originele uitgever": "Gallimard uitgeverij Gallimard",
+    "uitgiftedatum": "1992",
+    "uitgiftedatum origineel": "1947",
+    "paginas": "319",
+    "grootte": "28x200x126 millimeter mm",
+    "gewicht": "421 gram eenheid g",
+    "film": "La Peste film La Peste"
+}
+
+    --- generated infobox ---
+    {
+    "orig titel": "De Pest (roman)",
+    "cover-op-enwp": "La Peste book cover jpg",
+    "grens": "yes",
+    "onderschrift": "Cover of the first edition",
+    "auteur": "Albert Camus",
+    "orig_lang_code": "fr",
+    "land": "Frankrijk",
+    "originele taal": "Frans",
+    "genre": "Filosofische fictie Filosofische roman",
+    "set_in": "Oran French Algeria",
+    "uitgiftedatum origineel": "plainlist 1947 \u00c9ditions Gallimard Gallimard French 1948 Hamish Hamilton English"
+}
+
+    --- stats ---
+    items in true infobox:      18
+    items in generated infobox: 11
+
+    --- exact matches ---
+    correct keys:          0.545 (6 / 11)
+    correct values:        0.364 (4 / 11)
+    correct key AND value: 0.273 (3 / 11)
+
+    --- wrong key but in top 3 ---
+    Actual: ('naam', 'De Pest') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
+Actual: ('afbeelding', 'La Peste book cover jpg') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
+Actual: ('afbeelding', 'La Peste book cover jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'La Peste') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'La Peste') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
+Actual: ('taal', 'Nederlands') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('taal', 'Nederlands') predicted: originele taal options: ['originele taal', 'taal']
+Actual: ('uitgever', 'De Bezige Bij') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgever', 'uitgiftedatum']
+Actual: ('uitgiftedatum', '1992') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgever', 'uitgiftedatum']
+    

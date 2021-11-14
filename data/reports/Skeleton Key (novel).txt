@@ -1,0 +1,53 @@
+
+    --- true infobox ---
+    {
+    "naam": "Skeleton Key",
+    "auteur": "Anthony Horowitz",
+    "land": "Verenigd Koninkrijk Groot Brittanni\u00eb",
+    "taal": "Engels",
+    "reeks": "Alex Rider",
+    "genre": "Spionage",
+    "uitgever": "Clavis uitgeverij Clavis",
+    "uitgiftedatum": "8 juli 2002",
+    "voorafgegaan": "Point Blanc",
+    "vervolg": "Eagle Strike"
+}
+
+    --- generated infobox ---
+    {
+    "orig titel": "Skeleton Key (boek)",
+    "cover-op-enwp": "Skeletonkey JPG",
+    "onderschrift": "First edition cover",
+    "auteur": "Anthony Horowitz",
+    "land": "Verenigd Koninkrijk",
+    "originele taal": "Engels",
+    "genre": "Avonturenroman Adventure Spy-roman Mystery fiction Mystery",
+    "uitgever": "Walker Books UK",
+    "uitgiftedatum origineel": "8 July 2002",
+    "medium": "Print Hardcover Hardback Paperback",
+    "paginas": "324 pp first edition paperback",
+    "isbn": "0 14 240102 1",
+    "isbn_note": "first edition paperback",
+    "congres": "PZ7 H7875 Sk 2004",
+    "oclc": "54953320",
+    "voorafgegaan": "Point Blanc",
+    "vervolg": "Eagle Strike",
+    "reeks": "Alex Rider Alex Rider series"
+}
+
+    --- stats ---
+    items in true infobox:      10
+    items in generated infobox: 18
+
+    --- exact matches ---
+    correct keys:          0.389 (7 / 18)
+    correct values:        0.222 (4 / 18)
+    correct key AND value: 0.167 (3 / 18)
+
+    --- wrong key but in top 3 ---
+    Actual: ('naam', 'Skeleton Key') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('taal', 'Engels') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('taal', 'Engels') predicted: originele taal options: ['originele taal', 'taal']
+Actual: ('uitgiftedatum', '8 juli 2002') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
+Actual: ('uitgiftedatum', '8 juli 2002') predicted: paginas options: ['paginas', 'uitgiftedatum']
+    

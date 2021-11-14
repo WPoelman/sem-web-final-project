@@ -1,0 +1,57 @@
+
+    --- true infobox ---
+    {
+    "naam": "Artemis Fowl",
+    "afbeelding": "Artemis_Fowl_logo png",
+    "auteur": "Eoin Colfer",
+    "land": "Ierland land Ierland",
+    "taal": "Engels",
+    "reeks": "Artemis Fowl serie Artemis Fowl",
+    "genre": "Fantasy",
+    "uitgever": "Viking Press",
+    "uitgiftedatum": "april 2001",
+    "medium": "Print Hardcover Hardback Paperback",
+    "paginas": "280",
+    "isbn": "0670899623",
+    "vervolg": "Artemis Fowl De Russische connectie"
+}
+
+    --- generated infobox ---
+    {
+    "orig titel": "Artemis Fowl (boek)",
+    "cover-op-enwp": "Artemis Fowl first edition cover jpg",
+    "onderschrift": "First edition cover",
+    "auteur": "Eoin Colfer",
+    "audio_read_by": "Adrian Dunbar",
+    "land": "Republiek Ierland Ierland",
+    "originele taal": "Engels",
+    "genre": "Jonge volwassenen fictie Jonge volwassenen Fantasy literatuur fantasie",
+    "uitgever": "Viking Press",
+    "uitgiftedatum origineel": "26 April 2001",
+    "medium": "Print hardback paperback Audiobook CD",
+    "paginas": "280",
+    "isbn": "0 670 89962 3",
+    "dewey": "813",
+    "oclc": "46493219",
+    "vervolg": "Artemis Fowl and the Arctic Incident The Arctic Incident 2002",
+    "reeks": "Artemis Fowl (boekenserie)"
+}
+
+    --- stats ---
+    items in true infobox:      13
+    items in generated infobox: 17
+
+    --- exact matches ---
+    correct keys:          0.529 (9 / 17)
+    correct values:        0.235 (4 / 17)
+    correct key AND value: 0.176 (3 / 17)
+
+    --- wrong key but in top 3 ---
+    Actual: ('naam', 'Artemis Fowl') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('afbeelding', 'Artemis_Fowl_logo png') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('taal', 'Engels') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('taal', 'Engels') predicted: originele taal options: ['originele taal', 'taal']
+Actual: ('uitgiftedatum', 'april 2001') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
+Actual: ('uitgiftedatum', 'april 2001') predicted: paginas options: ['paginas', 'uitgiftedatum']
+Actual: ('paginas', '280') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
+    
