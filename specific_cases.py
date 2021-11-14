@@ -22,6 +22,11 @@ def handle_specific_cases(en_ib, nl_ib, key_pairs, en_title, nl_title):
     if 'name' in en_ib:
         if nl_title != en_title:
             nl_ib.pop(key_pairs['name'], None)
+            # clean the en_title and nl_title
+            nl_title = nl_title.replace(" (boek)", "")
+            nl_title = nl_title.replace(" (roman)", "")
+            en_title = en_title.replace(" (novel)", "")
+            en_title = en_title.replace(" (book)", "")
             nl_ib['orig titel'] = en_title
             nl_ib['naam'] = nl_title
 
@@ -40,6 +45,11 @@ def handle_specific_cases(en_ib, nl_ib, key_pairs, en_title, nl_title):
     if 'country' in en_ib:
         used_nl_key = key_pairs['country']
         nl_ib[used_nl_key] = translate(en_ib['country'])
+
+    # The caption is also always translated
+    if 'caption' in en_ib:
+        used_nl_key = key_pairs['caption']
+        nl_ib[used_nl_key] = translate(en_ib['caption'])
 
     # The genre label has some dubious exceptions when translating to Dutch
     if 'genre' in en_ib:
