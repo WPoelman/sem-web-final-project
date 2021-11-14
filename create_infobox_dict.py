@@ -1,66 +1,30 @@
 #!/usr/bin/env python
 
 """
-...
-remember to:
-pip install wptools
+Filename:   create_infobox_dict.py
+Date:       14-11-2021
+Authors:    Frank van den Berg, Esther Ploeger, Wessel Poelman
+Description:
+    A program that creates a dataset of English and Dutch infoboxes from a 
+    given list of Wikipedia titles.
 """
 
 import argparse
 import concurrent.futures
-import contextlib
-import io
 import pickle
 
-import requests
-import wptools
-
-MAX_WORKERS = 32
+from utils import *
 
 
 def create_arg_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument("-t", "--titles_file", default='data/titles.txt',
-                        help="Input txt file containing book titles on each line")
+                        help="Input txt file containing book titles on each line.")
+    parser.add_argument("-w", "--max_workers", default=32,
+                        help="Max concurrent workers used to fetch the infoboxes.")
 
     args = parser.parse_args()
     return args
-
-
-def get_dutch_title(en_title):
-    """Use the english title of a Wikipedia page to get the Dutch title"""
-    try:
-        URL = "https://en.wikipedia.org/w/api.php"
-        PARAMS = {
-            "action": "query",
-            "titles": en_title,
-            "prop": "langlinks",
-            "lllang": "nl",
-            "format": "json"
-        }
-
-        results = requests.get(url=URL, params=PARAMS).json()
-        pages = [p for p in results['query']['pages']]
-        for p in pages:  # There is probably only one page
-            dutch_title = results['query']['pages'][p]['langlinks'][0]['*']
-    except:
-        dutch_title = en_title
-
-    return dutch_title
-
-
-def get_infobox(title, language='en'):
-    """Use the title of a Wikipedia page to get the infobox"""
-    with contextlib.redirect_stderr(io.StringIO()), \
-            contextlib.redirect_stdout(io.StringIO()):
-        try:
-            page = wptools.page(title, lang=language,
-                                silent=True, verbose=False).get_parse(show=False)
-            infobox = page.data['infobox']
-        except:
-            infobox = False
-
-    return infobox
 
 
 def get_data(en_title):
@@ -75,25 +39,24 @@ def create_dict_pickle(dict, filename):
         pickle.dump(dict, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
 
-if __name__ == "__main__":
+def main():
     args = create_arg_parser()
 
     # Get list of wikipedia page titles from txt file:
-    titles = []
     with open(args.titles_file, 'r') as f:
-        for line in f:
-            titles.append(line.strip())
+        titles = [line.strip() for line in f]
 
     # Create {title: infobox} dictionary
     en_infoboxes = dict()
     nl_infoboxes = dict()
+
     # List to store titles that actually contain both EN and NL infoboxes
     both_infoboxes_titles = []
     only_en = 0
 
-    print(f'Fetching {len(titles)} with {MAX_WORKERS} workers')
+    print(f'Fetching {len(titles)} with {args.max_workers} workers')
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=args.max_workers) as executor:
         futures = [executor.submit(get_data, title) for title in titles]
         all_data = [
             r.result()
@@ -101,17 +64,8 @@ if __name__ == "__main__":
         ]
 
     for en_title, en_infobox, nl_title, nl_infobox in all_data:
-        # First: try to get dutch title
-        # dutch_title = get_dutch_title(title)
-        #print("ENGLISH TITLE: {} \t DUTCH TITLE: {}".format(title, dutch_title))
-
-        # Get English infobox:
-        # en_infobox = get_infobox(title)
-
         if en_infobox:
             en_infoboxes[en_title] = en_infobox
-            # Get dutch infobox
-            # nl_infobox = get_infobox(dutch_title, 'nl')
             if nl_infobox:
                 nl_infoboxes[en_title] = nl_infobox
                 both_infoboxes_titles.append(en_title)
@@ -123,7 +77,11 @@ if __name__ == "__main__":
     create_dict_pickle(en_infoboxes, 'all_en_infoboxes.pickle')
     create_dict_pickle(nl_infoboxes, 'all_nl_infoboxes.pickle')
 
-    print("number of titles: ", len(titles))
-    print("number of titles containing only EN infoboxes: ", only_en)
-    print("number of titles containing both infoboxes: ",
+    print("Number of titles: ", len(titles))
+    print("Number of titles containing only EN infoboxes: ", only_en)
+    print("Number of titles containing both infoboxes: ",
           len(both_infoboxes_titles))
+
+
+if __name__ == "__main__":
+    main()

@@ -1,20 +1,32 @@
 #!/usr/bin/env python
 
 """
-Utility functions
+Filename:   utils.py
+Date:       14-11-2021
+Authors:    Frank van den Berg, Esther Ploeger, Wessel Poelman
+Description:
+    Utility functions used in various places.
 """
 
-import re
+import contextlib
+import io
 import pickle
+import re
+
+import requests
+import wptools
+from deep_translator import GoogleTranslator
 
 WHITESPACE_PATTERN = re.compile(r'\W+')
 TAG_PATTERN = re.compile(r'<[^>]+>')
 TRANSLATION = str.maketrans({'[': ' ', ']': ' ', '{': ' ', '}': ' ', '|': ' '})
 
+
 def load_pickle(filename):
     with open(filename, 'rb') as handle:
         dict = pickle.load(handle)
     return dict
+
 
 def clean_str(string):
     # remove brackets
@@ -44,3 +56,61 @@ def clean_ib_dict(ib_dict):
     for k, v in ib_dict.items():
         cleaned_dict[k] = unpack_iterables(v)
     return cleaned_dict
+
+
+def get_dutch_title(en_title):
+    """Use the English title of a Wikipedia page to get the Dutch title"""
+    try:
+        URL = "https://en.wikipedia.org/w/api.php"
+        PARAMS = {
+            "action": "query",
+            "titles": en_title,
+            "prop": "langlinks",
+            "lllang": "nl",
+            "format": "json"
+        }
+
+        results = requests.get(url=URL, params=PARAMS).json()
+        pages = [p for p in results['query']['pages']]
+        for p in pages:  # There is probably only one page
+            dutch_title = results['query']['pages'][p]['langlinks'][0]['*']
+    except:
+        # Return the English title instead
+        return en_title
+
+    return dutch_title
+
+
+def get_infobox(title, language='en'):
+    """Use the title of a Wikipedia page to get the infobox"""
+    # For some reason this library prints a lot of garbage even though we tell
+    # it three (!) times to be quiet. This is a known problem:
+    # https://github.com/siznax/wptools/issues/167
+    # https://github.com/siznax/wptools/issues/158
+    # That is why we silence stderr and stdout alltogether.
+
+    with contextlib.redirect_stderr(io.StringIO()), \
+            contextlib.redirect_stdout(io.StringIO()):
+        try:
+            page = wptools.page(title, lang=language,
+                                silent=True, verbose=False).get_parse(show=False)
+            infobox = page.data['infobox']
+        except:
+            infobox = None
+
+    return infobox
+
+
+def rnd(n, ndigits=3):
+    ''' Helper for consistent rounding'''
+    return round(n, ndigits)
+
+
+def translate(value, source='en', target='nl'):
+    """Translate from the source to the target language"""
+    try:
+        translated_val = GoogleTranslator(source=source,
+                                          target=target).translate(value)
+    except:
+        return value
+    return translated_val

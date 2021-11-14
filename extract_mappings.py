@@ -1,8 +1,14 @@
 
-'''
-File to extract mappings from a 'training' dataset of infoboxes where we have
-both Dutch and English available.
-'''
+#!/usr/bin/env python
+
+"""
+Filename:   extract_mappings.py
+Date:       14-11-2021
+Authors:    Frank van den Berg, Esther Ploeger, Wessel Poelman
+Description:
+    A program that extracts mappings from a 'training' dataset of infoboxes
+    where both Dutch and English infoboxes available for the same subject.
+"""
 
 from __future__ import annotations
 
@@ -85,7 +91,7 @@ class Mapper:
         if en_key not in self.map:
             return None
 
-        # NOTE: be careful if you are using a normalized key or not 
+        # NOTE: be careful if you are using a normalized key or not
         mapping_options = self.map[en_key]
 
         if rank_strategy == 'most_frequent':
@@ -122,8 +128,6 @@ def normalize_str(string: str) -> str:
     string = clean_str(string)
     # Next try ascii folding to account for localization differences
     string = unidecode(string)
-
-    # possible other options?
 
     return string
 

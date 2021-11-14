@@ -1,17 +1,18 @@
 #!/usr/bin/env python
 
 """
-A program to retrieve the English infobox from a given Wikipedia page title,
-then either expand the existing Dutch infobox or create a new Dutch infobox.
+Filename:   demo.py
+Date:       14-11-2021
+Authors:    Frank van den Berg, Esther Ploeger, Wessel Poelman
+Description:
+    A program that retrieves an English infobox from a given Wikipedia page
+    title, then it either expands the existing Dutch infobox or creates a new
+    Dutch infobox.
 """
 
 import argparse
 import json
 import sys
-
-import requests
-import wptools
-from deep_translator import GoogleTranslator
 
 from extract_mappings import Mapper, Mapping
 from specific_cases import *
@@ -33,55 +34,6 @@ def create_arg_parser():
                         help="Path to a trained mapper object.")
     args = parser.parse_args()
     return args
-
-
-def get_dutch_title(en_title):
-    """Use the English title of a Wikipedia page to get the Dutch title"""
-    try:
-        URL = "https://en.wikipedia.org/w/api.php"
-        PARAMS = {
-            "action": "query",
-            "titles": en_title,
-            "prop": "langlinks",
-            "lllang": "nl",
-            "format": "json"
-        }
-
-        results = requests.get(url=URL, params=PARAMS).json()
-        pages = [p for p in results['query']['pages']]
-        for p in pages:  # There is probably only one page
-            dutch_title = results['query']['pages'][p]['langlinks'][0]['*']
-    except:
-        # Return the English title instead
-        return en_title
-
-    return dutch_title
-
-
-def get_infobox(title, language='en'):
-    """Use the title of a Wikipedia page to get the infobox"""
-    try:
-        page = wptools.page(title, lang=language,
-                            silent=True, verbose=False).get_parse(show=False)
-        infobox = page.data['infobox']
-    except:
-        infobox = None
-
-    return infobox
-
-
-def translate(value, source='en', target='nl'):
-    """Translate from the source to the target language"""
-    try:
-        translated_val = GoogleTranslator(source=source,
-                                          target=target).translate(value)
-    except:
-        return value
-    return translated_val
-
-
-def rnd(n, ndigits=3):
-    return round(n, ndigits)
 
 
 def evaluate(true_infobox, gen_infobox, chosen_top3):
@@ -134,7 +86,7 @@ def evaluate(true_infobox, gen_infobox, chosen_top3):
     ''')
 
 
-if __name__ == "__main__":
+def main():
     args = create_arg_parser()
 
     mapper: Mapper = load_pickle(args.mapper)
@@ -159,13 +111,12 @@ if __name__ == "__main__":
     # Clean the English infobox
     en_infobox_clean = clean_ib_dict(en_infobox)
 
-    # todo: various steps of filling the new infobox
     # We try to generate the NL infobox
     nl_new_infobox = dict()
     chosen_keypairs = dict()  # Here we store which EN and NL keys we picked
     chosen_top3 = dict()
+
     for en_key in en_infobox_clean:
-        # TODO: test if we want fuzzy here or not
         nl_key_options = mapper.translate(en_key, allow_fuzzy=False)
 
         if nl_key_options:
@@ -178,7 +129,7 @@ if __name__ == "__main__":
         else:
             nl_key = translate(en_key)
             if nl_key not in nl_new_infobox:
-                # todo: decide whether we want to just use the same value
+                # TODO: decide whether we want to just use the same value
                 # in this case
                 nl_new_infobox[nl_key] = en_infobox_clean[en_key]
                 chosen_keypairs[en_key] = nl_key
@@ -206,8 +157,13 @@ if __name__ == "__main__":
     if nl_infobox_clean:
         evaluate(nl_infobox_clean, nl_new_infobox, chosen_top3)
     else:
-        print(f'Cannot evaluate {en_title} since there is no Dutch infobox')
+        print(
+            f'Cannot evaluate {en_title} since there is no Dutch infobox')
 
     # The combination of the existing infobox with our own infobox
     # print(cleaned_nl)
     # print(nl_new_infobox)  # Our self created infobox so far
+
+
+if __name__ == "__main__":
+    main()
