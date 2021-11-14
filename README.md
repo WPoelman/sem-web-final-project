@@ -9,4 +9,4 @@ Final project for the course Semantic Webtechnology
 3. The 'correct' order to do all steps is the following:
    1. `python create_infobox_dict.py` to create a dataset of infoboxes
    2. `python extract_mappings.py` to learn mappings from the created training dataset
-   3. `python demo.py` to create some infoboxes with the learned mappings
+   3. `python demo.py -ts=data/test/test_titles.txt` to create some infoboxes with the learned mappings

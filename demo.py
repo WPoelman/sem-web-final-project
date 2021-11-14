@@ -222,13 +222,13 @@ def main():
         with open(args.titles, 'r') as f:
             titles = [t.strip() for t in f]
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=args.max_workers) as executor:
-        futures = [
-            executor.submit(generator.generate_infobox, title)
-            for title in titles
-        ]
-        for _ in concurrent.futures.as_completed(futures):
-            pass
+        with concurrent.futures.ThreadPoolExecutor(max_workers=args.max_workers) as executor:
+            futures = [
+                executor.submit(generator.generate_infobox, title)
+                for title in titles
+            ]
+            for _ in concurrent.futures.as_completed(futures):
+                pass
 
 
 if __name__ == "__main__":
