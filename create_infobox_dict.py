@@ -18,7 +18,7 @@ from utils import *
 
 def create_arg_parser():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-t", "--titles_file", default='data/titles.txt',
+    parser.add_argument("-t", "--titles_file", default='data/train/titles.txt',
                         help="Input txt file containing book titles on each line.")
     parser.add_argument("-w", "--max_workers", default=32,
                         help="Max concurrent workers used to fetch the infoboxes.")
