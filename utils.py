@@ -10,6 +10,7 @@ Description:
 
 import contextlib
 import io
+import json
 import pickle
 import re
 
@@ -114,3 +115,8 @@ def translate(value, source='en', target='nl'):
     except:
         return value
     return translated_val
+
+
+def format_dict_str(dictionary: dict) -> str:
+    ''' Formats a dict as a readable json string'''
+    return json.dumps(dictionary, indent=4)
