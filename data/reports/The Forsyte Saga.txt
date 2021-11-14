@@ -28,5 +28,6 @@
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'The Forsyte Saga') predicted: orig titel options: ['orig titel', 'naam', 'titel']
-Actual: ('auteur', 'John Galsworthy') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
+Actual: ('naam', 'The Forsyte Saga') predicted: auteur options: ['auteur', 'schrijver', 'naam']
+Actual: ('naam', 'The Forsyte Saga') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
     

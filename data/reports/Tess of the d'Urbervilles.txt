@@ -18,7 +18,7 @@
     "orig titel": "Tess of the d Urbervilles",
     "orig_lang_code": "en",
     "cover-op-enwp": "Tess jpg",
-    "onderschrift": "The front cover of an 1892 edition of Tess of the d Urbervilles A Pure Woman Faithfully Presented published by Harper Bros NY",
+    "onderschrift": "De voorkant van een 1892-editie van Tess of the d Urbervilles A Pure Woman Faithfully Presented, uitgegeven door Harper Bros NY",
     "auteur": "Thomas Hardy",
     "land": "Verenigd Koninkrijk",
     "originele taal": "Engels",
@@ -44,13 +44,12 @@
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Tess of the d Urbervilles') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
-Actual: ('naam', 'Tess of the d Urbervilles') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
-Actual: ('naam', 'Tess of the d Urbervilles') predicted: vervolg options: ['vervolg', 'volgendeboek', 'naam']
+Actual: ('naam', 'Tess of the d Urbervilles') predicted: auteur options: ['auteur', 'schrijver', 'naam']
+Actual: ('naam', 'Tess of the d Urbervilles') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
 Actual: ('afbeelding', 'Tess jpg') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
 Actual: ('afbeelding', 'Tess jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('auteur', 'Thomas Hardy schrijver Thomas Hardy') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
-Actual: ('taal', 'Engels') predicted: land options: ['land', 'extra portaal', 'taal']
+Actual: ('taal', 'Engels') predicted: land options: ['land', 'taal', 'extra portaal']
 Actual: ('taal', 'Engels') predicted: originele taal options: ['originele taal', 'taal']
-Actual: ('uitgiftedatum', '1891') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgever', 'uitgiftedatum']
+Actual: ('uitgiftedatum', '1891') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'uitgever']
 Actual: ('uitgiftedatum', '1891') predicted: paginas options: ['paginas', 'uitgiftedatum']
     

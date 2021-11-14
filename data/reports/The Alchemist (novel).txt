@@ -16,7 +16,7 @@
     --- generated infobox ---
     {
     "cover-op-enwp": "File TheAlchemist jpg",
-    "onderschrift": "Original Brazilian publication",
+    "onderschrift": "Originele Braziliaanse publicatie",
     "auteur": "Paulo Coelho",
     "kaftontwerp": "Caravaggio Narcissus Caravaggio Narcissus 1597 9",
     "land": "Brazili\u00eb",
@@ -33,8 +33,8 @@
     "oclc": "26857452",
     "voorafgegaan": "The Pilgrimage 1987",
     "vervolg": "Brida 1990",
-    "orig titel": "The Alchemist (novel)",
-    "naam": "De Alchemist (roman)"
+    "orig titel": "The Alchemist",
+    "naam": "De Alchemist"
 }
 
     --- stats ---
@@ -43,17 +43,18 @@
 
     --- exact matches ---
     correct keys:          0.4 (8 / 20)
-    correct values:        0.15 (3 / 20)
-    correct key AND value: 0.1 (2 / 20)
+    correct values:        0.2 (4 / 20)
+    correct key AND value: 0.15 (3 / 20)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'De Alchemist') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
-Actual: ('naam', 'De Alchemist') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
-Actual: ('naam', 'De Alchemist') predicted: vervolg options: ['vervolg', 'volgendeboek', 'naam']
+Actual: ('naam', 'De Alchemist') predicted: auteur options: ['auteur', 'schrijver', 'naam']
+Actual: ('naam', 'De Alchemist') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
 Actual: ('orig titel', 'O Alquimista') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'O Alquimista') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
+Actual: ('orig titel', 'O Alquimista') predicted: vervolg options: ['vervolg', 'volgendeboek', 'orig titel']
 Actual: ('auteur', 'Paulo Coelho') predicted: kaftontwerp options: ['kaftontwerp', 'illustraties', 'auteur']
-Actual: ('auteur', 'Paulo Coelho') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
-Actual: ('taal', 'oorspronkelijk in Portugees') predicted: land options: ['land', 'extra portaal', 'taal']
+Actual: ('taal', 'oorspronkelijk in Portugees') predicted: land options: ['land', 'taal', 'extra portaal']
 Actual: ('taal', 'oorspronkelijk in Portugees') predicted: originele taal options: ['originele taal', 'taal']
 Actual: ('uitgiftedatum', '1988') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
 Actual: ('uitgiftedatum', '1988') predicted: paginas options: ['paginas', 'uitgiftedatum']

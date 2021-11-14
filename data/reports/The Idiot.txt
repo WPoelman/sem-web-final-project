@@ -20,7 +20,7 @@
     --- generated infobox ---
     {
     "cover-op-enwp": "Fyodor Dostoyevsky manuscript and drawing 06 jpg",
-    "onderschrift": "Drawing and handwritten text by Fyodor Dostoevsky",
+    "onderschrift": "Tekening en handgeschreven tekst door Fjodor Dostojevski",
     "auteur": "Fyodor Dostoevsky",
     "orig_lang_code": "ru",
     "orig titel": "The Idiot",
@@ -38,6 +38,7 @@
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'De idioot') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
-Actual: ('naam', 'De idioot') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
+Actual: ('naam', 'De idioot') predicted: auteur options: ['auteur', 'schrijver', 'naam']
 Actual: ('orig titel', 'Идиот') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'Идиот') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
     

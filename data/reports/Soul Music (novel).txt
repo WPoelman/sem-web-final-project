@@ -19,7 +19,7 @@
     {
     "cover-op-enwp": "soul music cover jpg",
     "grens": "yes",
-    "onderschrift": "First edition",
+    "onderschrift": "Eerste editie",
     "auteur": "Terry Pratchett",
     "kaftontwerp": "Josh Kirby",
     "originele taal": "Engels",
@@ -28,7 +28,7 @@
     "uitgever": "Victor Gollancz",
     "uitgiftedatum origineel": "1994",
     "isbn": "0 575 05504 9",
-    "orig titel": "Soul Music (novel)",
+    "orig titel": "Soul Music",
     "naam": "Zieltonen",
     "reeks": "Discworld 16th novel 3rd Death story"
 }
@@ -39,15 +39,16 @@
 
     --- exact matches ---
     correct keys:          0.5 (7 / 14)
-    correct values:        0.214 (3 / 14)
-    correct key AND value: 0.214 (3 / 14)
+    correct values:        0.286 (4 / 14)
+    correct key AND value: 0.286 (4 / 14)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Zieltonen') predicted: orig titel options: ['orig titel', 'naam', 'titel']
-Actual: ('naam', 'Zieltonen') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
+Actual: ('naam', 'Zieltonen') predicted: auteur options: ['auteur', 'schrijver', 'naam']
+Actual: ('naam', 'Zieltonen') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
 Actual: ('auteur', 'Terry Pratchett') predicted: kaftontwerp options: ['kaftontwerp', 'illustraties', 'auteur']
-Actual: ('auteur', 'Terry Pratchett') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
 Actual: ('orig titel', 'Soul Music') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'Soul Music') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
 Actual: ('orig titel', 'Soul Music') predicted: reeks options: ['reeks', 'extra portaal', 'orig titel']
 Actual: ('uitgiftedatum', '1994 1997') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'jaren-actief']
     

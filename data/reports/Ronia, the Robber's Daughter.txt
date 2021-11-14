@@ -18,7 +18,7 @@
     --- generated infobox ---
     {
     "cover-op-enwp": "Ronia Robbers Daughter png",
-    "onderschrift": "First edition",
+    "onderschrift": "Eerste editie",
     "auteur": "Astrid Lindgren",
     "illustraties": "Ilon Wikland",
     "land": "Zweden",
@@ -44,11 +44,12 @@
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Ronja de roversdochter') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
-Actual: ('naam', 'Ronja de roversdochter') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
+Actual: ('naam', 'Ronja de roversdochter') predicted: auteur options: ['auteur', 'schrijver', 'naam']
+Actual: ('naam', 'Ronja de roversdochter') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
 Actual: ('orig titel', 'Ronja Rövardotter') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'Ronja Rövardotter') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
 Actual: ('auteur', 'Astrid Lindgren') predicted: illustraties options: ['illustraties', 'kaftontwerp', 'auteur']
-Actual: ('auteur', 'Astrid Lindgren') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
-Actual: ('taal', 'Zweeds') predicted: land options: ['land', 'extra portaal', 'taal']
+Actual: ('taal', 'Zweeds') predicted: land options: ['land', 'taal', 'extra portaal']
 Actual: ('taal', 'Zweeds') predicted: originele taal options: ['originele taal', 'taal']
 Actual: ('uitgiftedatum', '1981') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'jaren-actief']
 Actual: ('uitgiftedatum', '1981') predicted: paginas options: ['paginas', 'uitgiftedatum']

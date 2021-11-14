@@ -17,7 +17,7 @@
     --- generated infobox ---
     {
     "cover-op-enwp": "The Twits first edition jpg",
-    "onderschrift": "second edition",
+    "onderschrift": "tweede druk",
     "auteur": "Roald Dahl",
     "illustraties": "Quentin Blake",
     "kaftontwerp": "Quentin Blake",
@@ -43,11 +43,12 @@
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'De Griezels') predicted: orig titel options: ['orig titel', 'naam', 'titel']
-Actual: ('naam', 'De Griezels') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
+Actual: ('naam', 'De Griezels') predicted: auteur options: ['auteur', 'schrijver', 'naam']
+Actual: ('naam', 'De Griezels') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
 Actual: ('orig titel', 'The Twits') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'The Twits') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
 Actual: ('auteur', 'Roald Dahl') predicted: illustraties options: ['illustraties', 'kaftontwerp', 'auteur']
 Actual: ('auteur', 'Roald Dahl') predicted: kaftontwerp options: ['kaftontwerp', 'illustraties', 'auteur']
-Actual: ('auteur', 'Roald Dahl') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
 Actual: ('kaftontwerp', 'Quentin Blake') predicted: illustraties options: ['illustraties', 'kaftontwerp', 'auteur']
 Actual: ('uitgiftedatum', '1980') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'jaren-actief']
 Actual: ('uitgiftedatum', '1980') predicted: paginas options: ['paginas', 'uitgiftedatum']

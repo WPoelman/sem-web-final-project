@@ -18,7 +18,7 @@
     --- generated infobox ---
     {
     "cover-op-enwp": "Hogfather 2 jpg",
-    "onderschrift": "First edition",
+    "onderschrift": "Eerste editie",
     "auteur": "Terry Pratchett",
     "kaftontwerp": "Josh Kirby",
     "originele taal": "Engels",
@@ -44,10 +44,11 @@
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Berevaar') predicted: orig titel options: ['orig titel', 'naam', 'titel']
-Actual: ('naam', 'Berevaar') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
+Actual: ('naam', 'Berevaar') predicted: auteur options: ['auteur', 'schrijver', 'naam']
+Actual: ('naam', 'Berevaar') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
 Actual: ('auteur', 'Terry Pratchett') predicted: kaftontwerp options: ['kaftontwerp', 'illustraties', 'auteur']
-Actual: ('auteur', 'Terry Pratchett') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
 Actual: ('orig titel', 'Hogfather') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'Hogfather') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
 Actual: ('orig titel', 'Hogfather') predicted: reeks options: ['reeks', 'extra portaal', 'orig titel']
 Actual: ('uitgiftedatum', '1996 2000') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'jaren-actief']
     

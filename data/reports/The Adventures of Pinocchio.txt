@@ -21,7 +21,7 @@
     {
     "cover-op-enwp": "Pinocchio jpg",
     "afbeeldingbreedte": "190px",
-    "onderschrift": "illustration from 1883 edition by Enrico Mazzanti",
+    "onderschrift": "illustratie uit 1883 editie door Enrico Mazzanti",
     "auteur": "Carlo Collodi",
     "illustraties": "Enrico Mazzanti",
     "land": "Itali\u00eb",
@@ -29,7 +29,7 @@
     "genre": "Fictie literatuur fantasie kinderboek Avontuur fictie avontuur",
     "uitgiftedatum origineel": "1883",
     "orig titel": "The Adventures of Pinocchio",
-    "naam": "Pinokkio (boek)"
+    "naam": "Pinokkio"
 }
 
     --- stats ---
@@ -38,14 +38,15 @@
 
     --- exact matches ---
     correct keys:          0.818 (9 / 11)
-    correct values:        0.273 (3 / 11)
-    correct key AND value: 0.273 (3 / 11)
+    correct values:        0.364 (4 / 11)
+    correct key AND value: 0.364 (4 / 11)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Pinokkio') predicted: orig titel options: ['orig titel', 'naam', 'titel']
-Actual: ('naam', 'Pinokkio') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
+Actual: ('naam', 'Pinokkio') predicted: auteur options: ['auteur', 'schrijver', 'naam']
 Actual: ('afbeelding', 'Le avventure di Pinocchio pag007 jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
 Actual: ('orig titel', 'Le avventure di Pinocchio Pinocchio') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'Le avventure di Pinocchio Pinocchio') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
 Actual: ('auteur', 'Carlo Collodi') predicted: illustraties options: ['illustraties', 'kaftontwerp', 'auteur']
 Actual: ('paginas', '224') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
     

@@ -14,7 +14,7 @@
     --- generated infobox ---
     {
     "cover-op-enwp": "Goethe 1774 JPG",
-    "onderschrift": "First print 1774",
+    "onderschrift": "Eerste druk 1774",
     "auteur": "Johann Wolfgang von Goethe",
     "land": "Duitsland",
     "originele taal": "Duitse taal Duits",
@@ -37,11 +37,11 @@
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Die Leiden des jungen Werthers') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
-Actual: ('naam', 'Die Leiden des jungen Werthers') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
+Actual: ('naam', 'Die Leiden des jungen Werthers') predicted: auteur options: ['auteur', 'schrijver', 'naam']
+Actual: ('naam', 'Die Leiden des jungen Werthers') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
 Actual: ('afbeelding', 'Goethe 1774 JPG') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
 Actual: ('afbeelding', 'Goethe 1774 JPG') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('auteur', 'Johann Wolfgang von Goethe') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
-Actual: ('taal', 'Duits') predicted: land options: ['land', 'extra portaal', 'taal']
+Actual: ('taal', 'Duits') predicted: land options: ['land', 'taal', 'extra portaal']
 Actual: ('taal', 'Duits') predicted: originele taal options: ['originele taal', 'taal']
 Actual: ('uitgiftedatum', '1774') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
     

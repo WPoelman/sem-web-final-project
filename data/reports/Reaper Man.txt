@@ -18,7 +18,7 @@
     --- generated infobox ---
     {
     "cover-op-enwp": "reaper man cover jpg",
-    "onderschrift": "First edition",
+    "onderschrift": "Eerste editie",
     "auteur": "Terry Pratchett",
     "kaftontwerp": "Josh Kirby",
     "originele taal": "Engels",
@@ -43,10 +43,11 @@
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Maaierstijd') predicted: orig titel options: ['orig titel', 'naam', 'titel']
-Actual: ('naam', 'Maaierstijd') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
+Actual: ('naam', 'Maaierstijd') predicted: auteur options: ['auteur', 'schrijver', 'naam']
+Actual: ('naam', 'Maaierstijd') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
 Actual: ('auteur', 'Terry Pratchett') predicted: kaftontwerp options: ['kaftontwerp', 'illustraties', 'auteur']
-Actual: ('auteur', 'Terry Pratchett') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
 Actual: ('orig titel', 'Reaper Man') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'Reaper Man') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
 Actual: ('orig titel', 'Reaper Man') predicted: reeks options: ['reeks', 'extra portaal', 'orig titel']
 Actual: ('uitgiftedatum', '1991 1995') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'jaren-actief']
     

@@ -20,7 +20,7 @@
     --- generated infobox ---
     {
     "cover-op-enwp": "AngelsAndDemons jpg",
-    "onderschrift": "First edition cover",
+    "onderschrift": "Omslag eerste editie",
     "auteur": "Dan Brown",
     "land": "Verenigde Staten Verenigd Koninkrijk",
     "originele taal": "Engels",
@@ -49,11 +49,12 @@
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Het Bernini Mysterie') predicted: orig titel options: ['orig titel', 'naam', 'titel']
-Actual: ('naam', 'Het Bernini Mysterie') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
-Actual: ('naam', 'Het Bernini Mysterie') predicted: vervolg options: ['vervolg', 'volgendeboek', 'naam']
+Actual: ('naam', 'Het Bernini Mysterie') predicted: auteur options: ['auteur', 'schrijver', 'naam']
 Actual: ('orig titel', 'Angels and Demons') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'Angels and Demons') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
 Actual: ('orig titel', 'Angels and Demons') predicted: reeks options: ['reeks', 'extra portaal', 'orig titel']
-Actual: ('taal', '45 verschillende talen') predicted: land options: ['land', 'extra portaal', 'taal']
+Actual: ('orig titel', 'Angels and Demons') predicted: vervolg options: ['vervolg', 'volgendeboek', 'orig titel']
+Actual: ('taal', '45 verschillende talen') predicted: land options: ['land', 'taal', 'extra portaal']
 Actual: ('taal', '45 verschillende talen') predicted: originele taal options: ['originele taal', 'taal']
 Actual: ('uitgiftedatum', '2003') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
 Actual: ('uitgiftedatum', '2003') predicted: paginas options: ['paginas', 'uitgiftedatum']

@@ -19,7 +19,7 @@
     --- generated infobox ---
     {
     "cover-op-enwp": "Artemis Fowl first edition cover jpg",
-    "onderschrift": "First edition cover",
+    "onderschrift": "Omslag eerste editie",
     "auteur": "Eoin Colfer",
     "audio_read_by": "Adrian Dunbar",
     "land": "Republiek Ierland Ierland",
@@ -33,8 +33,8 @@
     "dewey": "813",
     "oclc": "46493219",
     "vervolg": "Artemis Fowl and the Arctic Incident The Arctic Incident 2002",
-    "orig titel": "Artemis Fowl (novel)",
-    "naam": "Artemis Fowl (boek)",
+    "orig titel": "Artemis Fowl",
+    "naam": "Artemis Fowl",
     "reeks": "Artemis Fowl (boekenserie)"
 }
 
@@ -44,16 +44,15 @@
 
     --- exact matches ---
     correct keys:          0.556 (10 / 18)
-    correct values:        0.222 (4 / 18)
-    correct key AND value: 0.167 (3 / 18)
+    correct values:        0.278 (5 / 18)
+    correct key AND value: 0.222 (4 / 18)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Artemis Fowl') predicted: orig titel options: ['orig titel', 'naam', 'titel']
-Actual: ('naam', 'Artemis Fowl') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
-Actual: ('naam', 'Artemis Fowl') predicted: vervolg options: ['vervolg', 'volgendeboek', 'naam']
+Actual: ('naam', 'Artemis Fowl') predicted: auteur options: ['auteur', 'schrijver', 'naam']
+Actual: ('naam', 'Artemis Fowl') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
 Actual: ('afbeelding', 'Artemis_Fowl_logo png') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('auteur', 'Eoin Colfer') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
-Actual: ('taal', 'Engels') predicted: land options: ['land', 'extra portaal', 'taal']
+Actual: ('taal', 'Engels') predicted: land options: ['land', 'taal', 'extra portaal']
 Actual: ('taal', 'Engels') predicted: originele taal options: ['originele taal', 'taal']
 Actual: ('uitgiftedatum', 'april 2001') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
 Actual: ('uitgiftedatum', 'april 2001') predicted: paginas options: ['paginas', 'uitgiftedatum']

@@ -22,7 +22,7 @@
     --- generated infobox ---
     {
     "cover-op-enwp": "Vanity Fair 01 cover jpg",
-    "onderschrift": "Title page to the first issue of the Vanity nbsp Fair serial whose canary yellow colour became a William Makepeace Thackeray Thackeray hallmark Thackeray was also responsible for its illustrations",
+    "onderschrift": "Titelpagina van het eerste nummer van de Vanity nbsp Fair-serie waarvan de kanariegele kleur een William Makepeace werd. Thackeray Thackeray-kenmerk Thackeray was ook verantwoordelijk voor de illustraties",
     "auteur": "William Makepeace Thackeray",
     "illustraties": "William Makepeace Thackeray",
     "orig_lang_code": "en",
@@ -40,8 +40,8 @@
     "congres": "PR5618 A1",
     "voorafgegaan": "Mrs Perkins s Ball",
     "vervolg": "The Book of Snobs",
-    "orig titel": "Vanity Fair (novel)",
-    "naam": "Vanity Fair (roman)"
+    "orig titel": "Vanity Fair",
+    "naam": "Vanity Fair"
 }
 
     --- stats ---
@@ -50,20 +50,21 @@
 
     --- exact matches ---
     correct keys:          0.476 (10 / 21)
-    correct values:        0.286 (6 / 21)
-    correct key AND value: 0.19 (4 / 21)
+    correct values:        0.333 (7 / 21)
+    correct key AND value: 0.286 (6 / 21)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Vanity Fair') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
-Actual: ('naam', 'Vanity Fair') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
-Actual: ('naam', 'Vanity Fair') predicted: vervolg options: ['vervolg', 'volgendeboek', 'naam']
+Actual: ('naam', 'Vanity Fair') predicted: auteur options: ['auteur', 'schrijver', 'naam']
+Actual: ('naam', 'Vanity Fair') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
 Actual: ('afbeelding', 'Vanity Fair 01 cover jpg') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
 Actual: ('afbeelding', 'Vanity Fair 01 cover jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
 Actual: ('orig titel', 'Vanity Fair') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'Vanity Fair') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
+Actual: ('orig titel', 'Vanity Fair') predicted: vervolg options: ['vervolg', 'volgendeboek', 'orig titel']
 Actual: ('auteur', 'William Makepeace Thackeray') predicted: illustraties options: ['illustraties', 'kaftontwerp', 'auteur']
-Actual: ('auteur', 'William Makepeace Thackeray') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
-Actual: ('originele uitgever', 'Punch tijdschrift Punch') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
+Actual: ('originele uitgever', 'Punch tijdschrift Punch') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
 Actual: ('paginas', 'xvi 624 eerste editie') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
 Actual: ('vorigeboek', 'Mrs Perkins s Ball') predicted: voorafgegaan options: ['voorafgegaan', 'vorigeboek', 'voorloper']
-Actual: ('volgendeboek', 'The Book of Snobs') predicted: vervolg options: ['vervolg', 'volgendeboek', 'naam']
+Actual: ('volgendeboek', 'The Book of Snobs') predicted: vervolg options: ['vervolg', 'volgendeboek', 'orig titel']
     

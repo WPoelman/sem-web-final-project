@@ -19,7 +19,7 @@
     --- generated infobox ---
     {
     "cover-op-enwp": "Stormbreakerbook jpg",
-    "onderschrift": "First edition UK",
+    "onderschrift": "Eerste editie VK",
     "auteur": "Anthony Horowitz",
     "land": "Verenigd Koninkrijk",
     "originele taal": "Engels",
@@ -33,7 +33,7 @@
     "oclc": "44562574",
     "vervolg": "Point Blanc",
     "orig titel": "Stormbreaker",
-    "naam": "Bolbliksem (boek)",
+    "naam": "Bolbliksem",
     "reeks": "Alex Rider Alex Rider series"
 }
 
@@ -43,17 +43,18 @@
 
     --- exact matches ---
     correct keys:          0.529 (9 / 17)
-    correct values:        0.235 (4 / 17)
-    correct key AND value: 0.235 (4 / 17)
+    correct values:        0.294 (5 / 17)
+    correct key AND value: 0.294 (5 / 17)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Bolbliksem') predicted: orig titel options: ['orig titel', 'naam', 'titel']
-Actual: ('naam', 'Bolbliksem') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
-Actual: ('naam', 'Bolbliksem') predicted: vervolg options: ['vervolg', 'volgendeboek', 'naam']
+Actual: ('naam', 'Bolbliksem') predicted: auteur options: ['auteur', 'schrijver', 'naam']
+Actual: ('naam', 'Bolbliksem') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
 Actual: ('orig titel', 'Stormbreaker') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'Stormbreaker') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
 Actual: ('orig titel', 'Stormbreaker') predicted: reeks options: ['reeks', 'extra portaal', 'orig titel']
-Actual: ('auteur', 'Anthony Horowitz') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
-Actual: ('taal', 'Engels in het Nederlands vertaald') predicted: land options: ['land', 'extra portaal', 'taal']
+Actual: ('orig titel', 'Stormbreaker') predicted: vervolg options: ['vervolg', 'volgendeboek', 'orig titel']
+Actual: ('taal', 'Engels in het Nederlands vertaald') predicted: land options: ['land', 'taal', 'extra portaal']
 Actual: ('taal', 'Engels in het Nederlands vertaald') predicted: originele taal options: ['originele taal', 'taal']
 Actual: ('uitgiftedatum', '2000 en 2002') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
 Actual: ('uitgiftedatum', '2000 en 2002') predicted: paginas options: ['paginas', 'uitgiftedatum']

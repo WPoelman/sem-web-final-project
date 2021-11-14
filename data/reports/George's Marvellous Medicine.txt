@@ -15,7 +15,7 @@
     --- generated infobox ---
     {
     "cover-op-enwp": "George s Marvellous Medicine first edition jpg",
-    "onderschrift": "British first edition hardback",
+    "onderschrift": "Britse eerste editie hardcover",
     "auteur": "Roald Dahl",
     "illustraties": "Quentin Blake",
     "land": "Verenigd Koninkrijk",
@@ -40,10 +40,11 @@
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Joris en de geheimzinnige toverdrank') predicted: orig titel options: ['orig titel', 'naam', 'titel']
-Actual: ('naam', 'Joris en de geheimzinnige toverdrank') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
+Actual: ('naam', 'Joris en de geheimzinnige toverdrank') predicted: auteur options: ['auteur', 'schrijver', 'naam']
+Actual: ('naam', 'Joris en de geheimzinnige toverdrank') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
 Actual: ('orig titel', 'George s Marvellous Medicine') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'George s Marvellous Medicine') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
 Actual: ('auteur', 'Roald Dahl') predicted: illustraties options: ['illustraties', 'kaftontwerp', 'auteur']
-Actual: ('auteur', 'Roald Dahl') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
 Actual: ('kaftontwerp', 'Quentin Blake') predicted: illustraties options: ['illustraties', 'kaftontwerp', 'auteur']
 Actual: ('uitgiftedatum', '1981') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'jaren-actief']
 Actual: ('uitgiftedatum', '1981') predicted: paginas options: ['paginas', 'uitgiftedatum']

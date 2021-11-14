@@ -15,7 +15,7 @@
     --- generated infobox ---
     {
     "cover-op-enwp": "EmmaTitlePage jpg",
-    "onderschrift": "Title page of first edition volume 1 of 3",
+    "onderschrift": "Titelpagina van eerste druk deel 1 van 3",
     "auteur": "Jane Austen",
     "land": "Verenigd Koninkrijk",
     "originele taal": "Engels",
@@ -29,8 +29,8 @@
     "congres": "PR4034 E5",
     "voorafgegaan": "Mansfield Park",
     "vervolg": "Northanger Abbey",
-    "orig titel": "Emma (novel)",
-    "naam": "Emma (roman)"
+    "orig titel": "Emma",
+    "naam": "Emma"
 }
 
     --- stats ---
@@ -39,15 +39,16 @@
 
     --- exact matches ---
     correct keys:          0.471 (8 / 17)
-    correct values:        0.176 (3 / 17)
-    correct key AND value: 0.118 (2 / 17)
+    correct values:        0.235 (4 / 17)
+    correct key AND value: 0.235 (4 / 17)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Emma') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
-Actual: ('naam', 'Emma') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
-Actual: ('naam', 'Emma') predicted: vervolg options: ['vervolg', 'volgendeboek', 'naam']
+Actual: ('naam', 'Emma') predicted: auteur options: ['auteur', 'schrijver', 'naam']
+Actual: ('naam', 'Emma') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
 Actual: ('afbeelding', 'EmmaTitlePage jpg') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
 Actual: ('afbeelding', 'EmmaTitlePage jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
 Actual: ('orig titel', 'Emma') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('auteur', 'Jane Austen') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
+Actual: ('orig titel', 'Emma') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
+Actual: ('orig titel', 'Emma') predicted: vervolg options: ['vervolg', 'volgendeboek', 'orig titel']
     

@@ -17,7 +17,7 @@
     {
     "orig titel": "Point Blanc",
     "cover-op-enwp": "Pointblanc JPG",
-    "onderschrift": "First edition UK",
+    "onderschrift": "Eerste editie VK",
     "auteur": "Anthony Horowitz",
     "land": "Verenigd Koninkrijk",
     "originele taal": "Engels",
@@ -46,10 +46,9 @@
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Point Blanc') predicted: orig titel options: ['orig titel', 'naam', 'titel']
-Actual: ('naam', 'Point Blanc') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
-Actual: ('naam', 'Point Blanc') predicted: vervolg options: ['vervolg', 'volgendeboek', 'naam']
-Actual: ('auteur', 'Anthony Horowitz') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
-Actual: ('taal', 'Engels') predicted: land options: ['land', 'extra portaal', 'taal']
+Actual: ('naam', 'Point Blanc') predicted: auteur options: ['auteur', 'schrijver', 'naam']
+Actual: ('naam', 'Point Blanc') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
+Actual: ('taal', 'Engels') predicted: land options: ['land', 'taal', 'extra portaal']
 Actual: ('taal', 'Engels') predicted: originele taal options: ['originele taal', 'taal']
 Actual: ('uitgiftedatum', '4 september 2001') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
 Actual: ('uitgiftedatum', '4 september 2001') predicted: paginas options: ['paginas', 'uitgiftedatum']

@@ -17,7 +17,7 @@
     --- generated infobox ---
     {
     "cover-op-enwp": "Wallace Ben Hur cover jpg",
-    "onderschrift": "First edition 1880",
+    "onderschrift": "Eerste editie 1880",
     "auteur": "Lew Wallace",
     "land": "Verenigde Staten",
     "originele taal": "Engels",
@@ -26,7 +26,7 @@
     "uitgiftedatum origineel": "November 12 1880",
     "medium": "Print Hardcover Hardback Paperback",
     "orig titel": "Ben-Hur: A Tale of the Christ",
-    "naam": "Ben-Hur (roman)"
+    "naam": "Ben-Hur"
 }
 
     --- stats ---
@@ -40,11 +40,11 @@
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Ben Hur A Tale of the Christ') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
-Actual: ('naam', 'Ben Hur A Tale of the Christ') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
+Actual: ('naam', 'Ben Hur A Tale of the Christ') predicted: auteur options: ['auteur', 'schrijver', 'naam']
+Actual: ('naam', 'Ben Hur A Tale of the Christ') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
 Actual: ('afbeelding', 'Wallace Ben Hur cover jpg') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
 Actual: ('afbeelding', 'Wallace Ben Hur cover jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('auteur', 'Lew Wallace') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
-Actual: ('taal', 'Engels') predicted: land options: ['land', 'extra portaal', 'taal']
+Actual: ('taal', 'Engels') predicted: land options: ['land', 'taal', 'extra portaal']
 Actual: ('taal', 'Engels') predicted: originele taal options: ['originele taal', 'taal']
 Actual: ('uitgiftedatum', '12 november 1880') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
 Actual: ('paginas', '560') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']

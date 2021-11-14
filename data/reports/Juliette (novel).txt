@@ -24,7 +24,7 @@
     --- generated infobox ---
     {
     "cover-op-enwp": "Juliette title page 1968 jpg",
-    "onderschrift": "Title page of 1968 translation by Austryn Wainhouse",
+    "onderschrift": "Titelpagina van de vertaling uit 1968 door Austryn Wainhouse",
     "auteur": "The Marquis de Sade",
     "land": "Frankrijk",
     "originele taal": "Frans",
@@ -33,7 +33,7 @@
     "medium": "Print Hardcover Hardback Paperback",
     "voorafgegaan": "La Nouvelle Justine",
     "vervolg": "The Crimes of Love 1800",
-    "orig titel": "Juliette (novel)",
+    "orig titel": "Juliette",
     "naam": "Juliette of De voorspoed van de ondeugd"
 }
 
@@ -48,10 +48,11 @@
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Juliette of De Voorspoed van de Ondeugd') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
-Actual: ('naam', 'Juliette of De Voorspoed van de Ondeugd') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
-Actual: ('naam', 'Juliette of De Voorspoed van de Ondeugd') predicted: vervolg options: ['vervolg', 'volgendeboek', 'naam']
+Actual: ('naam', 'Juliette of De Voorspoed van de Ondeugd') predicted: auteur options: ['auteur', 'schrijver', 'naam']
 Actual: ('afbeelding', 'Juliette Sade Dutch jpg') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
 Actual: ('afbeelding', 'Juliette Sade Dutch jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
 Actual: ('orig titel', 'L Histoire de Juliette ou Les Prospérités du Vice Juliette Ou Les Prospérités du Vice') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'L Histoire de Juliette ou Les Prospérités du Vice Juliette Ou Les Prospérités du Vice') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
+Actual: ('orig titel', 'L Histoire de Juliette ou Les Prospérités du Vice Juliette Ou Les Prospérités du Vice') predicted: vervolg options: ['vervolg', 'volgendeboek', 'orig titel']
 Actual: ('paginas', '1216') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
     

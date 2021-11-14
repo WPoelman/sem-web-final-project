@@ -43,8 +43,8 @@
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'The Seven Habits of Highly Effective People') predicted: orig titel options: ['orig titel', 'naam', 'titel']
-Actual: ('naam', 'The Seven Habits of Highly Effective People') predicted: vervolg options: ['vervolg', 'volgendeboek', 'naam']
-Actual: ('auteur', 'Stephen Covey Stephen R W Covey') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
+Actual: ('naam', 'The Seven Habits of Highly Effective People') predicted: auteur options: ['auteur', 'schrijver', 'naam']
+Actual: ('naam', 'The Seven Habits of Highly Effective People') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
 Actual: ('uitgiftedatum', '1989') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'jaren-actief']
 Actual: ('uitgiftedatum', '1989') predicted: paginas options: ['paginas', 'uitgiftedatum']
 Actual: ('issn', '0 7432 6951 9') predicted: isbn options: ['isbn', 'issn']

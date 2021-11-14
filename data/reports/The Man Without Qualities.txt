@@ -21,7 +21,7 @@
     --- generated infobox ---
     {
     "cover-op-enwp": "Robert Musil Der Mann ohne Eigenschaften 1930 jpg",
-    "onderschrift": "Cover of the first edition",
+    "onderschrift": "Omslag van de eerste editie",
     "auteur": "Robert Musil",
     "land": "Oostenrijk",
     "originele taal": "Duitse",
@@ -46,12 +46,13 @@
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'De man zonder eigenschappen') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
-Actual: ('naam', 'De man zonder eigenschappen') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
+Actual: ('naam', 'De man zonder eigenschappen') predicted: auteur options: ['auteur', 'schrijver', 'naam']
+Actual: ('naam', 'De man zonder eigenschappen') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
 Actual: ('orig titel', 'Der Mann ohne Eigenschaften') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('auteur', 'Robert Musil') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
-Actual: ('taal', 'Nederlands') predicted: land options: ['land', 'extra portaal', 'taal']
+Actual: ('orig titel', 'Der Mann ohne Eigenschaften') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
+Actual: ('taal', 'Nederlands') predicted: land options: ['land', 'taal', 'extra portaal']
 Actual: ('taal', 'Nederlands') predicted: originele taal options: ['originele taal', 'taal']
-Actual: ('originele uitgever', 'Rowohlt Berlijn') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
+Actual: ('originele uitgever', 'Rowohlt Berlijn') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
 Actual: ('uitgiftedatum', '2005') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
 Actual: ('uitgiftedatum', '2005') predicted: paginas options: ['paginas', 'uitgiftedatum']
 Actual: ('paginas', '449') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']

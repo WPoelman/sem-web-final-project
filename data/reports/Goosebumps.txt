@@ -50,8 +50,8 @@
     Actual: ('titel', 'Kippenvel') predicted: orig titel options: ['orig titel', 'naam', 'titel']
 Actual: ('orig titel', 'Goosebumps') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
 Actual: ('afbeelding', 'Goosebumps png') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('taal', 'Engels Nederlands vertaald') predicted: land options: ['land', 'extra portaal', 'taal']
+Actual: ('taal', 'Engels Nederlands vertaald') predicted: land options: ['land', 'taal', 'extra portaal']
 Actual: ('taal', 'Engels Nederlands vertaald') predicted: originele taal options: ['originele taal', 'taal']
-Actual: ('schrijver', 'R L Stine') predicted: auteur options: ['auteur', 'schrijver', 'Schrijfster']
+Actual: ('schrijver', 'R L Stine') predicted: auteur options: ['auteur', 'schrijver', 'naam']
 Actual: ('jaren-actief', '1992 1997') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'jaren-actief']
     

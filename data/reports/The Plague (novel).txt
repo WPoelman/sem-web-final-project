@@ -25,7 +25,7 @@
     {
     "cover-op-enwp": "La Peste book cover jpg",
     "grens": "yes",
-    "onderschrift": "Cover of the first edition",
+    "onderschrift": "Omslag van de eerste editie",
     "auteur": "Albert Camus",
     "orig_lang_code": "fr",
     "land": "Frankrijk",
@@ -33,8 +33,8 @@
     "genre": "Filosofische fictie Filosofische roman",
     "set_in": "Oran French Algeria",
     "uitgiftedatum origineel": "plainlist 1947 \u00c9ditions Gallimard Gallimard French 1948 Hamish Hamilton English",
-    "orig titel": "The Plague (novel)",
-    "naam": "De Pest (roman)"
+    "orig titel": "The Plague",
+    "naam": "De Pest"
 }
 
     --- stats ---
@@ -43,17 +43,18 @@
 
     --- exact matches ---
     correct keys:          0.583 (7 / 12)
-    correct values:        0.333 (4 / 12)
-    correct key AND value: 0.25 (3 / 12)
+    correct values:        0.417 (5 / 12)
+    correct key AND value: 0.333 (4 / 12)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'De Pest') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
-Actual: ('naam', 'De Pest') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
+Actual: ('naam', 'De Pest') predicted: auteur options: ['auteur', 'schrijver', 'naam']
 Actual: ('afbeelding', 'La Peste book cover jpg') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
 Actual: ('afbeelding', 'La Peste book cover jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
 Actual: ('orig titel', 'La Peste') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('taal', 'Nederlands') predicted: land options: ['land', 'extra portaal', 'taal']
+Actual: ('orig titel', 'La Peste') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
+Actual: ('taal', 'Nederlands') predicted: land options: ['land', 'taal', 'extra portaal']
 Actual: ('taal', 'Nederlands') predicted: originele taal options: ['originele taal', 'taal']
-Actual: ('uitgever', 'De Bezige Bij') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgever', 'uitgiftedatum']
-Actual: ('uitgiftedatum', '1992') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgever', 'uitgiftedatum']
+Actual: ('uitgever', 'De Bezige Bij') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'uitgever']
+Actual: ('uitgiftedatum', '1992') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'uitgever']
     

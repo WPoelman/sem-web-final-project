@@ -20,7 +20,7 @@
     "cursieve titel": "no",
     "cover-op-enwp": "Camus23 jpg",
     "grens": "yes",
-    "onderschrift": "Cover of the first edition",
+    "onderschrift": "Omslag van de eerste editie",
     "auteur": "Albert Camus",
     "orig_lang_code": "fr",
     "land": "Frankrijk",
@@ -45,13 +45,14 @@
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'De vreemdeling') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
-Actual: ('naam', 'De vreemdeling') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
+Actual: ('naam', 'De vreemdeling') predicted: auteur options: ['auteur', 'schrijver', 'naam']
+Actual: ('naam', 'De vreemdeling') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
 Actual: ('orig titel', 'L étranger') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'L étranger') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
 Actual: ('orig titel', 'L étranger') predicted: reeks options: ['reeks', 'extra portaal', 'orig titel']
 Actual: ('afbeelding', 'Camus23 jpg') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
 Actual: ('afbeelding', 'Camus23 jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('auteur', 'Albert Camus') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
-Actual: ('taal', 'Frans') predicted: land options: ['land', 'extra portaal', 'taal']
+Actual: ('taal', 'Frans') predicted: land options: ['land', 'taal', 'extra portaal']
 Actual: ('taal', 'Frans') predicted: originele taal options: ['originele taal', 'taal']
 Actual: ('uitgiftedatum', '1942') predicted: paginas options: ['paginas', 'uitgiftedatum']
     

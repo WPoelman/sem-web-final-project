@@ -15,7 +15,7 @@
     {
     "cover-op-enwp": "Hongloumeng2 jpg",
     "afbeeldingbreedte": "180px",
-    "onderschrift": "A scene from the novel painted by Xu Baozhuan 1810 1873",
+    "onderschrift": "Een sc\u00e8ne uit de roman geschilderd door Xu Baozhuan 1810 1873",
     "auteur": "Cao Xueqin",
     "land": "China",
     "originele taal": "Chinees in de volkstaal",
@@ -38,11 +38,12 @@
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Droom van de Rode Kamer') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
-Actual: ('naam', 'Droom van de Rode Kamer') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
+Actual: ('naam', 'Droom van de Rode Kamer') predicted: auteur options: ['auteur', 'schrijver', 'naam']
 Actual: ('orig titel', '紅樓夢') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', '紅樓夢') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
 Actual: ('afbeelding', 'JiaXu01 jpg') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
 Actual: ('afbeelding', 'JiaXu01 jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('taal', 'Chinese talen Chinees') predicted: land options: ['land', 'extra portaal', 'taal']
+Actual: ('taal', 'Chinese talen Chinees') predicted: land options: ['land', 'taal', 'extra portaal']
 Actual: ('taal', 'Chinese talen Chinees') predicted: originele taal options: ['originele taal', 'taal']
 Actual: ('uitgiftedatum', '18e eeuw') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
     
