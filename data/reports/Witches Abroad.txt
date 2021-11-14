@@ -17,7 +17,6 @@
 
     --- generated infobox ---
     {
-    "orig titel": "Heksen in de lucht",
     "cover-op-enwp": "witches abroad cover jpg",
     "onderschrift": "First edition",
     "auteur": "Terry Pratchett",
@@ -28,23 +27,26 @@
     "uitgever": "Victor Gollancz",
     "uitgiftedatum origineel": "1991",
     "isbn": "0 575 04980 4",
+    "orig titel": "Witches Abroad",
+    "naam": "Heksen in de lucht",
     "reeks": "Discworld 12th novel 3rd witches story"
 }
 
     --- stats ---
     items in true infobox:      12
-    items in generated infobox: 12
+    items in generated infobox: 13
 
     --- exact matches ---
-    correct keys:          0.5 (6 / 12)
-    correct values:        0.25 (3 / 12)
-    correct key AND value: 0.167 (2 / 12)
+    correct keys:          0.538 (7 / 13)
+    correct values:        0.308 (4 / 13)
+    correct key AND value: 0.308 (4 / 13)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Heksen in de lucht') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('naam', 'Heksen in de lucht') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
 Actual: ('auteur', 'Terry Pratchett') predicted: kaftontwerp options: ['kaftontwerp', 'illustraties', 'auteur']
+Actual: ('auteur', 'Terry Pratchett') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
 Actual: ('orig titel', 'Witches Abroad') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('orig titel', 'Witches Abroad') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
 Actual: ('orig titel', 'Witches Abroad') predicted: reeks options: ['reeks', 'extra portaal', 'orig titel']
 Actual: ('uitgiftedatum', '1991 1995') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'jaren-actief']
     

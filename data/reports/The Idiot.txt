@@ -19,24 +19,25 @@
 
     --- generated infobox ---
     {
-    "orig titel": "De idioot",
     "cover-op-enwp": "Fyodor Dostoyevsky manuscript and drawing 06 jpg",
     "onderschrift": "Drawing and handwritten text by Fyodor Dostoevsky",
     "auteur": "Fyodor Dostoevsky",
-    "orig_lang_code": "ru"
+    "orig_lang_code": "ru",
+    "orig titel": "The Idiot",
+    "naam": "De idioot"
 }
 
     --- stats ---
     items in true infobox:      14
-    items in generated infobox: 5
+    items in generated infobox: 6
 
     --- exact matches ---
-    correct keys:          0.6 (3 / 5)
-    correct values:        0.2 (1 / 5)
-    correct key AND value: 0.0 (0 / 5)
+    correct keys:          0.667 (4 / 6)
+    correct values:        0.167 (1 / 6)
+    correct key AND value: 0.167 (1 / 6)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'De idioot') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
+Actual: ('naam', 'De idioot') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
 Actual: ('orig titel', 'Идиот') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('orig titel', 'Идиот') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
     

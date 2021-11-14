@@ -21,7 +21,6 @@
 
     --- generated infobox ---
     {
-    "orig titel": "Rupsje Nooitgenoeg",
     "cover-op-enwp": "HungryCaterpillar JPG",
     "onderschrift": "Front cover illustration",
     "auteur": "Eric Carle",
@@ -36,28 +35,30 @@
     "paginas": "22",
     "isbn": "0 399 22690 7",
     "isbn_note": "US",
-    "oclc": "21134403"
+    "oclc": "21134403",
+    "orig titel": "The Very Hungry Caterpillar",
+    "naam": "Rupsje Nooitgenoeg"
 }
 
     --- stats ---
     items in true infobox:      16
-    items in generated infobox: 16
+    items in generated infobox: 17
 
     --- exact matches ---
-    correct keys:          0.688 (11 / 16)
-    correct values:        0.438 (7 / 16)
-    correct key AND value: 0.438 (7 / 16)
+    correct keys:          0.706 (12 / 17)
+    correct values:        0.471 (8 / 17)
+    correct key AND value: 0.529 (9 / 17)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Rupsje Nooitgenoeg') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('naam', 'Rupsje Nooitgenoeg') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
 Actual: ('orig titel', 'The Very Hungry Caterpillar') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('orig titel', 'The Very Hungry Caterpillar') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
 Actual: ('auteur', 'Eric Carle') predicted: illustraties options: ['illustraties', 'kaftontwerp', 'auteur']
 Actual: ('auteur', 'Eric Carle') predicted: kaftontwerp options: ['kaftontwerp', 'illustraties', 'auteur']
+Actual: ('auteur', 'Eric Carle') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
 Actual: ('kaftontwerp', 'Derrick') predicted: illustraties options: ['illustraties', 'kaftontwerp', 'auteur']
-Actual: ('illustraties', 'Eric Carle') predicted: auteur options: ['auteur', 'schrijver', 'illustraties']
 Actual: ('illustraties', 'Eric Carle') predicted: kaftontwerp options: ['kaftontwerp', 'illustraties', 'auteur']
-Actual: ('taal', 'Nederlands') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('taal', 'Nederlands') predicted: land options: ['land', 'extra portaal', 'taal']
 Actual: ('taal', 'Nederlands') predicted: originele taal options: ['originele taal', 'taal']
-Actual: ('originele uitgever', 'World Publishing Company') predicted: uitgever options: ['uitgever', 'originele uitgever', 'uitgeverij']
+Actual: ('originele uitgever', 'World Publishing Company') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
     

@@ -20,7 +20,6 @@
 
     --- generated infobox ---
     {
-    "orig titel": "De man zonder eigenschappen",
     "cover-op-enwp": "Robert Musil Der Mann ohne Eigenschaften 1930 jpg",
     "onderschrift": "Cover of the first edition",
     "auteur": "Robert Musil",
@@ -31,25 +30,28 @@
     "uitgiftedatum origineel": "1930 1943",
     "medium": "Print Hardcover Paperback",
     "paginas": "1 130 the core text 1 774 complete English translation",
-    "congres": "PT2625 U8 M3"
+    "congres": "PT2625 U8 M3",
+    "orig titel": "The Man Without Qualities",
+    "naam": "De man zonder eigenschappen"
 }
 
     --- stats ---
     items in true infobox:      15
-    items in generated infobox: 12
+    items in generated infobox: 13
 
     --- exact matches ---
-    correct keys:          0.75 (9 / 12)
-    correct values:        0.25 (3 / 12)
-    correct key AND value: 0.167 (2 / 12)
+    correct keys:          0.769 (10 / 13)
+    correct values:        0.231 (3 / 13)
+    correct key AND value: 0.231 (3 / 13)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'De man zonder eigenschappen') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
+Actual: ('naam', 'De man zonder eigenschappen') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
 Actual: ('orig titel', 'Der Mann ohne Eigenschaften') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('orig titel', 'Der Mann ohne Eigenschaften') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
-Actual: ('taal', 'Nederlands') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('auteur', 'Robert Musil') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
+Actual: ('taal', 'Nederlands') predicted: land options: ['land', 'extra portaal', 'taal']
 Actual: ('taal', 'Nederlands') predicted: originele taal options: ['originele taal', 'taal']
-Actual: ('originele uitgever', 'Rowohlt Berlijn') predicted: uitgever options: ['uitgever', 'originele uitgever', 'uitgeverij']
+Actual: ('originele uitgever', 'Rowohlt Berlijn') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
 Actual: ('uitgiftedatum', '2005') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
 Actual: ('uitgiftedatum', '2005') predicted: paginas options: ['paginas', 'uitgiftedatum']
 Actual: ('paginas', '449') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']

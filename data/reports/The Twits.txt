@@ -16,7 +16,6 @@
 
     --- generated infobox ---
     {
-    "orig titel": "De Griezels",
     "cover-op-enwp": "The Twits first edition jpg",
     "onderschrift": "second edition",
     "auteur": "Roald Dahl",
@@ -28,24 +27,27 @@
     "uitgever": "Jonathan Cape London",
     "uitgiftedatum origineel": "1980",
     "medium": "Print hardback paperback",
-    "paginas": "87"
+    "paginas": "87",
+    "orig titel": "The Twits",
+    "naam": "De Griezels"
 }
 
     --- stats ---
     items in true infobox:      11
-    items in generated infobox: 13
+    items in generated infobox: 14
 
     --- exact matches ---
-    correct keys:          0.615 (8 / 13)
-    correct values:        0.385 (5 / 13)
-    correct key AND value: 0.231 (3 / 13)
+    correct keys:          0.643 (9 / 14)
+    correct values:        0.429 (6 / 14)
+    correct key AND value: 0.357 (5 / 14)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'De Griezels') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('naam', 'De Griezels') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
 Actual: ('orig titel', 'The Twits') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('orig titel', 'The Twits') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
 Actual: ('auteur', 'Roald Dahl') predicted: illustraties options: ['illustraties', 'kaftontwerp', 'auteur']
 Actual: ('auteur', 'Roald Dahl') predicted: kaftontwerp options: ['kaftontwerp', 'illustraties', 'auteur']
+Actual: ('auteur', 'Roald Dahl') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
 Actual: ('kaftontwerp', 'Quentin Blake') predicted: illustraties options: ['illustraties', 'kaftontwerp', 'auteur']
 Actual: ('uitgiftedatum', '1980') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'jaren-actief']
 Actual: ('uitgiftedatum', '1980') predicted: paginas options: ['paginas', 'uitgiftedatum']

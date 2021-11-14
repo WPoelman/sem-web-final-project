@@ -19,7 +19,6 @@
 
     --- generated infobox ---
     {
-    "orig titel": "De stam van de holenbeer",
     "cover-op-enwp": "The Clan of the Cave Bear cover jpg",
     "afbeeldingbreedte": "200px",
     "onderschrift": "First edition",
@@ -35,27 +34,29 @@
     "congres": "PS3551 U36 C57 1980",
     "oclc": "6277166",
     "vervolg": "The Valley of Horses",
+    "orig titel": "The Clan of the Cave Bear",
+    "naam": "De stam van de holenbeer",
     "reeks": "Earth s Children"
 }
 
     --- stats ---
     items in true infobox:      14
-    items in generated infobox: 17
+    items in generated infobox: 18
 
     --- exact matches ---
-    correct keys:          0.471 (8 / 17)
-    correct values:        0.235 (4 / 17)
-    correct key AND value: 0.176 (3 / 17)
+    correct keys:          0.5 (9 / 18)
+    correct values:        0.278 (5 / 18)
+    correct key AND value: 0.278 (5 / 18)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'De stam van de holenbeer') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('naam', 'De stam van de holenbeer') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
+Actual: ('naam', 'De stam van de holenbeer') predicted: vervolg options: ['vervolg', 'volgendeboek', 'naam']
 Actual: ('orig titel', 'The Clan of the Cave Bear') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('orig titel', 'The Clan of the Cave Bear') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
 Actual: ('orig titel', 'The Clan of the Cave Bear') predicted: reeks options: ['reeks', 'extra portaal', 'orig titel']
-Actual: ('orig titel', 'The Clan of the Cave Bear') predicted: vervolg options: ['vervolg', 'volgendeboek', 'orig titel']
 Actual: ('uitgiftedatum', '1980') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgever', 'uitgiftedatum']
 Actual: ('uitgiftedatum', '1980') predicted: paginas options: ['paginas', 'uitgiftedatum']
-Actual: ('extra portaal', 'Prehistorie') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('extra portaal', 'Prehistorie') predicted: land options: ['land', 'extra portaal', 'taal']
 Actual: ('extra portaal', 'Prehistorie') predicted: reeks options: ['reeks', 'extra portaal', 'orig titel']
 Actual: ('extra portaal', 'Prehistorie') predicted: genre options: ['genre', 'extra portaal']
     

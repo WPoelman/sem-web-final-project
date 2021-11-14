@@ -38,8 +38,10 @@
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Silas Marner') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('naam', 'Silas Marner') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
 Actual: ('afbeelding', 'Silas Marner 1 jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('taal', 'Engels') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('auteur', 'George Eliot') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
+Actual: ('taal', 'Engels') predicted: land options: ['land', 'extra portaal', 'taal']
 Actual: ('taal', 'Engels') predicted: originele taal options: ['originele taal', 'taal']
 Actual: ('uitgiftedatum', '1861') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
     

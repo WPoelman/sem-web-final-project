@@ -17,7 +17,6 @@
 
     --- generated infobox ---
     {
-    "orig titel": "Te Wapen (roman)",
     "cover-op-enwp": "men at arms cover jpg",
     "onderschrift": "First edition",
     "grens": "yes",
@@ -29,23 +28,26 @@
     "uitgever": "Victor Gollancz",
     "uitgiftedatum origineel": "1993",
     "isbn": "0 575 05503 0",
+    "orig titel": "Men at Arms",
+    "naam": "Te Wapen (roman)",
     "reeks": "Discworld 15th novel 2nd City Watch novel 3rd story"
 }
 
     --- stats ---
     items in true infobox:      12
-    items in generated infobox: 13
+    items in generated infobox: 14
 
     --- exact matches ---
-    correct keys:          0.462 (6 / 13)
-    correct values:        0.154 (2 / 13)
-    correct key AND value: 0.154 (2 / 13)
+    correct keys:          0.5 (7 / 14)
+    correct values:        0.214 (3 / 14)
+    correct key AND value: 0.214 (3 / 14)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Te Wapen') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('naam', 'Te Wapen') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
 Actual: ('auteur', 'Terry Pratchett') predicted: kaftontwerp options: ['kaftontwerp', 'illustraties', 'auteur']
+Actual: ('auteur', 'Terry Pratchett') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
 Actual: ('orig titel', 'Men at Arms') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('orig titel', 'Men at Arms') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
 Actual: ('orig titel', 'Men at Arms') predicted: reeks options: ['reeks', 'extra portaal', 'orig titel']
 Actual: ('uitgiftedatum', '1993 1996') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'jaren-actief']
     

@@ -25,7 +25,6 @@
 
     --- generated infobox ---
     {
-    "orig titel": "Zij (boek)",
     "cover-op-enwp": "File SHE A History of Adventure 1st Edition Cover by H Rider Haggard jpg",
     "onderschrift": "Cover of the first edition 1887",
     "auteur": "H Rider Haggard",
@@ -42,34 +41,36 @@
     "congres": "PR4731 S6",
     "voorafgegaan": "King Solomon s Mines",
     "vervolg": "The Ancient Allan",
+    "orig titel": "She: A History of Adventure",
+    "naam": "Zij (boek)",
     "reeks": "Henry Rider Haggard Ayesha series Ayesha series"
 }
 
     --- stats ---
     items in true infobox:      20
-    items in generated infobox: 18
+    items in generated infobox: 19
 
     --- exact matches ---
-    correct keys:          0.667 (12 / 18)
-    correct values:        0.056 (1 / 18)
-    correct key AND value: 0.056 (1 / 18)
+    correct keys:          0.684 (13 / 19)
+    correct values:        0.053 (1 / 19)
+    correct key AND value: 0.053 (1 / 19)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Zij') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
+Actual: ('naam', 'Zij') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
+Actual: ('naam', 'Zij') predicted: vervolg options: ['vervolg', 'volgendeboek', 'naam']
 Actual: ('afbeelding', 'She title page jpg') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
 Actual: ('afbeelding', 'She title page jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
 Actual: ('orig titel', 'She A History of Adventure') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('orig titel', 'She A History of Adventure') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
 Actual: ('orig titel', 'She A History of Adventure') predicted: reeks options: ['reeks', 'extra portaal', 'orig titel']
-Actual: ('orig titel', 'She A History of Adventure') predicted: voorafgegaan options: ['voorafgegaan', 'vorigeboek', 'orig titel']
-Actual: ('orig titel', 'She A History of Adventure') predicted: vervolg options: ['vervolg', 'volgendeboek', 'orig titel']
 Actual: ('auteur', 'Henry Rider Haggard') predicted: illustraties options: ['illustraties', 'kaftontwerp', 'auteur']
-Actual: ('taal', 'Nederlands') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('auteur', 'Henry Rider Haggard') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
+Actual: ('taal', 'Nederlands') predicted: land options: ['land', 'extra portaal', 'taal']
 Actual: ('taal', 'Nederlands') predicted: originele taal options: ['originele taal', 'taal']
 Actual: ('uitgiftedatum', '1977') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
 Actual: ('uitgiftedatum', '1977') predicted: paginas options: ['paginas', 'uitgiftedatum']
 Actual: ('paginas', '192') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
-Actual: ('extra portaal', 'Fantasy') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('extra portaal', 'Fantasy') predicted: land options: ['land', 'extra portaal', 'taal']
 Actual: ('extra portaal', 'Fantasy') predicted: reeks options: ['reeks', 'extra portaal', 'orig titel']
 Actual: ('extra portaal', 'Fantasy') predicted: genre options: ['genre', 'extra portaal']
     

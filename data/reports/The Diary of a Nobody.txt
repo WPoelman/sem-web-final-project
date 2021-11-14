@@ -42,16 +42,16 @@
     correct key AND value: 0.2 (2 / 10)
 
     --- wrong key but in top 3 ---
-    Actual: ('naam', 'Dagboek van een onbenul') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
+    Actual: ('naam', 'Dagboek van een onbenul') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
+Actual: ('naam', 'Dagboek van een onbenul') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
 Actual: ('afbeelding', 'Charles_and_Lupin_Pooter gif') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('afbeelding', 'Charles_and_Lupin_Pooter gif') predicted: naam options: ['naam', 'orig titel', 'afbeelding']
 Actual: ('afbeelding', 'Charles_and_Lupin_Pooter gif') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
 Actual: ('orig titel', 'The Diary of a Nobody') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('orig titel', 'The Diary of a Nobody') predicted: naam options: ['naam', 'orig titel', 'afbeelding']
-Actual: ('orig titel', 'The Diary of a Nobody') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
+Actual: ('orig titel', 'The Diary of a Nobody') predicted: naam options: ['naam', 'volledige naam', 'orig titel']
 Actual: ('auteur', 'George Grossmith Weedon Grossmith') predicted: illustraties options: ['illustraties', 'kaftontwerp', 'auteur']
-Actual: ('taal', 'Nederlands') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('auteur', 'George Grossmith Weedon Grossmith') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
+Actual: ('taal', 'Nederlands') predicted: land options: ['land', 'extra portaal', 'taal']
 Actual: ('taal', 'Nederlands') predicted: originele taal options: ['originele taal', 'taal']
-Actual: ('originele uitgever', 'Punch uitgeverij Punch') predicted: uitgever options: ['uitgever', 'originele uitgever', 'uitgeverij']
+Actual: ('originele uitgever', 'Punch uitgeverij Punch') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
 Actual: ('uitgiftedatum', '1981') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
     

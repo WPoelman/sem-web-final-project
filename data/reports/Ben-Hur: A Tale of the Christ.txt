@@ -16,7 +16,6 @@
 
     --- generated infobox ---
     {
-    "orig titel": "Ben-Hur (roman)",
     "cover-op-enwp": "Wallace Ben Hur cover jpg",
     "onderschrift": "First edition 1880",
     "auteur": "Lew Wallace",
@@ -25,23 +24,27 @@
     "genre": "Historische fictie Christelijke literatuur",
     "uitgever": "Harper Brothers",
     "uitgiftedatum origineel": "November 12 1880",
-    "medium": "Print Hardcover Hardback Paperback"
+    "medium": "Print Hardcover Hardback Paperback",
+    "orig titel": "Ben-Hur: A Tale of the Christ",
+    "naam": "Ben-Hur (roman)"
 }
 
     --- stats ---
     items in true infobox:      11
-    items in generated infobox: 10
+    items in generated infobox: 11
 
     --- exact matches ---
-    correct keys:          0.5 (5 / 10)
-    correct values:        0.6 (6 / 10)
-    correct key AND value: 0.4 (4 / 10)
+    correct keys:          0.545 (6 / 11)
+    correct values:        0.545 (6 / 11)
+    correct key AND value: 0.364 (4 / 11)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Ben Hur A Tale of the Christ') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
+Actual: ('naam', 'Ben Hur A Tale of the Christ') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
 Actual: ('afbeelding', 'Wallace Ben Hur cover jpg') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
 Actual: ('afbeelding', 'Wallace Ben Hur cover jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('taal', 'Engels') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('auteur', 'Lew Wallace') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
+Actual: ('taal', 'Engels') predicted: land options: ['land', 'extra portaal', 'taal']
 Actual: ('taal', 'Engels') predicted: originele taal options: ['originele taal', 'taal']
 Actual: ('uitgiftedatum', '12 november 1880') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
 Actual: ('paginas', '560') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']

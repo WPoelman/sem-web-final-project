@@ -15,7 +15,6 @@
 
     --- generated infobox ---
     {
-    "orig titel": "Flowers in the Attic (boek)",
     "cover-op-enwp": "Dollanganger01 FlowersInTheAttic jpg",
     "afbeeldingbreedte": "200px",
     "onderschrift": "First edition cover of Flowers in the Attic",
@@ -30,21 +29,26 @@
     "isbn": "0 671 82531 3",
     "oclc": "21616361",
     "vervolg": "Petals on the Wind 1980",
+    "orig titel": "Flowers in the Attic",
+    "naam": "Flowers in the Attic (boek)",
     "reeks": "V C Andrews The Dollanganger series Dollanganger series"
 }
 
     --- stats ---
     items in true infobox:      10
-    items in generated infobox: 16
+    items in generated infobox: 17
 
     --- exact matches ---
-    correct keys:          0.438 (7 / 16)
-    correct values:        0.188 (3 / 16)
-    correct key AND value: 0.188 (3 / 16)
+    correct keys:          0.471 (8 / 17)
+    correct values:        0.235 (4 / 17)
+    correct key AND value: 0.176 (3 / 17)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Flowers in the Attic') predicted: orig titel options: ['orig titel', 'naam', 'titel']
-Actual: ('taal', 'Engels') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('naam', 'Flowers in the Attic') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
+Actual: ('naam', 'Flowers in the Attic') predicted: vervolg options: ['vervolg', 'volgendeboek', 'naam']
+Actual: ('auteur', 'V C Andrews') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
+Actual: ('taal', 'Engels') predicted: land options: ['land', 'extra portaal', 'taal']
 Actual: ('taal', 'Engels') predicted: originele taal options: ['originele taal', 'taal']
 Actual: ('uitgiftedatum', '1979') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
 Actual: ('uitgiftedatum', '1979') predicted: paginas options: ['paginas', 'uitgiftedatum']

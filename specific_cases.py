@@ -21,9 +21,9 @@ def handle_specific_cases(en_ib, nl_ib, key_pairs, en_title, nl_title):
     # If NL title differs from the EN title, we say it is a translated book
     if 'name' in en_ib:
         if nl_title != en_title:
+            nl_ib.pop(key_pairs['name'], None)
             nl_ib['orig titel'] = en_title
-        used_nl_key = key_pairs['name']
-        nl_ib[used_nl_key] = nl_title
+            nl_ib['naam'] = nl_title
 
     # If it is translated, add the original language
     if 'orig titel' in nl_ib and 'language' in en_ib:

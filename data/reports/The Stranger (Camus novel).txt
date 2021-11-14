@@ -18,7 +18,6 @@
     --- generated infobox ---
     {
     "cursieve titel": "no",
-    "orig titel": "De vreemdeling",
     "cover-op-enwp": "Camus23 jpg",
     "grens": "yes",
     "onderschrift": "Cover of the first edition",
@@ -30,26 +29,29 @@
     "set_in": "Algeria",
     "uitgever": "plainlist 1942 \u00c9ditions Gallimard Gallimard French 1946 Hamish Hamilton English",
     "paginas": "159",
+    "orig titel": "The Stranger (Camus novel)",
+    "naam": "De vreemdeling",
     "reeks": "Collection Blanche"
 }
 
     --- stats ---
     items in true infobox:      12
-    items in generated infobox: 14
+    items in generated infobox: 15
 
     --- exact matches ---
-    correct keys:          0.429 (6 / 14)
-    correct values:        0.286 (4 / 14)
-    correct key AND value: 0.071 (1 / 14)
+    correct keys:          0.467 (7 / 15)
+    correct values:        0.267 (4 / 15)
+    correct key AND value: 0.133 (2 / 15)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'De vreemdeling') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
+Actual: ('naam', 'De vreemdeling') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
 Actual: ('orig titel', 'L étranger') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('orig titel', 'L étranger') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
 Actual: ('orig titel', 'L étranger') predicted: reeks options: ['reeks', 'extra portaal', 'orig titel']
 Actual: ('afbeelding', 'Camus23 jpg') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
 Actual: ('afbeelding', 'Camus23 jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('taal', 'Frans') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('auteur', 'Albert Camus') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
+Actual: ('taal', 'Frans') predicted: land options: ['land', 'extra portaal', 'taal']
 Actual: ('taal', 'Frans') predicted: originele taal options: ['originele taal', 'taal']
 Actual: ('uitgiftedatum', '1942') predicted: paginas options: ['paginas', 'uitgiftedatum']
     

@@ -15,7 +15,6 @@
 
     --- generated infobox ---
     {
-    "orig titel": "Skeleton Key (boek)",
     "cover-op-enwp": "Skeletonkey JPG",
     "onderschrift": "First edition cover",
     "auteur": "Anthony Horowitz",
@@ -32,21 +31,26 @@
     "oclc": "54953320",
     "voorafgegaan": "Point Blanc",
     "vervolg": "Eagle Strike",
+    "orig titel": "Skeleton Key (novel)",
+    "naam": "Skeleton Key (boek)",
     "reeks": "Alex Rider Alex Rider series"
 }
 
     --- stats ---
     items in true infobox:      10
-    items in generated infobox: 18
+    items in generated infobox: 19
 
     --- exact matches ---
-    correct keys:          0.389 (7 / 18)
-    correct values:        0.222 (4 / 18)
-    correct key AND value: 0.167 (3 / 18)
+    correct keys:          0.421 (8 / 19)
+    correct values:        0.211 (4 / 19)
+    correct key AND value: 0.158 (3 / 19)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Skeleton Key') predicted: orig titel options: ['orig titel', 'naam', 'titel']
-Actual: ('taal', 'Engels') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('naam', 'Skeleton Key') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
+Actual: ('naam', 'Skeleton Key') predicted: vervolg options: ['vervolg', 'volgendeboek', 'naam']
+Actual: ('auteur', 'Anthony Horowitz') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
+Actual: ('taal', 'Engels') predicted: land options: ['land', 'extra portaal', 'taal']
 Actual: ('taal', 'Engels') predicted: originele taal options: ['originele taal', 'taal']
 Actual: ('uitgiftedatum', '8 juli 2002') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
 Actual: ('uitgiftedatum', '8 juli 2002') predicted: paginas options: ['paginas', 'uitgiftedatum']

@@ -13,7 +13,7 @@
 
     --- generated infobox ---
     {
-    "orig titel": "The Strange Case of Dr Jekyll and Mr Hyde",
+    "orig titel": "Strange Case of Dr Jekyll and Mr Hyde",
     "cover-op-enwp": "Jekyll and Hyde Title jpg",
     "onderschrift": "Title page of the first London edition 1886",
     "auteur": "Robert Louis Stevenson",
@@ -31,14 +31,16 @@
 
     --- exact matches ---
     correct keys:          0.3 (3 / 10)
-    correct values:        0.3 (3 / 10)
+    correct values:        0.4 (4 / 10)
     correct key AND value: 0.1 (1 / 10)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Strange Case of Dr Jekyll and Mr Hyde') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
+Actual: ('naam', 'Strange Case of Dr Jekyll and Mr Hyde') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
 Actual: ('afbeelding', 'Jekyll and Hyde Title jpg') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
 Actual: ('afbeelding', 'Jekyll and Hyde Title jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('taal', 'Engels') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('auteur', 'Robert Louis Stevenson') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
+Actual: ('taal', 'Engels') predicted: land options: ['land', 'extra portaal', 'taal']
 Actual: ('taal', 'Engels') predicted: originele taal options: ['originele taal', 'taal']
 Actual: ('uitgiftedatum', '1886') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'paginas']
 Actual: ('uitgiftedatum', '1886') predicted: paginas options: ['paginas', 'uitgiftedatum']

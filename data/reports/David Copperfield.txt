@@ -17,7 +17,6 @@
 
     --- generated infobox ---
     {
-    "orig titel": "David Copperfield (boek)",
     "cover-op-enwp": "Copperfield cover serial jpg",
     "onderschrift": "Cover first serial edition of 1849",
     "auteur": "Charles Dickens",
@@ -31,25 +30,30 @@
     "medium": "Print",
     "paginas": "nowrap 624 first book edition ref name The Guardian 2013 12 30 cite news url https www theguardian com books 2013 dec 30 david copperfield dickens 100 best novels title The 100 best novels No 15 David Copperfield by Charles Dickens 1850 last McCrum first Robert author link Robert McCrum date 30 December 2013 work The Guardian access date 24 March 2015",
     "voorafgegaan": "Dombey and Son 1848",
-    "vervolg": "Bleak House 1852 3"
+    "vervolg": "Bleak House 1852 3",
+    "orig titel": "David Copperfield",
+    "naam": "David Copperfield (boek)"
 }
 
     --- stats ---
     items in true infobox:      12
-    items in generated infobox: 15
+    items in generated infobox: 16
 
     --- exact matches ---
-    correct keys:          0.4 (6 / 15)
-    correct values:        0.2 (3 / 15)
-    correct key AND value: 0.133 (2 / 15)
+    correct keys:          0.438 (7 / 16)
+    correct values:        0.25 (4 / 16)
+    correct key AND value: 0.125 (2 / 16)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'David Copperfield') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
+Actual: ('naam', 'David Copperfield') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
+Actual: ('naam', 'David Copperfield') predicted: vervolg options: ['vervolg', 'volgendeboek', 'naam']
 Actual: ('afbeelding', 'David Copperfield jpg') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
 Actual: ('afbeelding', 'David Copperfield jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
 Actual: ('auteur', 'Charles Dickens') predicted: illustraties options: ['illustraties', 'kaftontwerp', 'auteur']
 Actual: ('auteur', 'Charles Dickens') predicted: kaftontwerp options: ['kaftontwerp', 'illustraties', 'auteur']
-Actual: ('taal', 'Engels') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('auteur', 'Charles Dickens') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
+Actual: ('taal', 'Engels') predicted: land options: ['land', 'extra portaal', 'taal']
 Actual: ('taal', 'Engels') predicted: originele taal options: ['originele taal', 'taal']
 Actual: ('uitgever', 'Bradbury Evans') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgever', 'uitgiftedatum']
 Actual: ('uitgiftedatum', 'in afleveringen 1849 1850 in boekvorm 1850') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgever', 'uitgiftedatum']

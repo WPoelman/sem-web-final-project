@@ -24,7 +24,6 @@
 
     --- generated infobox ---
     {
-    "orig titel": "Het verhaal van Genji",
     "cover-op-enwp": "Genji emaki 01003 002 jpg",
     "onderschrift": "Written text from the earliest illustrated handscroll 12th century",
     "auteur": "Murasaki Shikibu",
@@ -35,26 +34,27 @@
     "genre": "Monogatari",
     "uitgiftedatum origineel": "Before 1021",
     "medium": "manuscript",
-    "dewey": "895 63 M93"
+    "dewey": "895 63 M93",
+    "orig titel": "The Tale of Genji",
+    "naam": "Het verhaal van Genji"
 }
 
     --- stats ---
     items in true infobox:      19
-    items in generated infobox: 12
+    items in generated infobox: 13
 
     --- exact matches ---
-    correct keys:          0.75 (9 / 12)
-    correct values:        0.25 (3 / 12)
-    correct key AND value: 0.167 (2 / 12)
+    correct keys:          0.769 (10 / 13)
+    correct values:        0.231 (3 / 13)
+    correct key AND value: 0.231 (3 / 13)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Het verhaal van Genji') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
+Actual: ('naam', 'Het verhaal van Genji') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
 Actual: ('afbeelding', 'Ch5 wakamurasaki jpg') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
 Actual: ('afbeelding', 'Ch5 wakamurasaki jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
 Actual: ('orig titel', '源氏物語 Genji Monogatari') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('orig titel', '源氏物語 Genji Monogatari') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
-Actual: ('illustraties', 'Tosa Mitsuoki') predicted: auteur options: ['auteur', 'schrijver', 'illustraties']
-Actual: ('taal', 'Japans Nederlands') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('taal', 'Japans Nederlands') predicted: land options: ['land', 'extra portaal', 'taal']
 Actual: ('taal', 'Japans Nederlands') predicted: originele taal options: ['originele taal', 'taal']
 Actual: ('uitgever', 'Athenaeum Polak Van Gennep Athenaeum Polak Van Gennep') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgever', 'uitgiftedatum']
 Actual: ('uitgiftedatum', '2013') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgever', 'uitgiftedatum']

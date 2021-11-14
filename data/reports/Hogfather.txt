@@ -17,7 +17,6 @@
 
     --- generated infobox ---
     {
-    "orig titel": "Berevaar",
     "cover-op-enwp": "Hogfather 2 jpg",
     "onderschrift": "First edition",
     "auteur": "Terry Pratchett",
@@ -29,23 +28,26 @@
     "uitgiftedatum origineel": "1996",
     "awards": "Came 137th in the Big Read",
     "isbn": "0 575 06403 X",
+    "orig titel": "Hogfather",
+    "naam": "Berevaar",
     "reeks": "Discworld 20th novel ndash 4th Death story"
 }
 
     --- stats ---
     items in true infobox:      12
-    items in generated infobox: 13
+    items in generated infobox: 14
 
     --- exact matches ---
-    correct keys:          0.462 (6 / 13)
-    correct values:        0.231 (3 / 13)
-    correct key AND value: 0.154 (2 / 13)
+    correct keys:          0.5 (7 / 14)
+    correct values:        0.286 (4 / 14)
+    correct key AND value: 0.286 (4 / 14)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Berevaar') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('naam', 'Berevaar') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
 Actual: ('auteur', 'Terry Pratchett') predicted: kaftontwerp options: ['kaftontwerp', 'illustraties', 'auteur']
+Actual: ('auteur', 'Terry Pratchett') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
 Actual: ('orig titel', 'Hogfather') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('orig titel', 'Hogfather') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
 Actual: ('orig titel', 'Hogfather') predicted: reeks options: ['reeks', 'extra portaal', 'orig titel']
 Actual: ('uitgiftedatum', '1996 2000') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'jaren-actief']
     

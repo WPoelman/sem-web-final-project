@@ -18,9 +18,8 @@
 
     --- generated infobox ---
     {
-    "orig titel": "De Hongerspelen",
     "cover-op-enwp": "The Hunger Games jpg",
-    "naam": "Cover of the novel showing the title in white text on a black and grey background above a depiction of a gold pin featuring a bird in flight its wings spread and an arrow clasped in its beak",
+    "naam": "De Hongerspelen",
     "onderschrift": "North American first edition cover",
     "auteur": "Suzanne Collins",
     "kaftontwerp": "Tim O Brien illustrator Tim O Brien",
@@ -35,6 +34,7 @@
     "oclc": "181516677",
     "voorafgegaan": "The Ballad of Songbirds and Snakes",
     "vervolg": "Catching Fire",
+    "orig titel": "The Hunger Games (novel)",
     "reeks": "nowrap The Hunger Games trilogy The Hunger Games trilogy"
 }
 
@@ -49,14 +49,13 @@
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'De Hongerspelen De Hongerspelen franchise De Hongerspelen Trilogie Deel 1') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('naam', 'De Hongerspelen De Hongerspelen franchise De Hongerspelen Trilogie Deel 1') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
+Actual: ('naam', 'De Hongerspelen De Hongerspelen franchise De Hongerspelen Trilogie Deel 1') predicted: vervolg options: ['vervolg', 'volgendeboek', 'naam']
 Actual: ('orig titel', 'The Hunger Games') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('orig titel', 'The Hunger Games') predicted: naam options: ['naam', 'orig titel', 'afbeelding']
-Actual: ('orig titel', 'The Hunger Games') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
+Actual: ('orig titel', 'The Hunger Games') predicted: naam options: ['naam', 'volledige naam', 'orig titel']
 Actual: ('orig titel', 'The Hunger Games') predicted: reeks options: ['reeks', 'extra portaal', 'orig titel']
-Actual: ('orig titel', 'The Hunger Games') predicted: voorafgegaan options: ['voorafgegaan', 'vorigeboek', 'orig titel']
-Actual: ('orig titel', 'The Hunger Games') predicted: vervolg options: ['vervolg', 'volgendeboek', 'orig titel']
 Actual: ('auteur', 'Suzanne Collins') predicted: kaftontwerp options: ['kaftontwerp', 'illustraties', 'auteur']
-Actual: ('taal', 'Nederlands oorspr Engels') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('taal', 'Nederlands oorspr Engels') predicted: land options: ['land', 'extra portaal', 'taal']
 Actual: ('taal', 'Nederlands oorspr Engels') predicted: originele taal options: ['originele taal', 'taal']
 Actual: ('uitgever', 'Uitgeverij Unieboek Van Goor oorspr Scholastic') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgever', 'uitgiftedatum']
 Actual: ('uitgiftedatum', '2008') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgever', 'uitgiftedatum']

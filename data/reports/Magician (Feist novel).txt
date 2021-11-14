@@ -16,7 +16,6 @@
 
     --- generated infobox ---
     {
-    "orig titel": "Magi\u00ebr (Feist)",
     "cover-op-enwp": "Feist Magician Coverart png",
     "onderschrift": "Magician first edition cover",
     "auteur": "Raymond E Feist",
@@ -34,25 +33,28 @@
     "congres": "PS3556 E446 M3 1982",
     "oclc": "8220861",
     "vervolg": "Silverthorn novel Silverthorn",
+    "orig titel": "Magician (Feist novel)",
+    "naam": "Magi\u00ebr (Feist)",
     "reeks": "Riftwar The Riftwar Saga"
 }
 
     --- stats ---
     items in true infobox:      11
-    items in generated infobox: 19
+    items in generated infobox: 20
 
     --- exact matches ---
-    correct keys:          0.368 (7 / 19)
-    correct values:        0.053 (1 / 19)
-    correct key AND value: 0.053 (1 / 19)
+    correct keys:          0.4 (8 / 20)
+    correct values:        0.05 (1 / 20)
+    correct key AND value: 0.05 (1 / 20)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Magiër') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('naam', 'Magiër') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
+Actual: ('naam', 'Magiër') predicted: vervolg options: ['vervolg', 'volgendeboek', 'naam']
 Actual: ('auteur', 'Raymond E Feist') predicted: kaftontwerp options: ['kaftontwerp', 'illustraties', 'auteur']
+Actual: ('auteur', 'Raymond E Feist') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
 Actual: ('orig titel', 'Magician') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('orig titel', 'Magician') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
 Actual: ('orig titel', 'Magician') predicted: reeks options: ['reeks', 'extra portaal', 'orig titel']
-Actual: ('orig titel', 'Magician') predicted: vervolg options: ['vervolg', 'volgendeboek', 'orig titel']
 Actual: ('uitgiftedatum', '2000 Origineel 1982') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'jaren-actief']
 Actual: ('uitgiftedatum', '2000 Origineel 1982') predicted: paginas options: ['paginas', 'uitgiftedatum']
     

@@ -14,7 +14,6 @@
 
     --- generated infobox ---
     {
-    "orig titel": "The Seven Habits of Highly Effective People",
     "cover-op-enwp": "The 7 Habits of Highly Effective People jpg",
     "auteur": "Stephen Covey Stephen R Covey",
     "land": "VS",
@@ -28,20 +27,24 @@
     "dewey": "158 22",
     "congres": "BF637 S8 C68 2004",
     "oclc": "56413718",
-    "vervolg": "The 8th Habit From Effectiveness to Greatness"
+    "vervolg": "The 8th Habit From Effectiveness to Greatness",
+    "orig titel": "The 7 Habits of Highly Effective People",
+    "naam": "The Seven Habits of Highly Effective People"
 }
 
     --- stats ---
     items in true infobox:      9
-    items in generated infobox: 15
+    items in generated infobox: 16
 
     --- exact matches ---
-    correct keys:          0.267 (4 / 15)
-    correct values:        0.267 (4 / 15)
-    correct key AND value: 0.067 (1 / 15)
+    correct keys:          0.312 (5 / 16)
+    correct values:        0.25 (4 / 16)
+    correct key AND value: 0.125 (2 / 16)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'The Seven Habits of Highly Effective People') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('naam', 'The Seven Habits of Highly Effective People') predicted: vervolg options: ['vervolg', 'volgendeboek', 'naam']
+Actual: ('auteur', 'Stephen Covey Stephen R W Covey') predicted: uitgever options: ['uitgever', 'originele uitgever', 'auteur']
 Actual: ('uitgiftedatum', '1989') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'jaren-actief']
 Actual: ('uitgiftedatum', '1989') predicted: paginas options: ['paginas', 'uitgiftedatum']
 Actual: ('issn', '0 7432 6951 9') predicted: isbn options: ['isbn', 'issn']

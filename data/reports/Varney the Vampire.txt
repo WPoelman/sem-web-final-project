@@ -16,7 +16,7 @@
 
     --- generated infobox ---
     {
-    "orig titel": "Varney the Vampire",
+    "orig titel": "Varney the Vampire or the Feast of Blood",
     "cover-op-enwp": "Varney the Vampire or the Feast of Blood jpg",
     "onderschrift": "Cover from one of the original publications",
     "auteur": "James Malcolm Rymer Thomas Peckett Prest",
@@ -34,16 +34,17 @@
 
     --- exact matches ---
     correct keys:          0.4 (4 / 10)
-    correct values:        0.4 (4 / 10)
+    correct values:        0.3 (3 / 10)
     correct key AND value: 0.1 (1 / 10)
 
     --- wrong key but in top 3 ---
     Actual: ('naam', 'Varney the Vampire') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('naam', 'Varney the Vampire') predicted: onderschrift options: ['onderschrift', 'naam', 'titel']
 Actual: ('afbeelding', 'Varney the Vampire or the Feast of Blood jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
-Actual: ('taal', 'Engels') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('taal', 'Engels') predicted: land options: ['land', 'extra portaal', 'taal']
 Actual: ('taal', 'Engels') predicted: originele taal options: ['originele taal', 'taal']
 Actual: ('uitgiftedatum', '1847') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'jaren-actief']
 Actual: ('uitgiftedatum', '1847') predicted: paginas options: ['paginas', 'uitgiftedatum']
-Actual: ('extra portaal', 'Horror') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('extra portaal', 'Horror') predicted: land options: ['land', 'extra portaal', 'taal']
 Actual: ('extra portaal', 'Horror') predicted: genre options: ['genre', 'extra portaal']
     
