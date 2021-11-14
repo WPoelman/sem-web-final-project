@@ -1,0 +1,61 @@
+
+    --- true infobox ---
+    {
+    "naam": "Magi\u00ebr",
+    "reeks": "De Saga van de Oorlog van de Grote Scheuring",
+    "auteur": "Raymond E Feist",
+    "vertaler": "Richard Hoefkens",
+    "uitgever": "De Boekerij",
+    "orig titel": "Magician",
+    "uitgiftedatum": "2000 Origineel 1982",
+    "genre": "Fantasy genre Fantasy",
+    "pagina's": "736 blz",
+    "isbn": "9029055502",
+    "vervolg": "Zilverdoorn"
+}
+
+    --- generated infobox ---
+    {
+    "cover-op-enwp": "Feist Magician Coverart png",
+    "onderschrift": "Goochelaar eerste editie omslag",
+    "auteur": "Raymond E Feist",
+    "kaftontwerp": "David Gatti",
+    "land": "Verenigde Staten",
+    "originele taal": "Engels",
+    "genre": "Fantasie fictie Fantasie",
+    "uitgever": "Doubleday publisher Doubleday",
+    "uitgiftedatum origineel": "October 1982",
+    "medium": "Print Hardback Paperback",
+    "paginas": "545 first edition",
+    "isbn": "0 385 17580 9",
+    "isbn_note": "Magician Apprentice ISBN 0 553 56494 3 Magician Master ISBN 0 553 56493 5",
+    "dewey": "813 54 19",
+    "congres": "PS3556 E446 M3 1982",
+    "oclc": "8220861",
+    "vervolg": "Silverthorn novel Silverthorn",
+    "orig titel": "Magician (Feist novel)",
+    "naam": "Magi\u00ebr (Feist)",
+    "reeks": "Riftwar The Riftwar Saga"
+}
+
+    --- stats ---
+    items in true infobox:      11
+    items in generated infobox: 20
+
+    --- exact matches ---
+    correct keys:          0.4 (8 / 20)
+    correct values:        0.05 (1 / 20)
+    correct key AND value: 0.05 (1 / 20)
+
+    --- wrong key but in top 3 ---
+    Actual: ('naam', 'Magiër') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('naam', 'Magiër') predicted: auteur options: ['auteur', 'schrijver', 'naam']
+Actual: ('naam', 'Magiër') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
+Actual: ('auteur', 'Raymond E Feist') predicted: kaftontwerp options: ['kaftontwerp', 'illustraties', 'auteur']
+Actual: ('orig titel', 'Magician') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'Magician') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
+Actual: ('orig titel', 'Magician') predicted: reeks options: ['reeks', 'extra portaal', 'orig titel']
+Actual: ('orig titel', 'Magician') predicted: vervolg options: ['vervolg', 'volgendeboek', 'orig titel']
+Actual: ('uitgiftedatum', '2000 Origineel 1982') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'jaren-actief']
+Actual: ('uitgiftedatum', '2000 Origineel 1982') predicted: paginas options: ['paginas', 'uitgiftedatum']
+    

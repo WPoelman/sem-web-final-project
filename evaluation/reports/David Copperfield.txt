@@ -1,0 +1,60 @@
+
+    --- true infobox ---
+    {
+    "naam": "David Copperfield",
+    "afbeelding": "David Copperfield jpg",
+    "onderschrift": "Het boek David Copperfield",
+    "auteur": "Charles Dickens",
+    "land": "Engeland",
+    "taal": "Engels",
+    "genre": "Roman literatuur roman",
+    "uitgever": "Bradbury Evans",
+    "uitgiftedatum": "in afleveringen 1849 1850 in boekvorm 1850",
+    "isbn": "n v t",
+    "voorafgegaan": "Dombey and Son 1846 1848",
+    "vervolg": "Bleak House boek Bleak House 1852 1853"
+}
+
+    --- generated infobox ---
+    {
+    "cover-op-enwp": "Copperfield cover serial jpg",
+    "onderschrift": "Cover eerste seri\u00eble editie van 1849",
+    "auteur": "Charles Dickens",
+    "illustraties": "Hablot Knight Browne Phiz",
+    "kaftontwerp": "Hablot Knight Browne Phiz",
+    "land": "Verenigd Koninkrijk",
+    "originele taal": "Engels",
+    "genres": "Novel Bildungsroman",
+    "uitgever": "Bradbury Evans",
+    "uitgiftedatum origineel": "Serialised May 1849 November 1850 book format 1850",
+    "medium": "Print",
+    "paginas": "nowrap 624 first book edition ref name The Guardian 2013 12 30 cite news url https www theguardian com books 2013 dec 30 david copperfield dickens 100 best novels title The 100 best novels No 15 David Copperfield by Charles Dickens 1850 last McCrum first Robert author link Robert McCrum date 30 December 2013 work The Guardian access date 24 March 2015",
+    "voorafgegaan": "Dombey and Son 1848",
+    "vervolg": "Bleak House 1852 3",
+    "orig titel": "David Copperfield",
+    "naam": "David Copperfield"
+}
+
+    --- stats ---
+    items in true infobox:      12
+    items in generated infobox: 16
+
+    --- exact matches ---
+    correct keys:          0.438 (7 / 16)
+    correct values:        0.25 (4 / 16)
+    correct key AND value: 0.188 (3 / 16)
+
+    --- wrong key but in top 3 ---
+    Actual: ('naam', 'David Copperfield') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
+Actual: ('naam', 'David Copperfield') predicted: auteur options: ['auteur', 'schrijver', 'naam']
+Actual: ('naam', 'David Copperfield') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
+Actual: ('afbeelding', 'David Copperfield jpg') predicted: orig titel options: ['orig titel', 'naam', 'afbeelding']
+Actual: ('afbeelding', 'David Copperfield jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('auteur', 'Charles Dickens') predicted: illustraties options: ['illustraties', 'kaftontwerp', 'auteur']
+Actual: ('auteur', 'Charles Dickens') predicted: kaftontwerp options: ['kaftontwerp', 'illustraties', 'auteur']
+Actual: ('taal', 'Engels') predicted: land options: ['land', 'taal', 'extra portaal']
+Actual: ('taal', 'Engels') predicted: originele taal options: ['originele taal', 'taal']
+Actual: ('uitgever', 'Bradbury Evans') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'uitgever']
+Actual: ('uitgiftedatum', 'in afleveringen 1849 1850 in boekvorm 1850') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'uitgever']
+Actual: ('uitgiftedatum', 'in afleveringen 1849 1850 in boekvorm 1850') predicted: paginas options: ['paginas', 'uitgiftedatum']
+    

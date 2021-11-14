@@ -1,0 +1,45 @@
+
+    --- true infobox ---
+    {
+    "naam": "Far from the Madding Crowd",
+    "afbeelding": "Far From The Madding Crowd 1874 Title Page jpg",
+    "onderschrift": "eerste editie",
+    "auteur": "Thomas Hardy schrijver Thomas Hardy",
+    "land": "Engeland",
+    "originele taal": "Engels",
+    "uitgiftedatum origineel": "1874",
+    "film": "Far from the Madding Crowd 1915"
+}
+
+    --- generated infobox ---
+    {
+    "cover-op-enwp": "Far From The Madding Crowd 1874 Title Page jpg",
+    "onderschrift": "De titelpagina van een eerste editie uit 1874 van Far from the Madding Crowd",
+    "auteur": "Thomas Hardy",
+    "land": "Engeland",
+    "originele taal": "Engels",
+    "genre": "Roman",
+    "uitgever": "Cornhill Magazine",
+    "uitgiftedatum origineel": "1874",
+    "paginas": "464 pages Harper Brothers edition 1912",
+    "voorafgegaan": "A Pair of Blue Eyes",
+    "vervolg": "The Hand of Ethelberta",
+    "orig titel": "Far from the Madding Crowd",
+    "naam": "Far from the Madding Crowd"
+}
+
+    --- stats ---
+    items in true infobox:      8
+    items in generated infobox: 13
+
+    --- exact matches ---
+    correct keys:          0.462 (6 / 13)
+    correct values:        0.385 (5 / 13)
+    correct key AND value: 0.308 (4 / 13)
+
+    --- wrong key but in top 3 ---
+    Actual: ('naam', 'Far from the Madding Crowd') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('naam', 'Far from the Madding Crowd') predicted: auteur options: ['auteur', 'schrijver', 'naam']
+Actual: ('naam', 'Far from the Madding Crowd') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
+Actual: ('afbeelding', 'Far From The Madding Crowd 1874 Title Page jpg') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+    

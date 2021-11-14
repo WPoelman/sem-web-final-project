@@ -1,0 +1,54 @@
+
+    --- true infobox ---
+    {
+    "naam": "Zieltonen",
+    "reeks": "Schijfwereld",
+    "auteur": "Terry Pratchett",
+    "vertaler": "Venugopalan Ittekot",
+    "uitgever": "Het Spectrum",
+    "orig titel": "Soul Music",
+    "uitgiftedatum": "1994 1997",
+    "genre": "Fantasy genre Fantasy",
+    "paginas": "279 blz",
+    "isbn": "9027456143",
+    "voorafgegaan": "Te Wapen",
+    "vervolg": "Interessante Tijden"
+}
+
+    --- generated infobox ---
+    {
+    "cover-op-enwp": "soul music cover jpg",
+    "grens": "yes",
+    "onderschrift": "Eerste editie",
+    "auteur": "Terry Pratchett",
+    "kaftontwerp": "Josh Kirby",
+    "originele taal": "Engels",
+    "onderwerp": "Rock music and related mythologising Characters Death Discworld Death Susan Sto Helit Susan Imp y Celyn Glod Glodsson Lias Bluestone Locations Ankh Morpork Death s Domain Quirm",
+    "genre": "Fantasy genre Fantasy",
+    "uitgever": "Victor Gollancz",
+    "uitgiftedatum origineel": "1994",
+    "isbn": "0 575 05504 9",
+    "orig titel": "Soul Music",
+    "naam": "Zieltonen",
+    "reeks": "Discworld 16th novel 3rd Death story"
+}
+
+    --- stats ---
+    items in true infobox:      12
+    items in generated infobox: 14
+
+    --- exact matches ---
+    correct keys:          0.5 (7 / 14)
+    correct values:        0.286 (4 / 14)
+    correct key AND value: 0.286 (4 / 14)
+
+    --- wrong key but in top 3 ---
+    Actual: ('naam', 'Zieltonen') predicted: orig titel options: ['orig titel', 'naam', 'titel']
+Actual: ('naam', 'Zieltonen') predicted: auteur options: ['auteur', 'schrijver', 'naam']
+Actual: ('naam', 'Zieltonen') predicted: uitgever options: ['uitgever', 'originele uitgever', 'naam']
+Actual: ('auteur', 'Terry Pratchett') predicted: kaftontwerp options: ['kaftontwerp', 'illustraties', 'auteur']
+Actual: ('orig titel', 'Soul Music') predicted: cover-op-enwp options: ['cover-op-enwp', 'afbeelding', 'orig titel']
+Actual: ('orig titel', 'Soul Music') predicted: onderschrift options: ['onderschrift', 'titel', 'orig titel']
+Actual: ('orig titel', 'Soul Music') predicted: reeks options: ['reeks', 'extra portaal', 'orig titel']
+Actual: ('uitgiftedatum', '1994 1997') predicted: uitgiftedatum origineel options: ['uitgiftedatum origineel', 'uitgiftedatum', 'jaren-actief']
+    
