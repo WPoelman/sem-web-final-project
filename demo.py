@@ -247,11 +247,13 @@ def main():
 
     if args.titles:
         with open(args.titles, 'r') as f:
-            titles = [t.strip() for t in f]
+            titles = [t.strip() for t in f.readlines()]
+        print(f'Generating infoboxes for {len(titles)} titles with '
+              f'{args.max_workers} workers...')
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=args.max_workers) as executor:
             futures = [
-                executor.map(generator.generate_infobox, title)
+                executor.submit(generator.generate_infobox, title)
                 for title in titles
             ]
             for _ in concurrent.futures.as_completed(futures):
