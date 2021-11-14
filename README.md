@@ -1,5 +1,8 @@
 # sem_web_final_project
-Final project for the course Semantic Webtechnology
+Final project for the course Semantic Webtechnology (LIX002M05), 2021-2022.
+
+## Project description
+This project enables the generation of Wikipedia infobox content in Dutch, based on English Wikipedia infoboxes. It consists of several subparts: the extraction of data, the creation of mappings and the final prediction process. All code used for the writing of _Final Project Report: Aligning Wikipedia Infoboxes_ is present: the results are fully reproducible.
 
 ## Usage
 1. Run `pip install -r requirements.txt`
