@@ -220,6 +220,7 @@ def main():
     with open('data/mapper.pickle', 'wb') as f:
         pickle.dump(mapper, f)
 
+    print(f'Extracted {len(mappings)} mappings.')
 
 if __name__ == '__main__':
     main()

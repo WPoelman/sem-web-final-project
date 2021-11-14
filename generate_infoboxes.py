@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Filename:   demo.py
+Filename:   generate_infoboxes.py
 Date:       14-11-2021
 Authors:    Frank van den Berg, Esther Ploeger, Wessel Poelman
 Description:
