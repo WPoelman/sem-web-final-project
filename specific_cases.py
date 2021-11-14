@@ -36,6 +36,11 @@ def handle_specific_cases(en_ib, nl_ib, key_pairs, en_title, nl_title):
         nl_ib.pop(key_pairs['series'], None)
         nl_ib['reeks'] = dutch_series
 
+    # The country is always translated to Dutch
+    if 'country' in en_ib:
+        used_nl_key = key_pairs['country']
+        nl_ib[used_nl_key] = translate(en_ib['country'])
+
     # The genre label has some dubious exceptions when translating to Dutch
     if 'genre' in en_ib:
         genre = en_ib['genre']
