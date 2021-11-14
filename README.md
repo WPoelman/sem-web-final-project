@@ -5,10 +5,11 @@ Final project for the course Semantic Webtechnology (LIX002M05), 2021-2022.
 This project enables the generation of Wikipedia infobox content in Dutch, based on English Wikipedia infoboxes. It consists of several subparts: the extraction of data, the creation of mappings and the final prediction process. All code used for the writing of _Final Project Report: Aligning Wikipedia Infoboxes_ is present: the results are fully reproducible.
 
 ## Usage
-1. Run `pip install -r requirements.txt`
+1. (Optionally) create a virtual environment (the system was created on python 3.7+)
+2. Run `pip install -r requirements.txt`
    1. If you get a `curl` related error on Debian based systems, try installing the following:
     `sudo apt install libcurl4-openssl-dev libssl-dev`
-2. To evaluate our test set with the provided mappings, run: `python generate.py -ts=data/test/test_titles.txt`
+3. To evaluate our test set with the provided mappings, run: `python generate.py -ts=data/test/test_titles.txt`
 
 ## Full process
 To do the training data, mappings and evaluation from scratch. Run the following:
