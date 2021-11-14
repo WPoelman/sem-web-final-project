@@ -38,6 +38,10 @@ def create_arg_parser():
                         help="Path to a trained mapper object.")
     parser.add_argument("-w", "--max_workers", default=32,
                         help="Max concurrent workers used to create the infoboxes.")
+    parser.add_argument("-v", "--verbose", action='store_true',
+                        help="Show the output of the boxes as they are created")
+    parser.add_argument("-e", "--expand", action='store_true',
+                        help="Next to newly generated infboxes, also try to expand existing infoboxes")
     args = parser.parse_args()
     return args
 
@@ -95,29 +99,39 @@ def evaluate_infobox(true_infobox, gen_infobox, chosen_top3):
 
 
 class InfoBoxGenerator:
-    def __init__(self, mapper: Mapper, output_folder='data/reports/') -> None:
+    def __init__(
+        self,
+        mapper: Mapper,
+        output_folder='data/reports/',
+        verbose=False,
+        expand_existing=False
+    ) -> None:
+        '''
+        Class to generate infoboxes.
+
+        expand_existing: When an existing Dutch infobox is found, controls
+                         wether or not to expand that one, or to leave it
+                         as is.
+
+        verbose:        Print evaluation output as it is created.
+
+        '''
         self.mapper = mapper
         self.output_folder = output_folder
+        self.verbose = verbose
+        self.expand_existing = expand_existing
 
     def generate_infobox(
         self,
         en_title,
-        expand_existing=False,
         evaluate=True,
-        verbose=False
     ):
-        ''' Creates a Dutch infobox for a given English Wikipedia article title.
+        ''' 
+        Creates a Dutch infobox for a given English Wikipedia article title.
 
-            expand_existing:    When an existing Dutch infobox is found, controls
-                                wether or not to expand that one, or to leave it
-                                as is.
-
-            evaluate:           Controls wether to create an evaluation report or
-                                not. These reports are stored in data/reports
-                                and have the English article name as filename.
-
-            verbose:            Print evaluation output as it is created.
-
+        evaluate:       Controls wether to create an evaluation report or
+                        not. These reports are stored in data/reports
+                        and have the English article name as filename.
         '''
         # Get EN title and retrieve English wikipedia infobox
         en_infobox = get_infobox(en_title)
@@ -184,28 +198,38 @@ class InfoBoxGenerator:
         # Finally, if there is an existing NL infobox, we first use those
         # key-value pairs and add only the missing ones from our generated
         # infobox to it.
-        if expand_existing and nl_infobox_clean:
-            expanded = nl_infobox_clean
+        if self.expand_existing and nl_infobox_clean:
+            expanded = nl_infobox_clean.copy()
             for key in nl_new_infobox:
                 if key not in expanded:
                     expanded[key] = nl_new_infobox[key]
-        else:
-            expanded = None
+
+            added_keys = '\n'.join(
+                sorted(list(expanded.keys() - nl_infobox_clean.keys()))
+            )
+            expanded_result = f'''
+            keys added: {len(expanded.keys()) - len(nl_infobox_clean.keys())}
+            {added_keys}
+
+            --- original ---
+            {format_dict_str(nl_infobox_clean)}
+
+            --- expanded ---
+            {format_dict_str(expanded) }
+            '''
+
+            with open(f'{self.output_folder}{en_title}_expanded.txt', 'w') as f:
+                f.write(expanded_result)
+
+            if self.verbose:
+                print(expanded_result)
 
         if evaluate:
             with open(f'{self.output_folder}{en_title}.txt', 'w') as f:
                 f.write(report)
 
-            if verbose:
+            if self.verbose:
                 print(report)
-
-        if expanded:
-            with open(f'{self.output_folder}{en_title}_expanded.txt', 'w') as f:
-                f.write(
-                    f'Original: \n{format_dict_str(nl_infobox_clean)}\n'
-                    f'------------------------------------------\n'
-                    f'Expanded: \n{format_dict_str(expanded) }'
-                )
 
 
 def main():
@@ -213,9 +237,14 @@ def main():
 
     mapper: Mapper = load_pickle(args.mapper)
 
-    generator = InfoBoxGenerator(mapper)
+    generator = InfoBoxGenerator(
+        mapper,
+        verbose=args.verbose,
+        expand_existing=args.expand
+    )
 
     if args.title:
+        # Always print the single provided title
         generator.generate_infobox(args.title)
 
     if args.titles:
@@ -224,7 +253,7 @@ def main():
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=args.max_workers) as executor:
             futures = [
-                executor.submit(generator.generate_infobox, title)
+                executor.map(generator.generate_infobox, title)
                 for title in titles
             ]
             for _ in concurrent.futures.as_completed(futures):
